@@ -1,0 +1,15 @@
+- name: Locations API
+  href: locations/getting-started-locations-api.md
+  maintainContext: true
+- name: Elevations API
+  href: elevations/getting-started-elevations-api.md
+  maintainContext: true
+- name: Imagery API
+  href: imagery/getting-started-imagery-api.md
+  maintainContext: true
+- name: Routes API
+  href: routes/getting-started-routes-api.md
+  maintainContext: true
+- name: Traffic API
+  href: traffic/getting-started-traffic-api.md
+  maintainContext: true

@@ -1,0 +1,35 @@
+- name: Getting Started with BING Maps API
+  href: index.md
+  maintainContext: true
+
+- name: Common Parameters and Types
+  href: common-parameters-and-types/index.md
+  maintainContext: true
+  items:
+  - name: Base URL Structure
+    href: common-parameters-and-types/base-url-structure.md
+    maintainContext: true
+  - name: Culture Parameter
+    href: common-parameters-and-types/culture-parameter.md
+    maintainContext: true
+  - name: Output Parameters
+    href: common-parameters-and-types/output-parameters.md
+    maintainContext: true
+  - name: User Context Parameters
+    href: common-parameters-and-types/user-context-parameters.md
+    maintainContext: true
+ - name: Asynchronous Requests
+    href: common-parameters-and-types/asynchronous-requests.md
+    maintainContext: true
+ - name: Location and Area Types
+    href: common-parameters-and-types/asynchronous-requests.md
+    maintainContext: true
+ - name: Pushpin Syntax and Icon Styles
+    href: common-parameters-and-types/asynchronous-requests.md
+    maintainContext: true
+ - name: Supported Culture Codes
+    href: common-parameters-and-types/supported-culture-codes.md
+    maintainContext: true
+ - name: Location Recognition Entity Types
+    href: common-parameters-and-types/location-and-recognition-entity-types.md
+    maintainContext: true
