@@ -1,23 +1,35 @@
 {
   "build": {
+
     "content": [
       {
+        "src": "docs-ref-autogen",
+        "dest": "api/services",
         "files": [
           "**/*.md",
           "**/*.yml"
-        ],
-        "exclude": [
-          "**/obj/**",
-          "**/includes/**",
-          "_themes/**",
-          "_themes.pdf/**",
-          "README.md",
-          "LICENSE",
-          "LICENSE-CODE",
-          "ThirdPartyNotices"
         ]
+      },
+      {
+        "src": "docs-ref-autogen",
+        "files": [ "toc.md" ],
+        "exclude": [],
+        "dest": "api/services"
+      },
+      {
+        "src": "docs-ref-index",
+        "files": [ "index.md" ],
+        "exclude": [],
+        "dest": "services"
+      },
+      {
+        "src": "docs-ref-conceptual",
+        "files": [ "**.md" ],
+        "exclude": [ "**/toc.md" ],
+        "dest": "services"
       }
     ],
+
     "resource": [
       {
         "files": [
@@ -37,7 +49,14 @@
     "globalMetadata": {
       "breadcrumb_path": "/rest/breadcrumb/toc.json",
       "extendBreadcrumb": true,
-      "feedback_system": "None"
+      "feedback_system": "None",
+      "rest_product": "{Bing Maps REST API}",
+      "titleSuffix": "{Bing Maps} REST API",
+      "author": "v-chrfr",
+      "ms.author": "v-chrfr",
+      "ms.topic": "reference",
+      "ms.devlang": "rest-api",
+      "ms.date": "06/18/2018"
     },
     "fileMetadata": {},
     "template": [],
