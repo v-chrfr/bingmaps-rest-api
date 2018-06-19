@@ -8,13 +8,13 @@
       },
       {
         "src": "docs-ref-index",
-        "files": [ "**/*.md" ],
+        "files": [ "**/*.md", "**/*.yml" ],
         "exclude": [],
         "dest": "services"
       },
       {
         "src": "docs-ref-conceptual",
-        "files": [ "**/*.md" ],
+        "files": [ "**/*.md", "**/*.yml" ],
         "exclude": [],
         "dest": "services"
       }
