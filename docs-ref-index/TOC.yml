@@ -22,10 +22,10 @@
     href: common-parameters-and-types/asynchronous-requests.md
     maintainContext: true
  - name: Location and Area Types
-    href: common-parameters-and-types/asynchronous-requests.md
+    href: common-parameters-and-types/location-and-area-types.md
     maintainContext: true
  - name: Pushpin Syntax and Icon Styles
-    href: common-parameters-and-types/asynchronous-requests.md
+    href: common-parameters-and-types/pushpin-syntax-and-icon-styles.md
     maintainContext: true
  - name: Supported Culture Codes
     href: common-parameters-and-types/supported-culture-codes.md

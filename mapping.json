@@ -20,6 +20,7 @@
           "toc_title": "Locations API",
           "url_group": "locations",
           "service_index": "docs-ref-conceptual/locations/index.md",
+          "service_toc": "docs-ref-conceptual/locations/toc.yml",
           "swagger_files": [
             {
               "source": "REST-demo-repo/code/REST-location-swagger.json"
@@ -30,6 +31,7 @@
           "toc_title": "Elevations API",
           "url_group": "elevations",
           "service_index": "docs-ref-conceptual/elevations/index.md",
+          "service_toc": "docs-ref-conceptual/elevations/toc.yml",
           "swagger_files": [
             {
               "source": "REST-demo-repo/code/REST-elevations-swagger.json"
@@ -38,8 +40,9 @@
         },
         {
           "toc_title": "Imagery API",
-          "url_group": "elevations",
+          "url_group": "imagery",
           "service_index": "docs-ref-conceptual/imagery/index.md",
+          "service_toc": "docs-ref-conceptual/imagery/toc.yml",
           "swagger_files": [
             {
               "source": "REST-demo-repo/code/REST-imagery-swagger.json"
@@ -50,6 +53,7 @@
           "toc_title": "Routes API",
           "url_group": "routes",
           "service_index": "docs-ref-conceptual/routes/index.md",
+          "service_toc": "docs-ref-conceptual/routes/toc.yml",
           "swagger_files": [
             {
               "source": "REST-demo-repo/code/REST-elevations-swagger.json"
