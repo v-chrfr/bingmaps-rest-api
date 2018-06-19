@@ -13,7 +13,9 @@
 
   "organizations": [
     {
-
+      "name": "",
+      "index": "index.md",
+      "default_toc_title": "Getting Started with Bing Maps REST API",
       "services": [
 
         {
@@ -64,7 +66,7 @@
           "toc_title": "Traffic API",
           "url_group": "elevations",
           "service_index": "docs-ref-conceptual/traffic/index.md",
-          "service_toc" : "docs-ref-conceptual/traffic/toc.yml",
+          "service_toc": "docs-ref-conceptual/traffic/toc.yml",
           "swagger_files": [
             {
               "source": "sample-src/swagger-traffic-sample.json"
