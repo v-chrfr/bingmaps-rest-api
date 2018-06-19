@@ -1,5 +1,11 @@
 - name: Getting Started with BING Maps API
   href: index.md
+- name: What's New
+  href: what-s-new-in-the-rest-services.md
+- name: Getting Traffic Incident Data
+  href: getting-traffic-incident-data.md
+- Using the REST Services with .NET
+  href: using-the-rest-services-with-net.md
 - name: Common Parameters and Types
   href: common-parameters-and-types/index.md
   items:
@@ -21,3 +27,15 @@
     href: common-parameters-and-types/supported-culture-codes.md
  - name: Location Recognition Entity Types
     href: common-parameters-and-types/location-and-recognition-entity-types.md
+- name: Common Response Description
+  href: common-response-description.md
+- name: JSON Data Contracts
+  href: json-data-contracts.md
+- name: Status Codes and Error Handling
+  href: status-codes-and-error-handling.md
+- name: Directly Accessing the Bing Maps Tiles
+  href: directly-accessing-the-bing-maps-tiles.md
+- name: Release History
+  href: release-history.md
+- name: Developer Resources
+  href: developer-resources.md

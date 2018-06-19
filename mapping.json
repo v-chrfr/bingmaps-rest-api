@@ -23,7 +23,7 @@
           "service_toc": "docs-ref-conceptual/locations/toc.yml",
           "swagger_files": [
             {
-              "source": "REST-demo-repo/code/REST-location-swagger.json"
+              "source": "sample-src/swagger-locations-sample.json"
             }
           ]
         },
@@ -34,7 +34,7 @@
           "service_toc": "docs-ref-conceptual/elevations/toc.yml",
           "swagger_files": [
             {
-              "source": "REST-demo-repo/code/REST-elevations-swagger.json"
+              "source": "sample-src/swagger-elevations-sample.json"
             }
           ]
         },
@@ -45,7 +45,7 @@
           "service_toc": "docs-ref-conceptual/imagery/toc.yml",
           "swagger_files": [
             {
-              "source": "REST-demo-repo/code/REST-imagery-swagger.json"
+              "source": "sample-src/swagger-imagery-sample.json"
             }
           ]
         },
@@ -56,7 +56,7 @@
           "service_toc": "docs-ref-conceptual/routes/toc.yml",
           "swagger_files": [
             {
-              "source": "REST-demo-repo/code/REST-elevations-swagger.json"
+              "source": "sample-src/swagger-routes-sample.json"
             }
           ]
         },
@@ -67,7 +67,7 @@
           "service_toc" : "docs-ref-conceptual/traffic/toc.yml",
           "swagger_files": [
             {
-              "source": "REST-demo-repo/code/REST-traffic-swagger.json"
+              "source": "sample-src/swagger-traffic-sample.json"
             }
           ]
         }
