@@ -9,13 +9,13 @@
       {
         "src": "docs-ref-index",
         "files": [ "**/*.md" ],
-        "exclude": [ "**/TOC.yml", "**/toc.md" ],
+        "exclude": [],
         "dest": "services"
       },
       {
         "src": "docs-ref-conceptual",
         "files": [ "**/*.md" ],
-        "exclude": [ "**/toc.md", "**/TOC.yml" ],
+        "exclude": [],
         "dest": "services"
       }
     ],
