@@ -13,9 +13,6 @@
 
   "organizations": [
     {
-      "name": "",
-      "index": "index.md",
-      "default_toc_title": "Getting Started with Bing Maps REST API",
       "services": [
 
         {

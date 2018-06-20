@@ -6,6 +6,9 @@
   href: getting-traffic-incident-data.md
 - name: Using the REST Services with .NET
   href: using-the-rest-services-with-net.md
+- name: API Reference
+  href: /api/
+  maintainContext: true
 - name: Common Parameters and Types
   href: common-parameters-and-types/index.md
   items:
