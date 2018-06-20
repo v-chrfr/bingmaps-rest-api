@@ -4,15 +4,12 @@
   "is_operation_level": true,
   "use_yaml_schema": true,
   "is_grouped_by_tag": true,
-  "apis_page_options": {
-
-    "enable_auto_generate": false,
-    "toc_title": "Getting Started with BING Maps API",
-    "target_file": "docs-ref-index/index.md"
-  },
 
   "organizations": [
     {
+      "name": "",
+      "index": "index.md",
+      "default_toc_title": "Getting Started with BING Maps API",
       "services": [
 
         {

@@ -4,11 +4,11 @@
       {
         "src": "docs-ref-autogen",
         "dest": "api/",
-        "files": [ "**/*.md", "**/*.yml" ]
+        "files": [ "**/*.yml" ]
       },
       {
         "src": "docs-ref-index",
-        "files": [ "**/*.yml" ],
+        "files": [ "**/*.yml", "**/*.md" ],
         "exclude": [],
         "dest": "."
       },
