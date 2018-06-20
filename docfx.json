@@ -3,20 +3,20 @@
     "content": [
       {
         "src": "docs-ref-autogen",
-        "dest": "api/",
+        "dest": "api/services",
         "files": [ "**/*.yml" ]
       },
       {
         "src": "docs-ref-index",
         "files": [ "**/*.yml", "**/*.md" ],
         "exclude": [],
-        "dest": "."
+        "dest": "services"
       },
       {
         "src": "docs-ref-conceptual",
         "files": [ "**/*.md", "**/*.yml" ],
         "exclude": [],
-        "dest": "."
+        "dest": "services"
       }
     ],
 
