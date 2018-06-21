@@ -1,0 +1,188 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Location and Area Types | Microsoft Docs </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Location and Area Types | Microsoft Docs ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+
+
+<p>Use the following formats to specify locations and areas on the Earth.</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+<th>Values and Syntax</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Point</td>
+<td>A point on the Earth specified by a latitude and longitude.</td>
+<td>The coordinates are <code>double</code> values that are separated by commas and are specified in the following order.<br><br> Latitude,Longitude<br><br> Use the following ranges of values:<br><br> -   Latitude (degrees): [-90, +90]<br>-   Longitude (degrees): [-180,+180]<br><br> <strong>Example</strong>: 47.610679194331169,-122.10788659751415</td>
+</tr>
+<tr>
+<td>BoundingBox</td>
+<td>A rectangular area on the Earth.</td>
+<td>A bounding box is defined by two latitudes and two longitudes that represent the four sides of a rectangular area on the Earth. Use the following syntax to specify a bounding box.<br><br> South Latitude, West Longitude, North Latitude, East Longitude<br><br> <strong>Example</strong>: 45.219,-122.325,47.610,-122.107</td>
+</tr>
+<tr>
+<td>Address</td>
+<td>Details about a point on the Earth that has additional location information.</td>
+<td>An address can contain the following fields: address line, locality, neighborhood, admin district, admin district 2, formatted address, postal code and country or region. For descriptions see the <strong>Address Fields</strong> section below.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="address-fields">Address Fields</h2>
+<table>
+<thead>
+<tr>
+<th>Address</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>addressLine</td>
+<td>The official street line of an address relative to the area, as specified by the Locality, or PostalCode, properties. Typical use of this element would be to provide a street address or any official address.<br><br> <strong>Example</strong>: 1 Microsoft Way</td>
+</tr>
+<tr>
+<td>locality</td>
+<td>A string specifying the populated place for the address. This typically refers to a city, but may refer to a suburb or a neighborhood in certain countries.<br><br> <strong>Example</strong>: Seattle</td>
+</tr>
+<tr>
+<td>neighborhood</td>
+<td>A string specifying the neighborhood for an address.<br><br> You must specify includeNeighborhood=1 in your request to return the neighborhood.<br><br> <strong>Example</strong>: Ballard</td>
+</tr>
+<tr>
+<td>adminDistrict</td>
+<td>A string specifying the subdivision name in the country or region for an address. This element is typically treated as the first order administrative subdivision, but in some cases it is the second, third, or fourth order subdivision in a country, dependency, or region.<br><br> <strong>Example</strong>: WA</td>
+</tr>
+<tr>
+<td>adminDistrict2</td>
+<td>A string specifying the subdivision name in the country or region for an address. This element is used when there is another level of subdivision information for a location, such as the county.<br><br> <strong>Example</strong>: King</td>
+</tr>
+<tr>
+<td>formattedAddress</td>
+<td>A string specifying the complete address. This address may not include the country or region.<br><br> <strong>Example</strong>: 1 Microsoft Way, Redmond, WA 98052-8300</td>
+</tr>
+<tr>
+<td>postalCode</td>
+<td>A string specifying the post code, postal code, or ZIP Code of an address.<br><br> <strong>Example</strong>: 98178</td>
+</tr>
+<tr>
+<td>countryRegion</td>
+<td>A string specifying the country or region name of an address.<br><br> <strong>Example</strong>: United States</td>
+</tr>
+<tr>
+<td>countryRegionIso2</td>
+<td>A string specifying the <a href="http://www.iso.org/iso/country_codes.htm">two-letter ISO country code</a>.<br><br> You must specify include=ciso2 in your request to return this ISO country code.<br><br> <strong>Example</strong>: US</td>
+</tr>
+<tr>
+<td>landmark</td>
+<td>A string specifying the name of the landmark when there is a landmark associated with an address.<br><br> <strong>Example</strong>: Eiffel Tower</td>
+</tr>
+</tbody>
+</table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/v-chrfr/bingmaps-rest-api/blob/master/docs-ref-index/common-parameters-and-types/location-and-area-types.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

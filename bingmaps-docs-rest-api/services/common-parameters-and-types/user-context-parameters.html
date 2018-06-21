@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>User Context Parameters | Microsoft Docs </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="User Context Parameters | Microsoft Docs ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+
+
+<p>Use user context parameters to specify information about the user. You can increase the accuracy of a location result when you specify a user context parameter in your request URL.</p>
+<p>When an alias is provided, you can use the alias to shorten the length of the query parameter.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Alias</th>
+<th>Description</th>
+<th>Values</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>userMapView</td>
+<td>umv</td>
+<td><strong>Optional.</strong> The geographic region that corresponds to the current viewport.</td>
+<td>A rectangular area on the earth defined as a bounding box object. The sides of the rectangles are defined by latitude and longitude values. For more information, see <a href="../rest-services/location-and-area-types.md">Location and Area Types</a>. When you specify this parameter, the geographical area is taken into account when computing the results of a location query.<br><br> <strong>Example</strong>: 40.879052728414536,-122.51596324145794,49.77062925696373,-105.74403114616871</td>
+</tr>
+<tr>
+<td>userLocation</td>
+<td>ul</td>
+<td><strong>Optional</strong>. The user’s current position.</td>
+<td>A point on the earth specified as a latitude and longitude. When you specify this parameter, the user’s location is taken into account and the results returned may be more relevant to the user.<br><br> <strong>Example</strong>: userLocation=51.504360719046616,-0.12600176611298197</td>
+</tr>
+<tr>
+<td>userIp</td>
+<td>uip</td>
+<td><strong>Optional</strong>. An Internet Protocol version 4 (IPv4) address.</td>
+<td>The default address is the IPv4 address of the request. When you specify this parameter, the location associated with the IP address is taken into account in computing the results of a location query.<br><br> <strong>Example:</strong> userIp=111.111.11.11</td>
+</tr>
+<tr>
+<td>userRegion</td>
+<td>ur</td>
+<td><strong>Optional.</strong> The region the user is in.</td>
+<td>A string that an <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 Alpha-2 region/country code</a>. This will alter Geopolitical disputed borders and labels to align with the specified user region.<br><br> <strong>Example</strong>: userRegion=SA</td>
+</tr>
+</tbody>
+</table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/v-chrfr/bingmaps-rest-api/blob/master/docs-ref-index/common-parameters-and-types/user-context-parameters.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

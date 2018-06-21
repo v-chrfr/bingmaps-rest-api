@@ -1,0 +1,1280 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>JSON Data Contracts | Microsoft Docs </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="JSON Data Contracts | Microsoft Docs ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="json-data-contracts">JSON Data Contracts</h1>
+
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>Update: Since writing this documentation the Bing Maps team has released an open source portable class library which makes it easy to access the Bing Maps REST services from any .NET application. You can find this library on GitHub              <a href="https://github.com/Microsoft/BingMapsRESTToolkit/">here</a>. Going forward the data contracts on this page will no longer be updated. Please refer to the .NET REST Toolkit for the latest JSON contrcts.</p>
+</div>
+<p>The following data contracts include classes for all Bing Maps REST Services. For examples of how to use these data contracts, see <a href="../rest-services/using-the-rest-services-with-net.md">Using the REST Services with .NET</a>.</p>
+<h2 id="data-contracts">Data Contracts</h2>
+<h3 id="c-data-contracts">C# Data Contracts</h3>
+<pre><code class="lang-csharp">using System.Runtime.Serialization;  
+  
+namespace BingMapsRESTService.Common.JSON  
+{  
+    [DataContract]  
+    public class Address  
+    {  
+        [DataMember(Name = &quot;addressLine&quot;, EmitDefaultValue = false)]  
+        public string AddressLine { get; set; }  
+  
+        [DataMember(Name = &quot;adminDistrict&quot;, EmitDefaultValue = false)]  
+        public string AdminDistrict { get; set; }  
+  
+        [DataMember(Name = &quot;adminDistrict2&quot;, EmitDefaultValue = false)]  
+        public string AdminDistrict2 { get; set; }  
+  
+        [DataMember(Name = &quot;countryRegion&quot;, EmitDefaultValue = false)]  
+        public string CountryRegion { get; set; }  
+  
+        [DataMember(Name = &quot;countryRegionIso2&quot;, EmitDefaultValue = false)]  
+        public string CountryRegionIso2 { get; set; }  
+  
+        [DataMember(Name = &quot;formattedAddress&quot;, EmitDefaultValue = false)]  
+        public string FormattedAddress { get; set; }  
+  
+        [DataMember(Name = &quot;locality&quot;, EmitDefaultValue = false)]  
+        public string Locality { get; set; }  
+  
+        [DataMember(Name = &quot;postalCode&quot;, EmitDefaultValue = false)]  
+        public string PostalCode { get; set; }  
+  
+        [DataMember(Name = &quot;neighborhood&quot;, EmitDefaultValue = false)]  
+        public string Neighborhood { get; set; }  
+  
+        [DataMember(Name = &quot;landmark&quot;, EmitDefaultValue = false)]  
+        public string Landmark { get; set; }  
+    }  
+  
+    [DataContract(Namespace = &quot;http://schemas.microsoft.com/search/local/ws/rest/v1&quot;)]  
+    public class BirdseyeMetadata : ImageryMetadata  
+    {  
+        [DataMember(Name = &quot;orientation&quot;, EmitDefaultValue = false)]  
+        public double Orientation { get; set; }  
+  
+        [DataMember(Name = &quot;tilesX&quot;, EmitDefaultValue = false)]  
+        public int TilesX { get; set; }  
+  
+        [DataMember(Name = &quot;tilesY&quot;, EmitDefaultValue = false)]  
+        public int TilesY { get; set; }  
+    }  
+  
+    [DataContract]  
+    public class BoundingBox  
+    {  
+        [DataMember(Name = &quot;southLatitude&quot;, EmitDefaultValue = false)]  
+        public double SouthLatitude { get; set; }  
+  
+        [DataMember(Name = &quot;westLongitude&quot;, EmitDefaultValue = false)]  
+        public double WestLongitude { get; set; }  
+  
+        [DataMember(Name = &quot;northLatitude&quot;, EmitDefaultValue = false)]  
+        public double NorthLatitude { get; set; }  
+  
+        [DataMember(Name = &quot;eastLongitude&quot;, EmitDefaultValue = false)]  
+        public double EastLongitude { get; set; }  
+    }  
+  
+    [DataContract]  
+    public class Detail  
+    {  
+        [DataMember(Name = &quot;compassDegrees&quot;, EmitDefaultValue = false)]  
+        public int CompassDegrees { get; set; }  
+  
+        [DataMember(Name = &quot;maneuverType&quot;, EmitDefaultValue = false)]  
+        public string ManeuverType { get; set; }  
+  
+        [DataMember(Name = &quot;startPathIndices&quot;, EmitDefaultValue = false)]  
+        public int[] StartPathIndices { get; set; }  
+  
+        [DataMember(Name = &quot;endPathIndices&quot;, EmitDefaultValue = false)]  
+        public int[] EndPathIndices { get; set; }  
+  
+        [DataMember(Name = &quot;roadType&quot;, EmitDefaultValue = false)]  
+        public string RoadType { get; set; }  
+  
+        [DataMember(Name = &quot;locationCodes&quot;, EmitDefaultValue = false)]  
+        public string[] LocationCodes { get; set; }  
+  
+        [DataMember(Name = &quot;names&quot;, EmitDefaultValue = false)]  
+        public string[] Names { get; set; }  
+  
+        [DataMember(Name = &quot;mode&quot;, EmitDefaultValue = false)]  
+        public string Mode { get; set; }  
+  
+        [DataMember(Name = &quot;roadShieldRequestParameters&quot;, EmitDefaultValue = false)]  
+        public RoadShield roadShieldRequestParameters { get; set; }  
+    }  
+  
+    [DataContract]  
+    public class Generalization  
+    {  
+        [DataMember(Name = &quot;pathIndices&quot;, EmitDefaultValue = false)]  
+        public int[] PathIndices { get; set; }  
+  
+        [DataMember(Name = &quot;latLongTolerance&quot;, EmitDefaultValue = false)]  
+        public double LatLongTolerance { get; set; }  
+    }  
+  
+    [DataContract]  
+    public class Hint  
+    {  
+        [DataMember(Name = &quot;hintType&quot;, EmitDefaultValue = false)]  
+        public string HintType { get; set; }  
+  
+        [DataMember(Name = &quot;text&quot;, EmitDefaultValue = false)]  
+        public string Text { get; set; }  
+    }  
+  
+    [DataContract(Namespace = &quot;http://schemas.microsoft.com/search/local/ws/rest/v1&quot;)]  
+    [KnownType(typeof(StaticMapMetadata))]  
+    [KnownType(typeof(BirdseyeMetadata))]  
+    public class ImageryMetadata : Resource  
+    {  
+        [DataMember(Name = &quot;imageHeight&quot;, EmitDefaultValue = false)]  
+        public string ImageHeight { get; set; }  
+  
+        [DataMember(Name = &quot;imageWidth&quot;, EmitDefaultValue = false)]  
+        public string ImageWidth { get; set; }  
+  
+        [DataMember(Name = &quot;imageUrl&quot;, EmitDefaultValue = false)]  
+        public string ImageUrl { get; set; }  
+  
+        [DataMember(Name = &quot;imageUrlSubdomains&quot;, EmitDefaultValue = false)]  
+        public string[] ImageUrlSubdomains { get; set; }  
+  
+        [DataMember(Name = &quot;vintageEnd&quot;, EmitDefaultValue = false)]  
+        public string VintageEnd { get; set; }  
+  
+        [DataMember(Name = &quot;vintageStart&quot;, EmitDefaultValue = false)]  
+        public string VintageStart { get; set; }  
+  
+        [DataMember(Name = &quot;zoomMax&quot;, EmitDefaultValue = false)]  
+        public int ZoomMax { get; set; }  
+  
+        [DataMember(Name = &quot;zoomMin&quot;, EmitDefaultValue = false)]  
+        public int ZoomMin { get; set; }  
+    }  
+  
+    [DataContract]  
+    public class Instruction  
+    {  
+        [DataMember(Name = &quot;maneuverType&quot;, EmitDefaultValue = false)]  
+        public string ManeuverType { get; set; }  
+  
+        [DataMember(Name = &quot;text&quot;, EmitDefaultValue = false)]  
+        public string Text { get; set; }  
+    }  
+  
+    [DataContract]  
+    public class ItineraryItem  
+    {  
+        [DataMember(Name = &quot;childItineraryItems&quot;, EmitDefaultValue = false)]  
+        public ItineraryItem[] ChildItineraryItems { get; set; }  
+  
+        [DataMember(Name = &quot;compassDirection&quot;, EmitDefaultValue = false)]  
+        public string CompassDirection { get; set; }  
+  
+        [DataMember(Name = &quot;details&quot;, EmitDefaultValue = false)]  
+        public Detail[] Details { get; set; }  
+  
+        [DataMember(Name = &quot;exit&quot;, EmitDefaultValue = false)]  
+        public string Exit { get; set; }  
+  
+        [DataMember(Name = &quot;hints&quot;, EmitDefaultValue = false)]  
+        public Hint[] Hints { get; set; }  
+  
+        [DataMember(Name = &quot;iconType&quot;, EmitDefaultValue = false)]  
+        public string IconType { get; set; }  
+  
+        [DataMember(Name = &quot;instruction&quot;, EmitDefaultValue = false)]  
+        public Instruction Instruction { get; set; }  
+  
+        [DataMember(Name = &quot;maneuverPoint&quot;, EmitDefaultValue = false)]  
+        public Point ManeuverPoint { get; set; }  
+  
+        [DataMember(Name = &quot;sideOfStreet&quot;, EmitDefaultValue = false)]  
+        public string SideOfStreet { get; set; }  
+  
+        [DataMember(Name = &quot;signs&quot;, EmitDefaultValue = false)]  
+        public string[] Signs { get; set; }  
+  
+        [DataMember(Name = &quot;time&quot;, EmitDefaultValue = false)]  
+        public string Time { get; set; }  
+  
+        [DataMember(Name = &quot;tollZone&quot;, EmitDefaultValue = false)]  
+        public string TollZone { get; set; }  
+  
+        [DataMember(Name = &quot;towardsRoadName&quot;, EmitDefaultValue = false)]  
+        public string TowardsRoadName { get; set; }  
+  
+        [DataMember(Name = &quot;transitLine&quot;, EmitDefaultValue = false)]  
+        public TransitLine TransitLine { get; set; }  
+  
+        [DataMember(Name = &quot;transitStopId&quot;, EmitDefaultValue = false)]  
+        public int TransitStopId { get; set; }  
+  
+        [DataMember(Name = &quot;transitTerminus&quot;, EmitDefaultValue = false)]  
+        public string TransitTerminus { get; set; }  
+  
+        [DataMember(Name = &quot;travelDistance&quot;, EmitDefaultValue = false)]  
+        public double TravelDistance { get; set; }  
+  
+        [DataMember(Name = &quot;travelDuration&quot;, EmitDefaultValue = false)]  
+        public double TravelDuration { get; set; }  
+  
+        [DataMember(Name = &quot;travelMode&quot;, EmitDefaultValue = false)]  
+        public string TravelMode { get; set; }  
+  
+        [DataMember(Name = &quot;warning&quot;, EmitDefaultValue = false)]  
+        public Warning[] Warning { get; set; }  
+    }  
+  
+    [DataContract]  
+    public class Line  
+    {  
+        [DataMember(Name = &quot;type&quot;, EmitDefaultValue = false)]  
+        public string Type { get; set; }  
+  
+        [DataMember(Name = &quot;coordinates&quot;, EmitDefaultValue = false)]  
+        public double[][] Coordinates { get; set; }  
+    }  
+  
+    [DataContract(Namespace = &quot;http://schemas.microsoft.com/search/local/ws/rest/v1&quot;)]  
+    public class Location : Resource  
+    {  
+        [DataMember(Name = &quot;name&quot;, EmitDefaultValue = false)]  
+        public string Name { get; set; }  
+  
+        [DataMember(Name = &quot;point&quot;, EmitDefaultValue = false)]  
+        public Point Point { get; set; }  
+  
+        [DataMember(Name = &quot;entityType&quot;, EmitDefaultValue = false)]  
+        public string EntityType { get; set; }  
+  
+        [DataMember(Name = &quot;address&quot;, EmitDefaultValue = false)]  
+        public Address Address { get; set; }  
+  
+        [DataMember(Name = &quot;confidence&quot;, EmitDefaultValue = false)]  
+        public string Confidence { get; set; }  
+  
+        [DataMember(Name = &quot;matchCodes&quot;, EmitDefaultValue = false)]  
+        public string[] MatchCodes { get; set; }  
+  
+        [DataMember(Name = &quot;geocodePoints&quot;, EmitDefaultValue = false)]  
+        public Point[] GeocodePoints { get; set; }  
+  
+        [DataMember(Name = &quot;queryParseValues&quot;, EmitDefaultValue = false)]  
+        public QueryParseValue[] QueryParseValues { get; set; }  
+    }  
+  
+    [DataContract]  
+    public class QueryParseValue  
+    {  
+       [DataMember(Name = &quot;property&quot;, EmitDefaultValue = false)]  
+        public string Property { get; set; }  
+  
+       [DataMember(Name = &quot;value&quot;, EmitDefaultValue = false)]  
+        public string Value { get; set; }  
+    }  
+  
+    [DataContract(Namespace = &quot;http://schemas.microsoft.com/search/local/ws/rest/v1&quot;)]  
+    public class PinInfo  
+    {  
+        [DataMember(Name = &quot;anchor&quot;, EmitDefaultValue = false)]  
+        public Pixel Anchor { get; set; }  
+  
+        [DataMember(Name = &quot;bottomRightOffset&quot;, EmitDefaultValue = false)]  
+        public Pixel BottomRightOffset { get; set; }  
+  
+        [DataMember(Name = &quot;topLeftOffset&quot;, EmitDefaultValue = false)]  
+        public Pixel TopLeftOffset { get; set; }  
+  
+        [DataMember(Name = &quot;point&quot;, EmitDefaultValue = false)]  
+        public Point Point { get; set; }  
+    }  
+  
+    [DataContract(Namespace = &quot;http://schemas.microsoft.com/search/local/ws/rest/v1&quot;)]  
+    public class Pixel  
+    {  
+        [DataMember(Name = &quot;x&quot;, EmitDefaultValue = false)]  
+        public string X { get; set; }  
+  
+        [DataMember(Name = &quot;y&quot;, EmitDefaultValue = false)]  
+        public string Y { get; set; }  
+    }  
+  
+    [DataContract]  
+    public class Point : Shape  
+    {  
+        [DataMember(Name = &quot;type&quot;, EmitDefaultValue = false)]  
+        public string Type { get; set; }  
+  
+        /// &lt;summary&gt;  
+        /// Latitude,Longitude  
+        /// &lt;/summary&gt;  
+        [DataMember(Name = &quot;coordinates&quot;, EmitDefaultValue = false)]  
+        public double[] Coordinates { get; set; }  
+  
+        [DataMember(Name = &quot;calculationMethod&quot;, EmitDefaultValue = false)]  
+        public string CalculationMethod { get; set; }  
+  
+        [DataMember(Name = &quot;usageTypes&quot;, EmitDefaultValue = false)]  
+        public string[] UsageTypes { get; set; }  
+    }  
+  
+    [DataContract]  
+    [KnownType(typeof(Location))]  
+    [KnownType(typeof(Route))]  
+    [KnownType(typeof(TrafficIncident))]  
+    [KnownType(typeof(ImageryMetadata))]  
+    [KnownType(typeof(ElevationData))]  
+    [KnownType(typeof(SeaLevelData))]      
+    [KnownType(typeof(CompressedPointList))]  
+    public class Resource  
+    {  
+        [DataMember(Name = &quot;bbox&quot;, EmitDefaultValue = false)]  
+        public double[] BoundingBox { get; set; }  
+  
+        [DataMember(Name = &quot;__type&quot;, EmitDefaultValue = false)]  
+        public string Type { get; set; }  
+    }  
+  
+    [DataContract]  
+    public class ResourceSet  
+    {  
+        [DataMember(Name = &quot;estimatedTotal&quot;, EmitDefaultValue = false)]  
+        public long EstimatedTotal { get; set; }  
+  
+        [DataMember(Name = &quot;resources&quot;, EmitDefaultValue = false)]  
+        public Resource[] Resources { get; set; }  
+    }  
+  
+    [DataContract]  
+    public class Response  
+    {  
+        [DataMember(Name = &quot;copyright&quot;, EmitDefaultValue = false)]  
+        public string Copyright { get; set; }  
+  
+        [DataMember(Name = &quot;brandLogoUri&quot;, EmitDefaultValue = false)]  
+        public string BrandLogoUri { get; set; }  
+  
+        [DataMember(Name = &quot;statusCode&quot;, EmitDefaultValue = false)]  
+        public int StatusCode { get; set; }  
+  
+        [DataMember(Name = &quot;statusDescription&quot;, EmitDefaultValue = false)]  
+        public string StatusDescription { get; set; }  
+  
+        [DataMember(Name = &quot;authenticationResultCode&quot;, EmitDefaultValue = false)]  
+        public string AuthenticationResultCode { get; set; }  
+  
+        [DataMember(Name = &quot;errorDetails&quot;, EmitDefaultValue = false)]  
+        public string[] errorDetails { get; set; }  
+  
+        [DataMember(Name = &quot;traceId&quot;, EmitDefaultValue = false)]  
+        public string TraceId { get; set; }  
+  
+        [DataMember(Name = &quot;resourceSets&quot;, EmitDefaultValue = false)]  
+        public ResourceSet[] ResourceSets { get; set; }  
+    }  
+  
+    [DataContract]  
+    public class RoadShield  
+    {  
+        [DataMember(Name = &quot;bucket&quot;, EmitDefaultValue = false)]  
+        public int Bucket { get; set; }  
+  
+        [DataMember(Name = &quot;shields&quot;, EmitDefaultValue = false)]  
+        public Shield[] Shields { get; set; }  
+    }  
+  
+    [DataContract(Namespace = &quot;http://schemas.microsoft.com/search/local/ws/rest/v1&quot;)]  
+    public class Route : Resource  
+    {  
+        [DataMember(Name = &quot;id&quot;, EmitDefaultValue = false)]  
+        public string Id { get; set; }  
+  
+        [DataMember(Name = &quot;distanceUnit&quot;, EmitDefaultValue = false)]  
+        public string DistanceUnit { get; set; }  
+  
+        [DataMember(Name = &quot;durationUnit&quot;, EmitDefaultValue = false)]  
+        public string DurationUnit { get; set; }  
+  
+        [DataMember(Name = &quot;travelDistance&quot;, EmitDefaultValue = false)]  
+        public double TravelDistance { get; set; }  
+  
+        [DataMember(Name = &quot;travelDuration&quot;, EmitDefaultValue = false)]  
+        public double TravelDuration { get; set; }  
+  
+        [DataMember(Name = &quot;routeLegs&quot;, EmitDefaultValue = false)]  
+        public RouteLeg[] RouteLegs { get; set; }  
+  
+        [DataMember(Name = &quot;routePath&quot;, EmitDefaultValue = false)]  
+        public RoutePath RoutePath { get; set; }  
+    }  
+  
+    [DataContract]  
+    public class RouteLeg  
+    {  
+        [DataMember(Name = &quot;travelDistance&quot;, EmitDefaultValue = false)]  
+        public double TravelDistance { get; set; }  
+  
+        [DataMember(Name = &quot;travelDuration&quot;, EmitDefaultValue = false)]  
+        public double TravelDuration { get; set; }  
+  
+        [DataMember(Name = &quot;actualStart&quot;, EmitDefaultValue = false)]  
+        public Point ActualStart { get; set; }  
+  
+        [DataMember(Name = &quot;actualEnd&quot;, EmitDefaultValue = false)]  
+        public Point ActualEnd { get; set; }  
+  
+        [DataMember(Name = &quot;startLocation&quot;, EmitDefaultValue = false)]  
+        public Location StartLocation { get; set; }  
+  
+        [DataMember(Name = &quot;endLocation&quot;, EmitDefaultValue = false)]  
+        public Location EndLocation { get; set; }  
+  
+        [DataMember(Name = &quot;itineraryItems&quot;, EmitDefaultValue = false)]  
+        public ItineraryItem[] ItineraryItems { get; set; }  
+    }  
+  
+    [DataContract]  
+    public class RoutePath  
+    {  
+        [DataMember(Name = &quot;line&quot;, EmitDefaultValue = false)]  
+        public Line Line { get; set; }  
+  
+        [DataMember(Name = &quot;generalizations&quot;, EmitDefaultValue = false)]  
+        public Generalization[] Generalizations { get; set; }  
+    }  
+  
+    [DataContract]  
+    [KnownType(typeof(Point))]  
+    public class Shape  
+    {  
+        [DataMember(Name = &quot;boundingBox&quot;, EmitDefaultValue = false)]  
+        public double[] BoundingBox { get; set; }  
+    }  
+  
+    [DataContract]  
+    public class Shield  
+    {  
+        [DataMember(Name = &quot;labels&quot;, EmitDefaultValue = false)]  
+        public string[] Labels { get; set; }  
+  
+        [DataMember(Name = &quot;roadShieldType&quot;, EmitDefaultValue = false)]  
+        public int RoadShieldType { get; set; }  
+    }  
+  
+    [DataContract(Namespace = &quot;http://schemas.microsoft.com/search/local/ws/rest/v1&quot;)]  
+    public class StaticMapMetadata : ImageryMetadata  
+    {  
+        [DataMember(Name = &quot;mapCenter&quot;, EmitDefaultValue = false)]  
+        public Point MapCenter { get; set; }  
+  
+        [DataMember(Name = &quot;pushpins&quot;, EmitDefaultValue = false)]  
+        public PinInfo[] Pushpins { get; set; }  
+  
+        [DataMember(Name = &quot;zoom&quot;, EmitDefaultValue = false)]  
+        public string Zoom { get; set; }  
+    }  
+  
+    [DataContract(Namespace = &quot;http://schemas.microsoft.com/search/local/ws/rest/v1&quot;)]  
+    public class TrafficIncident : Resource  
+    {  
+        [DataMember(Name = &quot;point&quot;, EmitDefaultValue = false)]  
+        public Point Point { get; set; }  
+  
+        [DataMember(Name = &quot;congestion&quot;, EmitDefaultValue = false)]  
+        public string Congestion { get; set; }  
+  
+        [DataMember(Name = &quot;description&quot;, EmitDefaultValue = false)]  
+        public string Description { get; set; }  
+  
+        [DataMember(Name = &quot;detour&quot;, EmitDefaultValue = false)]  
+        public string Detour { get; set; }  
+  
+        [DataMember(Name = &quot;start&quot;, EmitDefaultValue = false)]  
+        public string Start { get; set; }  
+  
+        [DataMember(Name = &quot;end&quot;, EmitDefaultValue = false)]  
+        public string End { get; set; }  
+  
+        [DataMember(Name = &quot;incidentId&quot;, EmitDefaultValue = false)]  
+        public long IncidentId { get; set; }  
+  
+        [DataMember(Name = &quot;lane&quot;, EmitDefaultValue = false)]  
+        public string Lane { get; set; }  
+  
+        [DataMember(Name = &quot;lastModified&quot;, EmitDefaultValue = false)]  
+        public string LastModified { get; set; }  
+  
+        [DataMember(Name = &quot;roadClosed&quot;, EmitDefaultValue = false)]  
+        public bool RoadClosed { get; set; }  
+  
+        [DataMember(Name = &quot;severity&quot;, EmitDefaultValue = false)]  
+        public int Severity { get; set; }  
+  
+        [DataMember(Name = &quot;toPoint&quot;, EmitDefaultValue = false)]  
+        public Point ToPoint { get; set; }  
+  
+        [DataMember(Name = &quot;locationCodes&quot;, EmitDefaultValue = false)]  
+        public string[] LocationCodes { get; set; }  
+  
+        [DataMember(Name = &quot;type&quot;, EmitDefaultValue = false)]  
+        public int Type { get; set; }  
+  
+        [DataMember(Name = &quot;verified&quot;, EmitDefaultValue = false)]  
+        public bool Verified { get; set; }  
+    }  
+  
+    [DataContract]  
+    public class TransitLine  
+    {  
+        [DataMember(Name = &quot;verboseName&quot;, EmitDefaultValue = false)]  
+        public string verboseName { get; set; }  
+  
+        [DataMember(Name = &quot;abbreviatedName&quot;, EmitDefaultValue = false)]  
+        public string abbreviatedName { get; set; }  
+  
+        [DataMember(Name = &quot;agencyId&quot;, EmitDefaultValue = false)]  
+        public long AgencyId { get; set; }  
+  
+        [DataMember(Name = &quot;agencyName&quot;, EmitDefaultValue = false)]  
+        public string agencyName { get; set; }  
+  
+        [DataMember(Name = &quot;lineColor&quot;, EmitDefaultValue = false)]  
+        public long lineColor { get; set; }  
+  
+        [DataMember(Name = &quot;lineTextColor&quot;, EmitDefaultValue = false)]  
+        public long lineTextColor { get; set; }  
+  
+        [DataMember(Name = &quot;uri&quot;, EmitDefaultValue = false)]  
+        public string uri { get; set; }  
+  
+        [DataMember(Name = &quot;phoneNumber&quot;, EmitDefaultValue = false)]  
+        public string phoneNumber { get; set; }  
+  
+        [DataMember(Name = &quot;providerInfo&quot;, EmitDefaultValue = false)]  
+        public string providerInfo { get; set; }  
+    }  
+  
+    [DataContract]  
+    public class Warning  
+    {  
+        [DataMember(Name = &quot;warningType&quot;, EmitDefaultValue = false)]  
+        public string WarningType { get; set; }  
+  
+        [DataMember(Name = &quot;severity&quot;, EmitDefaultValue = false)]  
+        public string Severity { get; set; }  
+  
+        [DataMember(Name = &quot;text&quot;, EmitDefaultValue = false)]  
+        public string Text { get; set; }  
+    }  
+  
+    [DataContract(Namespace = &quot;http://schemas.microsoft.com/search/local/ws/rest/v1&quot;)]  
+    public class CompressedPointList : Resource  
+    {  
+        [DataMember(Name = &quot;value&quot;, EmitDefaultValue = false)]  
+        public string Value { get; set; }  
+    }  
+  
+    [DataContract(Namespace = &quot;http://schemas.microsoft.com/search/local/ws/rest/v1&quot;)]  
+    public class ElevationData : Resource  
+    {  
+        [DataMember(Name = &quot;elevations&quot;, EmitDefaultValue = false)]  
+        public int[] Elevations { get; set; }  
+  
+        [DataMember(Name = &quot;zoomLevel&quot;, EmitDefaultValue = false)]  
+        public int ZoomLevel { get; set; }  
+    }  
+  
+    [DataContract(Namespace = &quot;http://schemas.microsoft.com/search/local/ws/rest/v1&quot;)]  
+    public class SeaLevelData : Resource  
+    {  
+        [DataMember(Name = &quot;offsets&quot;, EmitDefaultValue = false)]  
+        public int[] Offsets { get; set; }  
+  
+        [DataMember(Name = &quot;zoomLevel&quot;, EmitDefaultValue = false)]  
+        public int ZoomLevel { get; set; }  
+    }  
+}  
+</code></pre>
+<h3 id="visual-basic-data-contracts">Visual Basic Data Contracts</h3>
+<pre><code class="lang-vb">Imports System.Runtime.Serialization  
+  
+Namespace BingMapsRESTService.Common.JSON  
+    &lt;DataContract()&gt; _  
+    Public Class Address  
+        &lt;DataMember(Name:=&quot;addressLine&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property AddressLine() As String  
+  
+        &lt;DataMember(Name:=&quot;adminDistrict&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property AdminDistrict() As String  
+  
+        &lt;DataMember(Name:=&quot;adminDistrict2&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property AdminDistrict2() As String  
+  
+        &lt;DataMember(Name:=&quot;countryRegion&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property CountryRegion() As String  
+  
+        &lt;DataMember(Name:=&quot;countryRegionIso2&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property CountryRegionIso2() As String  
+  
+        &lt;DataMember(Name:=&quot;formattedAddress&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property FormattedAddress() As String  
+  
+        &lt;DataMember(Name:=&quot;locality&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property Locality() As String  
+  
+        &lt;DataMember(Name:=&quot;postalCode&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property PostalCode() As String  
+  
+        &lt;DataMember(Name:=&quot;neighborhood&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property Neighborhood() As String  
+  
+        &lt;DataMember(Name:=&quot;landmark&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property Landmark() As String  
+    End Class  
+  
+    &lt;DataContract([Namespace]:=&quot;http://schemas.microsoft.com/search/local/ws/rest/v1&quot;)&gt; _  
+    Public Class BirdseyeMetadata  
+        Inherits ImageryMetadata  
+        &lt;DataMember(Name:=&quot;orientation&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property Orientation() As Double  
+  
+        &lt;DataMember(Name:=&quot;tilesX&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property TilesX() As Integer  
+  
+        &lt;DataMember(Name:=&quot;tilesY&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property TilesY() As Integer  
+    End Class  
+  
+    &lt;DataContract()&gt; _  
+    Public Class BoundingBox  
+        &lt;DataMember(Name:=&quot;southLatitude&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property SouthLatitude() As Double  
+  
+        &lt;DataMember(Name:=&quot;westLongitude&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property WestLongitude() As Double  
+  
+        &lt;DataMember(Name:=&quot;northLatitude&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property NorthLatitude() As Double  
+  
+        &lt;DataMember(Name:=&quot;eastLongitude&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property EastLongitude() As Double  
+    End Class  
+  
+    &lt;DataContract()&gt; _  
+    Public Class Detail  
+        &lt;DataMember(Name:=&quot;compassDegrees&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property CompassDegrees() As Integer  
+  
+        &lt;DataMember(Name:=&quot;maneuverType&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property ManeuverType() As String  
+  
+        &lt;DataMember(Name:=&quot;startPathIndices&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property StartPathIndices() As Integer()  
+  
+        &lt;DataMember(Name:=&quot;endPathIndices&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property EndPathIndices() As Integer()  
+  
+        &lt;DataMember(Name:=&quot;roadType&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property RoadType() As String  
+  
+        &lt;DataMember(Name:=&quot;locationCodes&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property LocationCodes() As String()  
+  
+        &lt;DataMember(Name:=&quot;names&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property Names() As String()  
+  
+        &lt;DataMember(Name:=&quot;mode&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property Mode() As String  
+  
+        &lt;DataMember(Name:=&quot;roadShieldRequestParameters&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property roadShieldRequestParameters() As RoadShield  
+    End Class  
+  
+    &lt;DataContract()&gt; _  
+    Public Class Generalization  
+        &lt;DataMember(Name:=&quot;pathIndices&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property PathIndices() As Integer()  
+  
+        &lt;DataMember(Name:=&quot;latLongTolerance&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property LatLongTolerance() As Double  
+    End Class  
+  
+    &lt;DataContract()&gt; _  
+    Public Class Hint  
+        &lt;DataMember(Name:=&quot;hintType&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property HintType() As String  
+  
+        &lt;DataMember(Name:=&quot;text&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property Text() As String  
+    End Class  
+  
+    &lt;DataContract([Namespace]:=&quot;http://schemas.microsoft.com/search/local/ws/rest/v1&quot;)&gt; _  
+    &lt;KnownType(GetType(StaticMapMetadata))&gt; _  
+    &lt;KnownType(GetType(BirdseyeMetadata))&gt; _  
+    Public Class ImageryMetadata  
+        Inherits Resource  
+        &lt;DataMember(Name:=&quot;imageHeight&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property ImageHeight() As String  
+  
+        &lt;DataMember(Name:=&quot;imageWidth&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property ImageWidth() As String  
+  
+        &lt;DataMember(Name:=&quot;imageUrl&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property ImageUrl() As String  
+  
+        &lt;DataMember(Name:=&quot;imageUrlSubdomains&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property ImageUrlSubdomains() As String()  
+  
+        &lt;DataMember(Name:=&quot;vintageEnd&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property VintageEnd() As String  
+  
+        &lt;DataMember(Name:=&quot;vintageStart&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property VintageStart() As String  
+  
+        &lt;DataMember(Name:=&quot;zoomMax&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property ZoomMax() As Integer  
+  
+        &lt;DataMember(Name:=&quot;zoomMin&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property ZoomMin() As Integer  
+    End Class  
+  
+    &lt;DataContract()&gt; _  
+    Public Class Instruction  
+        &lt;DataMember(Name:=&quot;maneuverType&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property ManeuverType() As String  
+  
+        &lt;DataMember(Name:=&quot;text&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property Text() As String  
+    End Class  
+  
+    &lt;DataContract()&gt; _  
+    Public Class ItineraryItem  
+        &lt;DataMember(Name:=&quot;childItineraryItems&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property ChildItineraryItems() As ItineraryItem  
+  
+        &lt;DataMember(Name:=&quot;compassDirection&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property CompassDirection() As String  
+  
+        &lt;DataMember(Name:=&quot;details&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property Details() As Detail()  
+  
+        &lt;DataMember(Name:=&quot;exit&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property [Exit]() As String  
+  
+        &lt;DataMember(Name:=&quot;hints&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property Hints() As Hint()  
+  
+        &lt;DataMember(Name:=&quot;iconType&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property IconType() As String  
+  
+        &lt;DataMember(Name:=&quot;instruction&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property Instruction() As Instruction  
+  
+        &lt;DataMember(Name:=&quot;maneuverPoint&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property ManeuverPoint() As Point  
+  
+        &lt;DataMember(Name:=&quot;sideOfStreet&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property SideOfStreet() As String  
+  
+        &lt;DataMember(Name:=&quot;signs&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property Signs() As String()  
+  
+        &lt;DataMember(Name:=&quot;time&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property Time() As String  
+  
+        &lt;DataMember(Name:=&quot;tollZone&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property TollZone() As String  
+  
+        &lt;DataMember(Name:=&quot;towardsRoadName&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property TowardsRoadName() As String  
+  
+        &lt;DataMember(Name:=&quot;transitLine&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property TransitLine() As TransitLine  
+  
+        &lt;DataMember(Name:=&quot;transitStopId&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property TransitStopId() As Integer  
+  
+        &lt;DataMember(Name:=&quot;transitTerminus&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property TransitTerminus() As String  
+  
+        &lt;DataMember(Name:=&quot;travelDistance&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property TravelDistance() As Double  
+  
+        &lt;DataMember(Name:=&quot;travelDuration&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property TravelDuration() As Double  
+  
+        &lt;DataMember(Name:=&quot;travelMode&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property TravelMode() As String  
+  
+        &lt;DataMember(Name:=&quot;warning&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property Warning() As Warning()  
+    End Class  
+  
+    &lt;DataContract()&gt; _  
+    Public Class Line  
+        &lt;DataMember(Name:=&quot;type&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property Type() As String  
+  
+        &lt;DataMember(Name:=&quot;coordinates&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property Coordinates() As Double()()  
+    End Class  
+  
+    &lt;DataContract([Namespace]:=&quot;http://schemas.microsoft.com/search/local/ws/rest/v1&quot;)&gt; _  
+    Public Class Location  
+        Inherits Resource  
+        &lt;DataMember(Name:=&quot;name&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property Name() As String  
+  
+        &lt;DataMember(Name:=&quot;point&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property Point() As Point  
+  
+        &lt;DataMember(Name:=&quot;entityType&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property EntityType() As String  
+  
+        &lt;DataMember(Name:=&quot;address&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property Address() As Address  
+  
+        &lt;DataMember(Name:=&quot;confidence&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property Confidence() As String  
+  
+        &lt;DataMember(Name:=&quot;matchCodes&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property MatchCodes() As String()  
+  
+        &lt;DataMember(Name:=&quot;geocodePoints&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property GeocodePoints() As Point()  
+  
+        &lt;DataMember(Name:=&quot;queryParseValues&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property QueryParseValues() As QueryParseValue()  
+    End Class  
+  
+    &lt;DataContract()&gt; _  
+    Public Class QueryParseValue  
+        &lt;DataMember(Name:=&quot;property&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property Property() As String  
+  
+        &lt;DataMember(Name:=&quot;value&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property Value() As String        
+    End Class  
+  
+    &lt;DataContract([Namespace]:=&quot;http://schemas.microsoft.com/search/local/ws/rest/v1&quot;)&gt; _  
+    Public Class PinInfo  
+        &lt;DataMember(Name:=&quot;anchor&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property Anchor() As Pixel  
+  
+        &lt;DataMember(Name:=&quot;bottomRightOffset&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property BottomRightOffset() As Pixel  
+  
+        &lt;DataMember(Name:=&quot;topLeftOffset&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property TopLeftOffset() As Pixel  
+  
+        &lt;DataMember(Name:=&quot;point&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property Point() As Point  
+    End Class  
+  
+    &lt;DataContract([Namespace]:=&quot;http://schemas.microsoft.com/search/local/ws/rest/v1&quot;)&gt; _  
+    Public Class Pixel  
+        &lt;DataMember(Name:=&quot;x&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property X() As String  
+  
+        &lt;DataMember(Name:=&quot;y&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property Y() As String  
+    End Class  
+  
+    &lt;DataContract()&gt; _  
+    Public Class Point  
+        Inherits Shape  
+        &lt;DataMember(Name:=&quot;type&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property Type() As String  
+  
+        ''' &lt;summary&gt;  
+        ''' Latitude,Longitude  
+        ''' &lt;/summary&gt;  
+        &lt;DataMember(Name:=&quot;coordinates&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property Coordinates() As Double()  
+  
+        &lt;DataMember(Name:=&quot;calculationMethod&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property CalculationMethod() As String  
+  
+        &lt;DataMember(Name:=&quot;usageTypes&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property UsageTypes() As String()  
+    End Class  
+  
+    &lt;DataContract()&gt; _  
+    &lt;KnownType(GetType(Location))&gt; _  
+    &lt;KnownType(GetType(Route))&gt; _  
+    &lt;KnownType(GetType(TrafficIncident))&gt; _  
+    &lt;KnownType(GetType(ImageryMetadata))&gt; _  
+    &lt;KnownType(GetType(ElevationData))&gt; _  
+    &lt;KnownType(GetType(SeaLevelData))&gt; _  
+    &lt;KnownType(GetType(CompressedPointList))&gt; _  
+    Public Class Resource  
+        &lt;DataMember(Name:=&quot;bbox&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property BoundingBox() As Double()  
+  
+        &lt;DataMember(Name:=&quot;__type&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property Type() As String  
+    End Class  
+  
+    &lt;DataContract()&gt; _  
+    Public Class ResourceSet  
+        &lt;DataMember(Name:=&quot;estimatedTotal&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property EstimatedTotal() As Long  
+  
+        &lt;DataMember(Name:=&quot;resources&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property Resources() As Resource()  
+    End Class  
+  
+    &lt;DataContract()&gt; _  
+    Public Class Response  
+        &lt;DataMember(Name:=&quot;copyright&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property Copyright() As String  
+  
+        &lt;DataMember(Name:=&quot;brandLogoUri&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property BrandLogoUri() As String  
+  
+        &lt;DataMember(Name:=&quot;statusCode&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property StatusCode() As Integer  
+  
+        &lt;DataMember(Name:=&quot;statusDescription&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property StatusDescription() As String  
+  
+        &lt;DataMember(Name:=&quot;authenticationResultCode&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property AuthenticationResultCode() As String  
+  
+        &lt;DataMember(Name:=&quot;errorDetails&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property errorDetails() As String()  
+  
+        &lt;DataMember(Name:=&quot;traceId&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property TraceId() As String  
+  
+        &lt;DataMember(Name:=&quot;resourceSets&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property ResourceSets() As ResourceSet()  
+    End Class  
+  
+    &lt;DataContract()&gt; _  
+    Public Class RoadShield  
+        &lt;DataMember(Name:=&quot;bucket&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property Bucket() As Integer  
+  
+        &lt;DataMember(Name:=&quot;shields&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property Shields() As Shield()  
+    End Class  
+  
+    &lt;DataContract([Namespace]:=&quot;http://schemas.microsoft.com/search/local/ws/rest/v1&quot;)&gt; _  
+    Public Class Route  
+        Inherits Resource  
+        &lt;DataMember(Name:=&quot;id&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property Id() As String  
+  
+        &lt;DataMember(Name:=&quot;distanceUnit&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property DistanceUnit() As String  
+  
+        &lt;DataMember(Name:=&quot;durationUnit&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property DurationUnit() As String  
+  
+        &lt;DataMember(Name:=&quot;travelDistance&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property TravelDistance() As Double  
+  
+        &lt;DataMember(Name:=&quot;travelDuration&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property TravelDuration() As Double  
+  
+        &lt;DataMember(Name:=&quot;routeLegs&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property RouteLegs() As RouteLeg()  
+  
+        &lt;DataMember(Name:=&quot;routePath&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property RoutePath() As RoutePath  
+    End Class  
+  
+    &lt;DataContract()&gt; _  
+    Public Class RouteLeg  
+        &lt;DataMember(Name:=&quot;travelDistance&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property TravelDistance() As Double  
+  
+        &lt;DataMember(Name:=&quot;travelDuration&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property TravelDuration() As Double  
+  
+        &lt;DataMember(Name:=&quot;actualStart&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property ActualStart() As Point  
+  
+        &lt;DataMember(Name:=&quot;actualEnd&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property ActualEnd() As Point  
+  
+        &lt;DataMember(Name:=&quot;startLocation&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property StartLocation() As Location  
+  
+        &lt;DataMember(Name:=&quot;endLocation&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property EndLocation() As Location  
+  
+        &lt;DataMember(Name:=&quot;itineraryItems&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property ItineraryItems() As ItineraryItem()  
+    End Class  
+  
+    &lt;DataContract()&gt; _  
+    Public Class RoutePath  
+        &lt;DataMember(Name:=&quot;line&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property Line() As Line  
+  
+        &lt;DataMember(Name:=&quot;generalizations&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property Generalizations() As Generalization()  
+    End Class  
+  
+    &lt;DataContract()&gt; _  
+    &lt;KnownType(GetType(Point))&gt; _  
+    Public Class Shape  
+        &lt;DataMember(Name:=&quot;boundingBox&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property BoundingBox() As Double()  
+    End Class  
+  
+    &lt;DataContract()&gt; _  
+    Public Class Shield  
+        &lt;DataMember(Name:=&quot;labels&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property Labels() As String()  
+  
+        &lt;DataMember(Name:=&quot;roadShieldType&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property RoadShieldType() As Integer  
+    End Class  
+  
+    &lt;DataContract([Namespace]:=&quot;http://schemas.microsoft.com/search/local/ws/rest/v1&quot;)&gt; _  
+    Public Class StaticMapMetadata  
+        Inherits ImageryMetadata  
+        &lt;DataMember(Name:=&quot;mapCenter&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property MapCenter() As Point  
+  
+        &lt;DataMember(Name:=&quot;pushpins&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property Pushpins() As PinInfo()  
+  
+        &lt;DataMember(Name:=&quot;zoom&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property Zoom() As String  
+    End Class  
+  
+    &lt;DataContract([Namespace]:=&quot;http://schemas.microsoft.com/search/local/ws/rest/v1&quot;)&gt; _  
+    Public Class TrafficIncident  
+        Inherits Resource  
+        &lt;DataMember(Name:=&quot;point&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property Point() As Point  
+  
+        &lt;DataMember(Name:=&quot;congestion&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property Congestion() As String  
+  
+        &lt;DataMember(Name:=&quot;description&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property Description() As String  
+  
+        &lt;DataMember(Name:=&quot;detour&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property Detour() As String  
+  
+        &lt;DataMember(Name:=&quot;start&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property Start() As String  
+  
+        &lt;DataMember(Name:=&quot;end&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property [End]() As String  
+  
+        &lt;DataMember(Name:=&quot;incidentId&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property IncidentId() As Long  
+  
+        &lt;DataMember(Name:=&quot;lane&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property Lane() As String  
+  
+        &lt;DataMember(Name:=&quot;lastModified&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property LastModified() As String  
+  
+        &lt;DataMember(Name:=&quot;roadClosed&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property RoadClosed() As Boolean  
+  
+        &lt;DataMember(Name:=&quot;severity&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property Severity() As Integer  
+  
+        &lt;DataMember(Name:=&quot;toPoint&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property ToPoint() As Point  
+  
+        &lt;DataMember(Name:=&quot;locationCodes&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property LocationCodes() As String()  
+  
+        &lt;DataMember(Name:=&quot;type&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property Type() As Integer  
+  
+        &lt;DataMember(Name:=&quot;verified&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property Verified() As Boolean  
+    End Class  
+  
+    &lt;DataContract()&gt; _  
+    Public Class TransitLine  
+        &lt;DataMember(Name:=&quot;verboseName&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property verboseName() As String  
+  
+        &lt;DataMember(Name:=&quot;abbreviatedName&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property abbreviatedName() As String  
+  
+        &lt;DataMember(Name:=&quot;agencyId&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property AgencyId() As Long  
+  
+        &lt;DataMember(Name:=&quot;agencyName&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property agencyName() As String  
+  
+        &lt;DataMember(Name:=&quot;lineColor&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property lineColor() As Long  
+  
+        &lt;DataMember(Name:=&quot;lineTextColor&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property lineTextColor() As Long  
+  
+        &lt;DataMember(Name:=&quot;uri&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property uri() As String  
+  
+        &lt;DataMember(Name:=&quot;phoneNumber&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property phoneNumber() As String  
+  
+        &lt;DataMember(Name:=&quot;providerInfo&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property providerInfo() As String  
+    End Class  
+  
+    &lt;DataContract()&gt; _  
+    Public Class Warning  
+        &lt;DataMember(Name:=&quot;warningType&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property WarningType() As String  
+  
+        &lt;DataMember(Name:=&quot;severity&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property Severity() As String  
+  
+        &lt;DataMember(Name:=&quot;text&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property Text() As String  
+    End Class  
+  
+    &lt;DataContract([Namespace]:=&quot;http://schemas.microsoft.com/search/local/ws/rest/v1&quot;)&gt; _  
+    Public Class CompressedPointList  
+        Inherits Resource  
+        &lt;DataMember(Name:=&quot;value&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property Value() As String  
+    End Class  
+  
+    &lt;DataContract([Namespace]:=&quot;http://schemas.microsoft.com/search/local/ws/rest/v1&quot;)&gt; _  
+    Public Class ElevationData  
+        Inherits Resource  
+        &lt;DataMember(Name:=&quot;elevations&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property Elevations() As Integer()  
+  
+        &lt;DataMember(Name:=&quot;zoomLevel&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property ZoomLevel() As Integer  
+    End Class  
+  
+    &lt;DataContract([Namespace]:=&quot;http://schemas.microsoft.com/search/local/ws/rest/v1&quot;)&gt; _  
+    Public Class SeaLevelData  
+        Inherits Resource  
+        &lt;DataMember(Name:=&quot;offsets&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property Offsets() As Integer()  
+  
+        &lt;DataMember(Name:=&quot;zoomLevel&quot;, EmitDefaultValue:=False)&gt; _  
+        Public Property ZoomLevel() As Integer  
+    End Class  
+End Namespace  
+</code></pre>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/v-chrfr/bingmaps-rest-api/blob/master/docs-ref-index/json-data-contracts.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

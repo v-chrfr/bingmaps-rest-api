@@ -1,0 +1,242 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Common Response Description | Microsoft Docs </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Common Response Description | Microsoft Docs ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="common-response-description">Common Response Description</h1>
+
+<p>The response to a Bing Maps REST Services URL request includes the status of the request and one or more resources that contain location, imagery, or route information. The resource information that is returned depends on the Bing Maps REST Services URL that is used and the parameter values that are provided with it. For example, a <a href="../rest-services/locations-api.md">Locations</a> URL returns one or more Location resources that provide location information based on the values in the URL request.</p>
+<p>The following tables describe the common fields that are returned in the response to a Bing Maps REST Services URL request. For more information about specific resource content, see the API reference for the Locations, Imagery, and Routes APIs.</p>
+<h2 id="response">Response</h2>
+<p>The Response container for a request provides the following information.</p>
+<table>
+<thead>
+<tr>
+<th>JSON</th>
+<th>XML</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>statusCode</td>
+<td>StatusCode</td>
+<td>integer</td>
+<td>The HTTP Status code for the request.</td>
+</tr>
+<tr>
+<td>statusDescription</td>
+<td>StatusDescription</td>
+<td>string</td>
+<td>A description of the HTTP status code.</td>
+</tr>
+<tr>
+<td>authenticationResultCode</td>
+<td>AuthenticationResultCode</td>
+<td>One of the following values:<br><br> ValidCredentials<br><br> InvalidCredentials<br><br> CredentialsExpired<br><br> NotAuthorized<br><br> NoCredentials<br><br> None</td>
+<td>A status code that offers additional information about authentication success or failure.</td>
+</tr>
+<tr>
+<td>traceId</td>
+<td>TraceId</td>
+<td>string</td>
+<td>A unique identifier for the request.</td>
+</tr>
+<tr>
+<td>copyright</td>
+<td>Copyright</td>
+<td>string</td>
+<td>A copyright notice.</td>
+</tr>
+<tr>
+<td>brandLogoUri</td>
+<td>BrandLogoUri</td>
+<td>string</td>
+<td>A URL that references a brand image to support contractual branding requirements.</td>
+</tr>
+<tr>
+<td>resourceSets</td>
+<td>ResourceSets</td>
+<td>collection</td>
+<td>A collection of ResourceSet objects. A ResourceSet is a container of Resources returned by the request. For more information, see the ResourceSet section below.</td>
+</tr>
+<tr>
+<td>errorDetails</td>
+<td>ErrorDetails</td>
+<td>string[]</td>
+<td>A collection of error descriptions. For example, ErrorDetails can identify parameter values that are not valid or missing.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="resourceset">ResourceSet</h2>
+<p>The ResourceSet container provides the following information.</p>
+<table>
+<thead>
+<tr>
+<th>JSON</th>
+<th>XML</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>estimatedTotal</td>
+<td>EstimatedTotal</td>
+<td>long</td>
+<td>An estimate of the total number of resources in the ResourceSet.</td>
+</tr>
+<tr>
+<td>resources</td>
+<td>Resources</td>
+<td>collection</td>
+<td>A collection of one or more resources. The resources that are returned depend on the request. Information about resources is provided in the API reference for each Bing Maps REST Services API.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="examples">Examples</h2>
+<p>The following are examples JSON and XML responses.</p>
+<h3 id="json-response-example">JSON Response Example</h3>
+<pre><code>{  
+    &quot;authenticationResultCode&quot;:&quot;ValidCredentials&quot;,  
+    &quot;brandLogoUri&quot;:&quot;http:\/\/dev.virtualearth.net\/Branding\/logo_powered_by.png&quot;,  
+    &quot;copyright&quot;:&quot;Copyright © 2010 Microsoft and its suppliers. All rights reserved. This API cannot be accessed and the content and any results may not be used, reproduced or transmitted in any manner without express written permission from Microsoft Corporation.&quot;,  
+    &quot;resourceSets&quot;:[  
+        {  
+            &quot;estimatedTotal&quot;:1,  
+            &quot;resources&quot;:[  
+                {  
+                   Resource content specific to a REST service  
+                }  
+            ]  
+        }  
+    ],  
+    &quot;statusCode&quot;:200,  
+    &quot;statusDescription&quot;:null,  
+    &quot;traceId&quot;:&quot;961e9c1e63e64bd4aa7d140ee4e05697&quot;  
+}  
+</code></pre>
+<h3 id="xml-response-example">XML Response Example</h3>
+<pre><code>&lt;Response xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns=&quot;http://schemas.microsoft.com/search/local/ws/rest/v1&quot;&gt;  
+  &lt;Copyright&gt;Copyright © 2010 Microsoft and its suppliers. All rights reserved. This API cannot be accessed and the content and any results may not be used, reproduced or transmitted in any manner without express written permission from Microsoft Corporation.&lt;/Copyright&gt;  
+  &lt;BrandLogoUri&gt;http://dev.virtualearth.net/Branding/logo_powered_by.png&lt;/BrandLogoUri&gt;  
+  &lt;StatusCode&gt;200&lt;/StatusCode&gt;  
+  &lt;AuthenticationResultCode&gt;ValidCredentials&lt;/AuthenticationResultCode&gt;  
+  &lt;TraceId&gt;25c368c85b964f4c978ff932b966a9d4&lt;/TraceId&gt;  
+  &lt;ResourceSets&gt;  
+    &lt;ResourceSet&gt;  
+      &lt;EstimatedTotal&gt;1&lt;/EstimatedTotal&gt;  
+      &lt;Resources&gt;  
+        &lt;Resource&gt;  
+          &lt;!-- Resource content specific to a REST service --&gt;  
+        &lt;/Resource&gt;  
+      &lt;/Resources&gt;  
+    &lt;/ResourceSet&gt;  
+  &lt;/ResourceSets&gt;  
+&lt;/Response&gt;  
+  
+</code></pre>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/v-chrfr/bingmaps-rest-api/blob/master/docs-ref-index/common-response-description.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

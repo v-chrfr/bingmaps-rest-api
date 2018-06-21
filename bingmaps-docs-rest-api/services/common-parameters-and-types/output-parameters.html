@@ -1,0 +1,202 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Output Parameters | Microsoft Docs </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Output Parameters | Microsoft Docs ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+
+
+<p>Use output parameters to specify the output of the request.</p>
+<p>When an alias is provided, you can use the alias to shorten the length of the query parameter. For example, output=xml can be shortened to o=xml.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Alias</th>
+<th>Description</th>
+<th>Values</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>output</td>
+<td>o</td>
+<td><strong>Optional</strong>. The output format for the response.</td>
+<td>One of the following values:<br><br> -   json <strong>[default]</strong><br>-   xml<br><br> <strong>Example</strong>: output=xml</td>
+</tr>
+<tr>
+<td>suppressStatus</td>
+<td>ss</td>
+<td><strong>Optional</strong>. When set to <code>true</code>, the HTTP Status returned is <strong>200 OK</strong> for all responses, including when there are errors. The content of the response always contains the actual HTTP Status.</td>
+<td>-   true<br>-   false <strong>[default]</strong><br><br> <strong>Example</strong>: suppressStatus=true</td>
+</tr>
+<tr>
+<td>jsonp</td>
+<td></td>
+<td><strong>Optional.</strong> Name of JSON callback function that is called when the response to the request is received. The JSON object provided in the response is passed to the callback function.</td>
+<td>A string that contains the name of the callback function.<br><br> <strong>Example</strong>: jsonp=MyCallbackFunction</td>
+</tr>
+<tr>
+<td>jsonso</td>
+<td></td>
+<td><strong>Optional.</strong> The state object to pass to the JSON callback function. You can use a state object to match a response with a specific call. This value is provided as the second parameter to the callback function provided in the JSONP parameter.</td>
+<td>Any valid JavaScript string.<br><br> <strong>Example</strong>: jsonso=abc3144sd</td>
+</tr>
+</tbody>
+</table>
+<h2 id="examples">Examples</h2>
+<p>This example returns the template that you can use to build a map that shows roads. The output is requested in XML format.</p>
+<pre><code class="lang-url">http://dev.virtualearth.net/REST/v1/Imagery/Metadata/Road?output=xml&amp;key=BingMapsKey  
+</code></pre>
+<p>This example returns the following response. The URL template is provided by the ImageURL element.</p>
+<pre><code class="lang-xml">&lt;Response xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns=&quot;http://schemas.microsoft.com/search/local/ws/rest/v1&quot;&gt;  
+  &lt;Copyright&gt;Copyright © 2010 Microsoft and its suppliers. All rights reserved. This API cannot be accessed and the content and any results may not be used, reproduced or transmitted in any manner without express written permission from Microsoft Corporation.&lt;/Copyright&gt;  
+  &lt;BrandLogoUri&gt;http://dev.virtualearth.net/Branding/logo_powered_by.png&lt;/BrandLogoUri&gt;  
+  &lt;StatusCode&gt;200&lt;/StatusCode&gt;  
+  &lt;StatusDescription&gt;OK&lt;/StatusDescription&gt;  
+  &lt;AuthenticationResultCode&gt;ValidCredentials&lt;/AuthenticationResultCode&gt;  
+  &lt;TraceId&gt;55da9336cd984609b45a91fc9fc26905&lt;/TraceId&gt;  
+  &lt;ResourceSets&gt;  
+    &lt;ResourceSet&gt;  
+      &lt;EstimatedTotal&gt;1&lt;/EstimatedTotal&gt;  
+      &lt;Resources&gt;  
+        &lt;ImageryMetadata&gt;  
+          &lt;ImageUrl&gt;http://ecn.{subdomain}.m3.tiles.live int.com/tiles/r{quadkey}.jpeg?g=58&amp;mkt={culture}&amp;shading=hill&amp;stl=H&lt;/ImageUrl&gt;  
+          &lt;ImageUrlSubdomains&gt;  
+            &lt;string&gt;t0&lt;/string&gt;  
+            &lt;string&gt;t1&lt;/string&gt;  
+            &lt;string&gt;t2&lt;/string&gt;  
+            &lt;string&gt;t3&lt;/string&gt;  
+          &lt;/ImageUrlSubdomains&gt;  
+          &lt;ImageWidth&gt;256&lt;/ImageWidth&gt;  
+          &lt;ImageHeight&gt;256&lt;/ImageHeight&gt;  
+          &lt;ZoomMin&gt;1&lt;/ZoomMin&gt;  
+          &lt;ZoomMax&gt;19&lt;/ZoomMax&gt;  
+        &lt;/ImageryMetadata&gt;  
+      &lt;/Resources&gt;  
+    &lt;/ResourceSet&gt;  
+  &lt;/ResourceSets&gt;  
+&lt;/Response&gt;  
+</code></pre>
+<p>This example gets a JSON object and specifies a callback function and a state parameter value.</p>
+<pre><code class="lang-url">http://dev.virtualearth.net/REST/v1/Imagery/Metadata/Road?output=json&amp;jsonp=MyCallbackFunction&amp;jsonso=abc3144sd&amp;key=BingMapsKey  
+</code></pre>
+<p>For this example, the body of the response contains the following function call.</p>
+<pre><code>MyCallbackFunction({&quot;authenticationResultCode&quot;:&quot;ValidCredentials&quot;,  
+  &quot;brandLogoUri&quot;:&quot;http:\/\/dev.virtualearth.net\/Branding\/logo_powered_by.png&quot;,  
+  &quot;copyright&quot;:&quot;Copyright © 2010 Microsoft and its suppliers. All rights reserved. This API cannot be accessed and the content and any results may not be used, reproduced or transmitted in any manner without express written permission from Microsoft Corporation.&quot;,  
+  &quot;resourceSets&quot;:[{&quot;estimatedTotal&quot;:1,&quot;resources&quot;:[{&quot;__type&quot;:&quot;ImageryMetadata:http:\/\/schemas.microsoft.com\/search\/local\/ws\/rest\/v1&quot;,  
+  &quot;imageHeight&quot;:256,  
+  &quot;imageUrl&quot;:&quot;http:\/\/ecn.{subdomain}.tiles.virtualearth.net\/tiles\/r{quadkey}.jpeg?g=470&amp;mkt={culture}&amp;shading=hill&amp;stl=H&quot;,  
+  &quot;imageUrlSubdomains&quot;:[&quot;t0&quot;,&quot;t1&quot;,&quot;t2&quot;,&quot;t3&quot;],  
+  &quot;imageWidth&quot;:256,  
+  &quot;imageryProviders&quot;:null,  
+  &quot;vintageEnd&quot;:null,&quot;vintageStart&quot;:null,  
+  &quot;zoomMax&quot;:19,&quot;zoomMin&quot;:1}]}],  
+  &quot;statusCode&quot;:200,  
+  &quot;statusDescription&quot;:&quot;OK&quot;,  
+  &quot;traceId&quot;:&quot;d172cd085d624f2cab9b2c0a07ae06f1&quot;},  
+  &quot;abc3144sd&quot;)  
+</code></pre>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/v-chrfr/bingmaps-rest-api/blob/master/docs-ref-index/common-parameters-and-types/output-parameters.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>
