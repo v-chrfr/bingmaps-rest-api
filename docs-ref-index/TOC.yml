@@ -1,20 +1,21 @@
 - name: Getting Started with BING Maps API
   href: index.md
+  expanded: true
   items:
     - name: Locations API
-      href: /locations/
+      href: /services/locations/
       maintainContext: true
     - name: Elevation API
-      href: /elevations/
+      href: /services/elevations/
       maintainContext: true
     - name: Imagery API
-      href: /imagery/
+      href: /services/imagery/
       maintainContext: true
     - name: Elevation API
-      href: /routes/
+      href: /services/routes/
       maintainContext: true
     - name: Traffic API
-      href: /traffic/
+      href: /services/traffic/
       maintainContext: true
 - name: What's New
   href: what-s-new-in-the-rest-services.md
