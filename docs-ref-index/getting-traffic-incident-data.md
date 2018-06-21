@@ -145,8 +145,8 @@ You can get traffic incident information along a route using the [Routes](routes
 The [Traffic API](traffic/index.md) returns a list of traffic incidents in a geographical area and provides incident details and traffic location codes. Traffic incident details include information such as the incident description, severity, location, road closures, type of incident, time of incident, and detours. See [Traffic Incident Data](traffic-incident-data.md) for a list of the incident details that may be returned. Traffic incidents reported by the Traffic API include common traffic problems, such as accidents and disabled vehicles, as well as other potential causes of traffic, such as sports events.  
   
  To use the Traffic API, you must specify an area defined as a bounding box. A bounding box is a set of longitudes and latitudes that define an area. See [Location and Area Types](common-parameters-and-types/location-and-area-types.md) for more information about a bounding box.  
- 
- The following is an example of traffic incident information returned in a JSON Traffic API response.  
+
+The following is an example of traffic incident information returned in a JSON Traffic API response.  
   
 ```json
 {  
