@@ -1,4 +1,4 @@
-- name Common Paramaters and Types
+- name: Common Paramaters and Types
   maintainContext: true
   expanded: true 
   - items:
