@@ -1,21 +1,26 @@
 - name: Getting Started with BING Maps API
   href: index.md
-  expanded: true
+- name: Bing Map REST APIs
   items:
     - name: Locations API
       href: /services/locations/
+      expanded: true
       maintainContext: true
     - name: Elevation API
       href: /services/elevations/
+      expanded: true
       maintainContext: true
     - name: Imagery API
       href: /services/imagery/
+      expanded: true
       maintainContext: true
     - name: Elevation API
       href: /services/routes/
+      expanded: true
       maintainContext: true
     - name: Traffic API
       href: /services/traffic/
+      expanded: true
       maintainContext: true
 - name: What's New
   href: what-s-new-in-the-rest-services.md
@@ -24,7 +29,7 @@
 - name: Using the REST Services with .NET
   href: using-the-rest-services-with-net.md
 - name: Common Parameters and Types
-  href: /common-parameters-and-types/
+  href: /services/common-parameters-and-types/
   maintainContext: true
 - name: Common Response Description
   href: common-response-description.md
