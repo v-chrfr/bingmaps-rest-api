@@ -26,8 +26,8 @@
 - name: Using the REST Services with .NET
   href: using-the-rest-services-with-net.md
 - name: Common Parameters and Types
-  maintainContext: true
-  href: /common-parameters-and-types/toc.yml
+  href: /common-parameters-and-types/
+  expanded: true
 - name: Common Response Description
   href: common-response-description.md
 - name: JSON Data Contracts
