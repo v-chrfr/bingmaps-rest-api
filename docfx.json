@@ -2,21 +2,26 @@
   "build": {
     "content": [
       {
+        "src": "content",
+        "dest": "api/overview",
+        "files":  ["**/*.md"]
+      },
+      {
         "src": "docs-ref-autogen",
         "dest": "api/services",
         "files": [ "**/*.yml" ]
       },
       {
         "src": "docs-ref-index",
-        "files": [ "**/*.yml", "**/*.md" ],
+        "files": [ "toc.yml" ],
         "exclude": [],
-        "dest": "services"
+        "dest": "api/overview"
       },
       {
         "src": "docs-ref-conceptual",
         "files": [ "**/*.md", "**/*.yml" ],
         "exclude": [],
-        "dest": "services"
+        "dest": "api/services"
       }
     ],
 
