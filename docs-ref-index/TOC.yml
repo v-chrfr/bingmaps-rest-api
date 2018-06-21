@@ -1,14 +1,27 @@
 - name: Getting Started with BING Maps API
   href: index.md
+  items:
+    - name: Locations API
+      href: /locations/
+      maintainContext: true
+    - name: Elevation API
+      href: /elevations/
+      maintainContext: true
+    - name: Imagery API
+      href: /imagery/
+      maintainContext: true
+    - name: Elevation API
+      href: /routes/
+      maintainContext: true
+    - name: Traffic API
+      href: /traffic/
+      maintainContext: true
 - name: What's New
   href: what-s-new-in-the-rest-services.md
 - name: Getting Traffic Incident Data
   href: getting-traffic-incident-data.md
 - name: Using the REST Services with .NET
   href: using-the-rest-services-with-net.md
-- name: API Reference
-  href: /api/
-  maintainContext: true
 - name: Common Parameters and Types
   href: /common-parameters-and-types/
   maintainContext: true
