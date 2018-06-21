@@ -35,7 +35,7 @@ http://dev.virtualearth.net/REST/v1/Elevation/Polyline?points=vx1vilihnM6hR7mEl2
 ```  
   
 ## Algorithm Description  
- The following step-by-step instructions describe the point compression algorithm complete with an example. A test URL that you can use with a small number of points to test your algorithm implementation is described in [Testing Your Algorithm Implementation](../rest-services/point-compression-algorithm.md#TestingYourAlg), and a [JavaScript Implementation](../rest-services/point-compression-algorithm.md#javascriptalg) is provided.  
+ The following step-by-step instructions describe the point compression algorithm complete with an example. A test URL that you can use with a small number of points to test your algorithm implementation is described in [Testing Your Algorithm Implementation](../services/point-compression-algorithm.md#TestingYourAlg), and a [JavaScript Implementation](../services/point-compression-algorithm.md#javascriptalg) is provided.  
   
 1.  Start with a set of latitude and longitude values.  
   
@@ -270,5 +270,5 @@ http://dev.virtualearth.net/REST/v1/Elevation/PointCompression?points=35.8943090
 ```  
   
 ## See Also  
- [Using the REST Services with .NET](../rest-services/using-the-rest-services-with-net.md)   
- [JSON Data Contracts](../rest-services/json-data-contracts.md)
+ [Using the REST Services with .NET](../services/using-the-rest-services-with-net.md)   
+ [JSON Data Contracts](../services/json-data-contracts.md)

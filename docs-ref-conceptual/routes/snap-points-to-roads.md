@@ -16,7 +16,7 @@ ms.service: "bing-maps"
 # Snap Points to Roads
 The Bing Maps Snap to Road API takes GPS point data, in the form of latitudes and longitudes, and returns a list of objects that form a route snapped to the roads on a map. The information returned on the road segments, include the names of the roads that the GPS points are associated with and their posted speed limits. You can also interpolate the GPS points, resulting in a route that smoothly follows the geometry of the road for map display purposes, which is a valuable feature when tracking assets and for data visualization.
 
-When you make a request by using one of the following URL templates, the response returns a `SnapToRoadResponse` resource that contains the requested snapped coordinate information. For more information about the `SnapToRoadResponse` resource, see [Snap to Road Data](../rest-services/snap-to-road-data.md). You can also view the example URL and response values in the **Examples** section.
+When you make a request by using one of the following URL templates, the response returns a `SnapToRoadResponse` resource that contains the requested snapped coordinate information. For more information about the `SnapToRoadResponse` resource, see [Snap to Road Data](../services/snap-to-road-data.md). You can also view the example URL and response values in the **Examples** section.
 
 The algorithm that powers the Bing Maps Snap to Road API is based on [this great paper](https://www.microsoft.com/en-us/research/publication/hidden-markov-map-matching-noise-sparseness/) written by Microsoft Research.
 
@@ -34,7 +34,7 @@ If you are not sure which one to use, it is recommended to use the asynchronous 
 
 **How asynchronous requests work**  
 
-See [Asynchronous Requests documentation](../rest-services/asynchronous-requests.md).
+See [Asynchronous Requests documentation](../services/asynchronous-requests.md).
 
 
 ## Supported HTTP Methods
@@ -144,7 +144,7 @@ https://dev.virtualearth.net/REST/v1/Routes/SnapToRoadAsyncCallback?requestId={r
 The following is a list of parameters that are supported by the Snap to Road API.
 
 > [!Note]
-> Additional parameters, such as output and JSON callback parameters, are found in [Output Parameters](../rest-services/output-parameters.md).<br/><br/>An alias can be used for a URL parameter when making a GET request to shorten the length of the query parameter. For example, points=47.610,-122.107; can be shortened to pts=47.610,-122.107;.  
+> Additional parameters, such as output and JSON callback parameters, are found in [Output Parameters](../services/output-parameters.md).<br/><br/>An alias can be used for a URL parameter when making a GET request to shorten the length of the query parameter. For example, points=47.610,-122.107; can be shortened to pts=47.610,-122.107;.  
 
 | Parameter              | GET Alias | Description  |
 |------------------------|-------|--------------|
@@ -201,12 +201,12 @@ Content-Type: application/json
 
 Notice that both standard and truck speed limits are requested in this query. The reason for this is few roads have posted truck speed limits, when there is no posted truck speed limit the value returned will be 0. When this occurs, the standard posted speed limit is assumed to also apply to trucks as well.
 
-To view the complete XML and JSON responses, see [Snap to Road Example](../rest-services/snap-to-road-example.md).
+To view the complete XML and JSON responses, see [Snap to Road Example](../services/snap-to-road-example.md).
 
 ## HTTP Status Codes
 
 > [!Note]
-> For more details about these HTTP status codes, see [Status Codes and Error Handling](../rest-services/status-codes-and-error-handling.md). 
+> For more details about these HTTP status codes, see [Status Codes and Error Handling](../services/status-codes-and-error-handling.md). 
 
 When the request is successful, the following HTTP status code is returned.
 
@@ -223,5 +223,5 @@ When the request is not successful, the response returns one of the following er
 
 ## See Also
 
-* [Using the REST Services with .NET](../rest-services/using-the-rest-services-with-net.md)
-* [Snap to Road Example](../rest-services/snap-to-road-example.md)
+* [Using the REST Services with .NET](../services/using-the-rest-services-with-net.md)
+* [Snap to Road Example](../services/snap-to-road-example.md)

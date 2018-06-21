@@ -14,7 +14,7 @@ manager: "stevelom"
 ms.service: "bing-maps"
 ---
 # Maneuver Types
-The following maneuver type values are returned the [Routes](../rest-services/routes-api.md) in the maneuverType field in the HTTP response. For more information about the values returned in the Routes API response, see [Route Data](../rest-services/route-data.md).  
+The following maneuver type values are returned the [Routes](../services/routes-api.md) in the maneuverType field in the HTTP response. For more information about the values returned in the Routes API response, see [Route Data](../services/route-data.md).  
   
 |Maneuver Type|Instruction|  
 |-------------------|-----------------|  

@@ -16,7 +16,7 @@ ms.service: "bing-maps"
 # Elevation Data
 The response returned by an Elevations URL can contain elevation or sea level offset resource data.  
   
- These resources are provided within a common response container. For a description, see [Common Response Description](../rest-services/common-response-description.md).  
+ These resources are provided within a common response container. For a description, see [Common Response Description](../services/common-response-description.md).  
   
 ## Elevation and Sea Level Offset Resource Data  
   

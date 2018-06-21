@@ -45,7 +45,7 @@ The Bing Maps Distance Matrix API that provides travel time and distances for a 
   
 ### New API Release History
   
-Starting with January, 2014, the Bing Maps REST Services API documentation includes [Release History](../rest-services/release-history.md).  
+Starting with January, 2014, the Bing Maps REST Services API documentation includes [Release History](../services/release-history.md).  
   
  **You now have an additional 40 pushpin icons to use with static maps. [[Get a Static Map](how-to/get-a-static-map.md)]**  
   

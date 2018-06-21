@@ -25,7 +25,7 @@ The Bing Maps Isochrone API provides time-specific, isoline polygons for the dis
 * **Recreation** – Where could I walk to within 30 minutes of where I am.
 * **Emergency Services Planning** – Where could an emergency vehicle travel too within 5, 10, and 15 minutes.
 
-When you make a request by using one of the following URL templates, the response returns either a `IsochroneResponse` resource that contains the requested isochrone information or an `RouteProxyAsyncResult ` resource which contains information on the asynchronous request that was made to calculate an isochrone. For more information about these resources, see [Isochrone Data](../rest-services/isochrone-data.md). You can also view the example URL and response values in the **Examples** section.
+When you make a request by using one of the following URL templates, the response returns either a `IsochroneResponse` resource that contains the requested isochrone information or an `RouteProxyAsyncResult ` resource which contains information on the asynchronous request that was made to calculate an isochrone. For more information about these resources, see [Isochrone Data](../services/isochrone-data.md). You can also view the example URL and response values in the **Examples** section.
 
 ## API Limits
 
@@ -38,7 +38,7 @@ If you are not sure which one to use, it is recommended to use the asynchronous 
 
 **How asynchronous requests work**
 
-See [Asynchronous Requests documentation](../rest-services/asynchronous-requests.md).
+See [Asynchronous Requests documentation](../services/asynchronous-requests.md).
 
 ## Supported HTTP Methods
 
@@ -78,11 +78,11 @@ https://dev.virtualearth.net/REST/v1/Routes/IsochronesAsyncCallback?requestId={r
 The following is a list of parameters that are supported by the Isochrone API.
 
 > [!NOTE]
-> Additional parameters, such as output and JSON callback parameters, are found in [Output Parameters](../rest-services/output-parameters.md).<br/><br/>An alias can be used for a URL parameter when making a GET request to shorten the length of the query parameter. For example, waypoint=47.610,-122.107 can be shortened to wp=47.610,-122.107.  
+> Additional parameters, such as output and JSON callback parameters, are found in [Output Parameters](../services/output-parameters.md).<br/><br/>An alias can be used for a URL parameter when making a GET request to shorten the length of the query parameter. For example, waypoint=47.610,-122.107 can be shortened to wp=47.610,-122.107.  
 
 | Parameter    | GET Alias  | Description  |
 |--------------|--------|--------------|
-| waypoint     | wp     | **Required**. The point around which the isochrone will be calculated. This can be specified as a Point or address. For more information about Point values, see [Location and Area Types](../rest-services/location-and-area-types.md).<br/><br/>**Examples**:<br/><br/>waypoint=47.610,-122.107 \[Point\]<br/><br/>waypoint=1%20Microsoft%20Way%20Redmond%20WA \[address\] |
+| waypoint     | wp     | **Required**. The point around which the isochrone will be calculated. This can be specified as a Point or address. For more information about Point values, see [Location and Area Types](../services/location-and-area-types.md).<br/><br/>**Examples**:<br/><br/>waypoint=47.610,-122.107 \[Point\]<br/><br/>waypoint=1%20Microsoft%20Way%20Redmond%20WA \[address\] |
 | maxTime      |        | **Required.** The maximum travel time in the specified time units in which the isochrone polygon is generated. Cannot be set when *maxDistance* is set. Maximum value is 60 minutes when using asynchronous requests.<br/><br/>**Example:** maxTime=10 |
 | timeUnit     | tu     | **Optional.** The units in which the maxTime value is specified. One of the following values:<br/><br/> • **minute**<br/> • **second** \[default\]<br/><br/>**Example**: timeUnit=second  |
 | maxDistance  | maxDis | **Required for Driving and Walking.** The maximum travel distance in the specified distance units in which the isochrone polygon is generated. Cannot be set when *maxTime* is set. Distance based isochrones are not supported for transit.<br/><br/>**Example:** maxDistance=15 |
@@ -111,7 +111,7 @@ In this case, consider a delivery company that has some electric vehicles in the
 https://dev.virtualearth.net/REST/v1/Routes/Isochrones?waypoint=31.520759,-97.133597&maxDistance=50&distanceUnit=mile&optimize=distance&travelMode=driving&key=BingMapsKey
 ```
 
-To view the complete XML and JSON responses, see [Isochrone Example](../rest-services/isochrone-example.md).
+To view the complete XML and JSON responses, see [Isochrone Example](../services/isochrone-example.md).
 
 **Calculate an Isochrone (asynchronous)**
 
@@ -139,14 +139,14 @@ https://dev.virtualearth.net/REST/v1/Routes/IsochroneAsyncCallback?requestId=90b
 
 The following image shows the resulting isochrone.
 
-![BM_Isochrone30Minute](../rest-services/media/bm-isochrone30minute.PNG)
+![BM_Isochrone30Minute](../services/media/bm-isochrone30minute.PNG)
 
-To view the complete XML and JSON responses, see [Isochrone Asynchronous Example](../rest-services/isochrone-asynchronous-example.md).
+To view the complete XML and JSON responses, see [Isochrone Asynchronous Example](../services/isochrone-asynchronous-example.md).
 
 ## HTTP Status Codes
 
 > [!NOTE]
-> For more details about these HTTP status codes, see [Status Codes and Error Handling](../rest-services/status-codes-and-error-handling.md). 
+> For more details about these HTTP status codes, see [Status Codes and Error Handling](../services/status-codes-and-error-handling.md). 
 
 When the request is successful, the following HTTP status code is returned.
 
@@ -166,7 +166,7 @@ When the request is not successful, the response returns one of the following er
 
 ## See Also
 
-* [Using the REST Services with .NET](../rest-services/using-the-rest-services-with-net.md)
-* [Isochrone Data](../rest-services/isochrone-data.md)
-* [Isochrone Example](../rest-services/isochrone-example.md)
-* [Isochrone Asynchronous Example](../rest-services/isochrone-asynchronous-example.md)
+* [Using the REST Services with .NET](../services/using-the-rest-services-with-net.md)
+* [Isochrone Data](../services/isochrone-data.md)
+* [Isochrone Example](../services/isochrone-example.md)
+* [Isochrone Asynchronous Example](../services/isochrone-asynchronous-example.md)

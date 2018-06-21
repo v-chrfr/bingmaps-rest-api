@@ -14,19 +14,19 @@ manager: "stevelom"
 ms.service: "bing-maps"
 ---
 # Static Map Data
-When you use the [Get a Static Map](../rest-services/get-a-static-map.md) API to request static map image metadata, the response returns a Static Map Metadata resource that contains metadata about the static map including the absolute (latitude and longitude) and relative (with respect to the map) coordinates and size of pushpins, as well as the map area, size and center point. When you request static map metadata, the response does not return the map image. This topic contains descriptions of the static map metadata, followed by JSON and XML examples.  
+When you use the [Get a Static Map](../services/get-a-static-map.md) API to request static map image metadata, the response returns a Static Map Metadata resource that contains metadata about the static map including the absolute (latitude and longitude) and relative (with respect to the map) coordinates and size of pushpins, as well as the map area, size and center point. When you request static map metadata, the response does not return the map image. This topic contains descriptions of the static map metadata, followed by JSON and XML examples.  
   
- For more information about the common response syntax for the Bing Maps REST Services, see [Common Response Description](../rest-services/common-response-description.md).  
+ For more information about the common response syntax for the Bing Maps REST Services, see [Common Response Description](../services/common-response-description.md).  
   
 ## Static Map Metadata  
  The following fields are returned when you request image metadata for a static map.  
   
 |JSON|XML|Type|Description|  
 |----------|---------|----------|-----------------|  
-|bbox|BoundingBox|BoundingBox. For more information about the BoundingBox type, see [Location and Area Types](../rest-services/location-and-area-types.md).|A geographic area that contains the location. A bounding box contains SouthLatitude, WestLongitude, NorthLatitude, and EastLongitude values in units of degrees.|  
+|bbox|BoundingBox|BoundingBox. For more information about the BoundingBox type, see [Location and Area Types](../services/location-and-area-types.md).|A geographic area that contains the location. A bounding box contains SouthLatitude, WestLongitude, NorthLatitude, and EastLongitude values in units of degrees.|  
 |imageWidth|ImageWidth|integer|The width of static map.|  
 |imageHeight|ImageHeight|integer|The height of the static map.|  
-|mapCenter|MapCenter|Point. For more information about the Point type, see [Location and Area Types](../rest-services/location-and-area-types.md).|The centerpoint of the static map.|  
+|mapCenter|MapCenter|Point. For more information about the Point type, see [Location and Area Types](../services/location-and-area-types.md).|The centerpoint of the static map.|  
 |zoom|Zoom|integer|The zoom level of the static map.|  
 |pushpinMetadata|PushpinMetadata|collection|A collection of metadata for each pushpin on the static map. See the **Pushpin Metadata** section below for more information.|  
   
@@ -35,7 +35,7 @@ When you use the [Get a Static Map](../rest-services/get-a-static-map.md) API to
   
 |JSON|XML|Type|Description|  
 |----------|---------|----------|-----------------|  
-|point|Point|Point. For more information about the Point type, see [Location and Area Types](../rest-services/location-and-area-types.md).|The latitude and longitude coordinates of the pushpin.|  
+|point|Point|Point. For more information about the Point type, see [Location and Area Types](../services/location-and-area-types.md).|The latitude and longitude coordinates of the pushpin.|  
 |anchor|Anchor|An x (horizontal) and y (vertical) offset in pixels.|The placement of the pushpin on the static map that is defined by an offset in pixels from the upper left hand corner of the map.|  
 |topLeftOffset|TopLeftOffset|An x (horizontal) and y (vertical) offset in pixels.|The offset of the top left corner of the pushpin icon with respect to the anchor point.|  
 |bottomRightOffset|BottomRightOffset|An x (horizontal) and y (vertical) offset in pixels.|The offset of the bottom right corner of the pushpin icon with respect to the anchor point.|  
@@ -50,7 +50,7 @@ When you use the [Get a Static Map](../rest-services/get-a-static-map.md) API to
 http://dev.virtualearth.net/REST/v1/Imagery/Map/Road/47.619048,-122.35384/15?mapSize=500,500&pp=47.620495,-122.34931;21;AA&pp=47.619385,-122.351485;;AB&pp=47.616295,-122.3556;22&mapMetadata=1&o=xml&key=BingMapsKey  
 ```  
   
- ![CenterPoint and ZoomLevel Static Map Example](../rest-services/media/centerpointzoomlevelstaticmap.jpg "CenterPoint and ZoomLevel Static Map Example")  
+ ![CenterPoint and ZoomLevel Static Map Example](../services/media/centerpointzoomlevelstaticmap.jpg "CenterPoint and ZoomLevel Static Map Example")  
   
  This example returns the following response.  
   

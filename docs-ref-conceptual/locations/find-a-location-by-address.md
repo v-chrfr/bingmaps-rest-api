@@ -16,7 +16,7 @@ ms.service: "bing-maps"
 # Find a Location by Address
 Use the following URL templates to get latitude and longitude coordinates for a location by specifying values such as a locality, postal code, and street address.  
   
- When you make a request by using one of the following URL templates, the response returns one or more Location resources that contain location information associated with the URL parameter values. The location information for each resource includes latitude and longitude coordinates, the type of location, and the geographical area that contains the location. For more information about the Location resource, see [Location Data](../rest-services/location-data.md). You can also view the example URL and response values in the Examples section.  
+ When you make a request by using one of the following URL templates, the response returns one or more Location resources that contain location information associated with the URL parameter values. The location information for each resource includes latitude and longitude coordinates, the type of location, and the geographical area that contains the location. For more information about the Location resource, see [Location Data](../services/location-data.md). You can also view the example URL and response values in the Examples section.  
   
 ## URL Templates  
   
@@ -42,7 +42,7 @@ http://dev.virtualearth.net/REST/v1/Locations?countryRegion={countryRegion}&admi
 > [!NOTE]
 >  You can substitute a hyphen (-) for any structured URL parameter when there is no value.  
 >   
->  For countries that do not have a structured URL template, use the Unstructured URL described below or use the [Find a Location by Query](../rest-services/find-a-location-by-query.md) API which takes location well as encode other special characters information as a single query string.  
+>  For countries that do not have a structured URL template, use the Unstructured URL described below or use the [Find a Location by Query](../services/find-a-location-by-query.md) API which takes location well as encode other special characters information as a single query string.  
 >   
 >  For all location values, it is a best practice to encode the URI before making the request. Encoding replaces spaces with "%20" and replaces other special characters with similar encoded values. For more information, see [encodeURI](http://www.w3schools.com/jsref/jsref_encodeURI.asp) [JavaScript] and [Uri.EscapeDataString](http://msdn.microsoft.com/en-us/library/system.uri.aspx) [.NET].  
   
@@ -86,25 +86,25 @@ http://dev.virtualearth.net/REST/v1/Locations/US/adminDistrict/locality/addressL
 > [!IMPORTANT]
 >  **About Special Characters**  
 >   
->  When you specify location information using one of the structured URLs, do not use values that contain special characters such as a period (.), a comma (,), a colon (:) or a plus sign (+). A hyphen is acceptable as a placeholder, but should not be used as part of a parameter value in a structured URL. If the location information contains any special characters, use the Unstructured URL template or the [Find a Location by Query](../rest-services/find-a-location-by-query.md) API.  
+>  When you specify location information using one of the structured URLs, do not use values that contain special characters such as a period (.), a comma (,), a colon (:) or a plus sign (+). A hyphen is acceptable as a placeholder, but should not be used as part of a parameter value in a structured URL. If the location information contains any special characters, use the Unstructured URL template or the [Find a Location by Query](../services/find-a-location-by-query.md) API.  
 >   
 >  For example, if you want to get latitude and longitude values for the address "100 Main St. Somewhere, WA 98001" that contains a period (.), use one of the following query formats.  
 >   
 >  **Unstructured query:** `http://dev.virtualearth.net/REST/v1/Locations?CountryRegion=US&adminDistrict=WA&locality=Somewhere&postalCode=98001&addressLine=100%20Main%20St.&key=BingMapsKey`  
 >   
->  **[Find a Location by Query](../rest-services/find-a-location-by-query.md) query**: `http://dev.virtualearth.net/REST/v1/Locations?q=100%20Main%20St.%20Somewhere,%20WA%2098001&key=BingMapsKey`  
+>  **[Find a Location by Query](../services/find-a-location-by-query.md) query**: `http://dev.virtualearth.net/REST/v1/Locations?q=100%20Main%20St.%20Somewhere,%20WA%2098001&key=BingMapsKey`  
 
   
 ### Template Parameters  
   
 > [!NOTE]
->  See the [Common Parameters and Types](../rest-services/common-parameters-and-types.md) section for additional common parameters to use with these URLs.  
+>  See the [Common Parameters and Types](../services/common-parameters-and-types.md) section for additional common parameters to use with these URLs.  
 >   
 >  Common parameters include:  
 >   
->  -   [Output Parameters](../rest-services/output-parameters.md): Includes response output types and the JSON callback parameters.  
-> -   [Culture Parameter](../rest-services/culture-parameter.md): Includes a list of the supported cultures.  
-> -   [User Context Parameters](../rest-services/user-context-parameters.md): Includes parameters that set user location and viewport values to help with determining locations. For example, you can specify the user’s location to prioritize the set of locations returned when you query with incomplete address information.  
+>  -   [Output Parameters](../services/output-parameters.md): Includes response output types and the JSON callback parameters.  
+> -   [Culture Parameter](../services/culture-parameter.md): Includes a list of the supported cultures.  
+> -   [User Context Parameters](../services/user-context-parameters.md): Includes parameters that set user location and viewport values to help with determining locations. For example, you can specify the user’s location to prioritize the set of locations returned when you query with incomplete address information.  
 >   
 >  Parameter values are not case-sensitive.  
   
@@ -120,9 +120,9 @@ http://dev.virtualearth.net/REST/v1/Locations/US/adminDistrict/locality/addressL
 |maxResults|maxRes|**Optional.** Specifies the maximum number of locations to return in the response.|A string that contains an integer between 1 and 20. The default value is 5.<br /><br /> **Example:**<br /><br /> maxResults=10|  
   
 ## Response  
- One or more Location resources are returned in the response when you make a request by using these URL templates. For more information about the Location resource, see [Location Data](../rest-services/location-data.md). For more information about the common response syntax for the Bing Maps REST Services, see [Common Response Description](../rest-services/common-response-description.md). Responses are provided for some URL examples in the following section.  
+ One or more Location resources are returned in the response when you make a request by using these URL templates. For more information about the Location resource, see [Location Data](../services/location-data.md). For more information about the common response syntax for the Bing Maps REST Services, see [Common Response Description](../services/common-response-description.md). Responses are provided for some URL examples in the following section.  
   
- These URLs support JSON (application/json) and XML (application/xml) response formats. A JSON response is provided by default unless you request XML output by setting the output (o) parameter. For more information, see [Output Parameters](../rest-services/output-parameters.md).  
+ These URLs support JSON (application/json) and XML (application/xml) response formats. A JSON response is provided by default unless you request XML output by setting the output (o) parameter. For more information, see [Output Parameters](../services/output-parameters.md).  
   
 ## Examples  
   
@@ -303,7 +303,7 @@ http://dev.virtualearth.net/REST/v1/Locations/US/-/-/-?key=BingMapsKey
   
  **Find location information by using an unstructured URL and setting the userLocation parameter.**  
   
- This example provides location information for an unstructured query for Kings Road in the United Kingdom and uses the userLocation value to prioritize the response. If you remove the userLocation parameter in this example, the results change because the userLocation position prioritizes results that are closer to this location. For more information about the userLocation parameter and other user context parameters, see [User Context Parameters](../rest-services/user-context-parameters.md).  
+ This example provides location information for an unstructured query for Kings Road in the United Kingdom and uses the userLocation value to prioritize the response. If you remove the userLocation parameter in this example, the results change because the userLocation position prioritizes results that are closer to this location. For more information about the userLocation parameter and other user context parameters, see [User Context Parameters](../services/user-context-parameters.md).  
   
 ```  
 http://dev.virtualearth.net/REST/v1/Locations?culture=en-GB&addressLine=Kings%20Road&o=xml&userLocation=51.504360719046616,-0.12600176611298197&key=BingMapsKey  
@@ -498,7 +498,7 @@ http://dev.virtualearth.net/REST/v1/Locations?locality=London&postalCode=SW1A&ke
 ## HTTP Status Codes  
   
 > [!NOTE]
->  For more details about these HTTP status codes, see [Status Codes and Error Handling](../rest-services/status-codes-and-error-handling.md).  
+>  For more details about these HTTP status codes, see [Status Codes and Error Handling](../services/status-codes-and-error-handling.md).  
   
  When the request is successful, the following HTTP status code is returned.  
   
@@ -514,8 +514,8 @@ When the request is not successful, the response returns one of the following er
 * 503
   
 ## See Also  
- [Using the REST Services with .NET](../rest-services/using-the-rest-services-with-net.md)   
- [JSON Data Contracts](../rest-services/json-data-contracts.md)   
+ [Using the REST Services with .NET](../services/using-the-rest-services-with-net.md)   
+ [JSON Data Contracts](../services/json-data-contracts.md)   
  [Geocoding a Location](https://msdn.microsoft.com/en-us/library/gg427601.aspx)   
  [Getting Route Directions](https://msdn.microsoft.com/en-us/library/gg427607.aspx)   
  [Find a location by query](https://www.bingmapsportal.com/ISDK/AjaxV7#RESTServices1)

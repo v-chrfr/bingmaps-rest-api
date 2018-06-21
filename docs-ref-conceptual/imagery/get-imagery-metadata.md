@@ -63,12 +63,12 @@ https://dev.virtualearth.net/REST/v1/Imagery/BasicMetadata/{imagerySet}/{centerP
 ### Template Parameters  
   
 > [!NOTE]
->  See the [Common Parameters and Types](../rest-services/common-parameters-and-types.md) section for additional common parameters to use with these URLs.  
+>  See the [Common Parameters and Types](../services/common-parameters-and-types.md) section for additional common parameters to use with these URLs.  
 >   
 >  Common parameters include:  
 >   
->  -   [Output Parameters](../rest-services/output-parameters.md): Includes response output types and the JSON callback parameters.  
-> -   [Culture Parameter](../rest-services/culture-parameter.md): Includes a list of the supported cultures.  
+>  -   [Output Parameters](../services/output-parameters.md): Includes response output types and the JSON callback parameters.  
+> -   [Culture Parameter](../services/culture-parameter.md): Includes a list of the supported cultures.  
 >   
 >  When an alias is provided, you can use the alias to shorten the length of the query parameter. For example, zoomLevel=10 can be shortened to zl=10.  
 >   
@@ -77,16 +77,16 @@ https://dev.virtualearth.net/REST/v1/Imagery/BasicMetadata/{imagerySet}/{centerP
 |Parameters|Alias|Description|Values|  
 |----------------|-----------|-----------------|------------|  
 |imagerySet||**Required.** The type of imagery for which you are requesting metadata.|Aerial - Aerial imagery.<br /><br /> AerialWithLabels - Aerial imagery with a road overlay.<br /><br /> AerialWithLabelsOnDemand - Aerial imagery with on-demand road overlay.<br /><br /> Birdseye - Bird’s eye (oblique-angle) imagery.<br /><br /> BirdseyeWithLabels - Bird’s eye imagery with a road overlay.<br /><br /> BirdseyeV2 - The second generation Bird’s eye (oblique-angle) imagery.<br /><br /> BirdseyeV2WithLabels - The second generation Bird’s eye (oblique-angle) imagerywith a road overlay.<br /><br /> CanvasDark - A dark version of the road maps.<br /><br /> CanvasLight - A lighter version of the road maps which also has some of the details such as hill shading disabled.<br /><br /> CanvasGray - A grayscale version of the road maps.<br /><br /> Road - Roads without additional imagery. Uses the legacy static tile service.<br /><br /> RoadOnDemand - Roads without additional imagery. Uses the dynamic tile service.<br /><br /> OrdnanceSurvey - Ordnance Survey imagery. This imagery is visible only for the London area.<br /><br /> **Example**: imagerySet=Aerial|  
-|centerPoint||**Required when imagerySet is Birdseye or BirdseyeWithLabels. Optional for other imagery sets.** The center point to use for the imagery metadata.|A point on the earth specified by latitude and longitude coordinates. For more information about point values, see [Location and Area Types](../rest-services/location-and-area-types.md).<br /><br /> **Example**: 47.610,-122.107|  
+|centerPoint||**Required when imagerySet is Birdseye or BirdseyeWithLabels. Optional for other imagery sets.** The center point to use for the imagery metadata.|A point on the earth specified by latitude and longitude coordinates. For more information about point values, see [Location and Area Types](../services/location-and-area-types.md).<br /><br /> **Example**: 47.610,-122.107|  
 |include|incl|**Optional.** Specifies to provide additional information about the imagery as part of the response.|The only option for this parameter is ImageryProviders. When this parameter value is specified, information about the imagery providers is returned in the response.<br /><br /> **Example**: include=ImageryProviders|  
 |orientation|dir|**Optional.** The orientation of the viewport to use for the imagery metadata. This option only applies to Birdseye imagery.|A double value between 0 to 360, where 0 = North [**default**], 90 = East, 180 = South, 270 = West.<br /><br /> **Example**: orientation=253.21|  
 |uriScheme||**Optional.** Specifies the scheme that image URL in the response should use.|Two values can be specified; http (default), https.<br /><br /> **Example**: uriScheme=https|  
-|zoomLevel|zl|**Required if a centerPoint is specified and imagerySet is set to Road, Aerial or AerialWithLabels** The level of zoom to use for the imagery metadata.|An integer between 1 and 21. **Note:**  Some imagery may not be available at all zoom levels for all locations. If imagery is not available at a location, a message is returned in the `ErrorDetails` collection of the response. For more information about this collection, see [Common Response Description](../rest-services/common-response-description.md). <br /><br /> **Example**: zoomLevel=10|  
+|zoomLevel|zl|**Required if a centerPoint is specified and imagerySet is set to Road, Aerial or AerialWithLabels** The level of zoom to use for the imagery metadata.|An integer between 1 and 21. **Note:**  Some imagery may not be available at all zoom levels for all locations. If imagery is not available at a location, a message is returned in the `ErrorDetails` collection of the response. For more information about this collection, see [Common Response Description](../services/common-response-description.md). <br /><br /> **Example**: zoomLevel=10|  
   
 ## Response  
- When metadata for Birdseye or BirdseyeWithLabels imagery is requested, a BirdseyeMetadata resource is returned in the response. For other imagery types, an ImageryMetadata resource is returned. The ImageryMetadata resource may contain a map tile URL. For more information about the map tile URL and other metadata returned, see [Imagery Metadata](../rest-services/imagery-metadata.md). For more information about the common response syntax for the Bing Maps REST Services, see [Common Response Description](../rest-services/common-response-description.md). JSON and XML responses are provided for the URL examples in the following section.  
+ When metadata for Birdseye or BirdseyeWithLabels imagery is requested, a BirdseyeMetadata resource is returned in the response. For other imagery types, an ImageryMetadata resource is returned. The ImageryMetadata resource may contain a map tile URL. For more information about the map tile URL and other metadata returned, see [Imagery Metadata](../services/imagery-metadata.md). For more information about the common response syntax for the Bing Maps REST Services, see [Common Response Description](../services/common-response-description.md). JSON and XML responses are provided for the URL examples in the following section.  
   
- These URLs support JSON (application/json) and XML (application/xml) response formats. A JSON response is provided by default unless you request XML output by setting the output (o) parameter. For more information, see [Output Parameters](../rest-services/output-parameters.md).  
+ These URLs support JSON (application/json) and XML (application/xml) response formats. A JSON response is provided by default unless you request XML output by setting the output (o) parameter. For more information, see [Output Parameters](../services/output-parameters.md).  
   
 ## Examples  
  **Get Aerial imagery metadata at street level.**  
@@ -101,7 +101,7 @@ https://dev.virtualearth.net/REST/V1/Imagery/Metadata/Aerial/40.714550167322159,
   
  **XML Response**  
   
- This example returns the following XML response. For more information about the response fields including the image URL (map tile URL), see [Common Response Description](../rest-services/common-response-description.md) and [Imagery Metadata](../rest-services/imagery-metadata.md).  
+ This example returns the following XML response. For more information about the response fields including the image URL (map tile URL), see [Common Response Description](../services/common-response-description.md) and [Imagery Metadata](../services/imagery-metadata.md).  
   
 ```  
 <Response xmlns:xsi="http://www.w3.org/2001/XMLSchema instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/search/local/ws/rest/v1">  
@@ -176,7 +176,7 @@ https://dev.virtualearth.net/REST/V1/Imagery/Metadata/Road?output=xml&key=BingMa
   
  **XML Response**  
   
- This example returns the following XML response. For more information about the response and resource fields including the image URL (map tile URL), see [Common Response Description](../rest-services/common-response-description.md) and [Imagery Metadata](../rest-services/imagery-metadata.md).  
+ This example returns the following XML response. For more information about the response and resource fields including the image URL (map tile URL), see [Common Response Description](../services/common-response-description.md) and [Imagery Metadata](../services/imagery-metadata.md).  
   
 ```  
 <Response xmlns:xsi="http://www.w3.org/2001/XMLSchema instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/search/local/ws/rest/v1">  
@@ -260,7 +260,7 @@ https://dev.virtualearth.net/REST/V1/Imagery/Metadata/Birdseye/37.77916006743907
   
  **XML Response**  
   
- This example returns the following XML response. For more information about the response fields including the image URL (map tile URL), see [Common Response Description](../rest-services/common-response-description.md) and [Imagery Metadata](../rest-services/imagery-metadata.md).  
+ This example returns the following XML response. For more information about the response fields including the image URL (map tile URL), see [Common Response Description](../services/common-response-description.md) and [Imagery Metadata](../services/imagery-metadata.md).  
   
 ```  
 <Response xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/search/local/ws/rest/v1">  
@@ -383,7 +383,7 @@ https://dev.virtualearth.net/REST/v1/Imagery/Metadata/AerialWithLabels/47.23,-12
 ## HTTP Status Codes  
   
 > [!NOTE]
->  For more details about these HTTP status codes, see [Status Codes and Error Handling](../rest-services/status-codes-and-error-handling.md).  
+>  For more details about these HTTP status codes, see [Status Codes and Error Handling](../services/status-codes-and-error-handling.md).  
   
  When the request is successful, the following HTTP status code is returned.  
   
@@ -402,5 +402,5 @@ When the request is not successful, the response returns one of the following er
  [Bing Maps Tile System](http://msdn.microsoft.com/en-us/library/bb259689.aspx)   
  [Building Your Own Tile Server](http://msdn.microsoft.com/en-us/library/bb545006.aspx)   
  [Understanding Scale and Resolution](http://msdn.microsoft.com/en-us/library/aa940990.aspx)   
- [Using the REST Services with .NET](../rest-services/using-the-rest-services-with-net.md)   
- [JSON Data Contracts](../rest-services/json-data-contracts.md)
+ [Using the REST Services with .NET](../services/using-the-rest-services-with-net.md)   
+ [JSON Data Contracts](../services/json-data-contracts.md)

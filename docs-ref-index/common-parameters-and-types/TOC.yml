@@ -1,7 +1,7 @@
 - name: Common Paramaters and Types
   maintainContext: true
   expanded: true 
-  - items:
+  items:
     - name: Base URL Structure
       href: base-url-structure.md
     - name: Culture Parameter

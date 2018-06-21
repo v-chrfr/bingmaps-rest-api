@@ -23,7 +23,7 @@ Distance matrices are used in several different types of applications. The most 
 * Calculate the difference in commute times between locations. For example: We are looking to move to a new office, what is the impact on commute times for our staff?
 * Clustering data based on travel time and distances. For example: Find all homes that are within 1 mile of a corner store.
 
-When you make a request by using one of the following URL templates, the response returns a Distance Matrix resource that contains either an array of Distance Matrix cells or information on the asynchronous request that was made to calculate a distance matrix. Each distance matrix cell contains the location and index of the origin and destination it is related to, the travel time, and distance. If a distance matrix histogram is requested, a departure time for when in the histogram the cell it is related to will be included. For more information about the Distance Matrix resource, see [Distance Matrix Data](../rest-services/distance-matrix-data.md). You can also view the example URL and response values in the **Examples** section.
+When you make a request by using one of the following URL templates, the response returns a Distance Matrix resource that contains either an array of Distance Matrix cells or information on the asynchronous request that was made to calculate a distance matrix. Each distance matrix cell contains the location and index of the origin and destination it is related to, the travel time, and distance. If a distance matrix histogram is requested, a departure time for when in the histogram the cell it is related to will be included. For more information about the Distance Matrix resource, see [Distance Matrix Data](../services/distance-matrix-data.md). You can also view the example URL and response values in the **Examples** section.
 
 ## API Limits
 
@@ -54,19 +54,19 @@ If your scenario doesn’t fit either of the parameters outlined above for synch
 
 **How asynchronous requests work**
 
-See [Asynchronous Requests documentation](../rest-services/asynchronous-requests.md).
+See [Asynchronous Requests documentation](../services/asynchronous-requests.md).
 
 **How to calculate number of cells a response will have**
 
 When calculating a simple distance matrix each origin-destination pair will generate a single cell in the matrix.
 
-![Total Cells Calculation](../rest-services/media/distancematrixcellcalculation2.PNG)
+![Total Cells Calculation](../services/media/distancematrixcellcalculation2.PNG)
 
 For example, a matrix that has 2 origins, and 5 destinations, will generate 10 cells where 2 \* 5 = 10.
 
 When a matrix includes a histogram, each origin-destination pair will have a cell in the matrix for each time interval. The number of time intervals that a request will have depends on the resolution, start and end times.
 
-![Total Async Cells Calculation](../rest-services/media/distancematrixasynccellcalculation2.PNG)
+![Total Async Cells Calculation](../services/media/distancematrixasynccellcalculation2.PNG)
 
 For example, a matrix that has 2 origins, 5 destinations, and retrieves time intervals in 15-minute increments (resolution = 1) over 24 hours, will generate 960 cells where 2 \* 5 \* 24/0.25 = 2 \* 5 \* 24 \* 4 = 960.
 
@@ -77,13 +77,13 @@ For example, a matrix that has 2 origins, 5 destinations, and retrieves time int
 
 A billable transaction is generated for every 2 cells in a matrix, rounded up to the nearest whole integer. For a simple matrix, billable transactions will be calculated using the following formula:
 
-![Total Billable Transactions Calculation](../rest-services/media/distancematrixtransactioncalculation2.PNG)
+![Total Billable Transactions Calculation](../services/media/distancematrixtransactioncalculation2.PNG)
 
 For example, a matrix that has 2 origins, and 5 destinations, will generate 5 billable transactions where Ceiling(0.5 \* 2 \* 5) = 5.
 
 When calculating a matrix which includes a histogram, only the first 30 time intervals in each origin-destination pair are counted towards billable transactions, any additional time intervals are provided for free.
 
-![Total Async Billable Transactions Calculation](../rest-services/media/distancematrixasynctransactioncalculation2.PNG)
+![Total Async Billable Transactions Calculation](../services/media/distancematrixasynctransactioncalculation2.PNG)
 
 For example, a matrix that has 2 origins, 5 destinations, and retrieves time intervals in 15 minute increments (resolution = 1) over 24 hours, will generate 150 cells where Ceiling(0.5 \* 2 \* 5 \* Min(30, 24/0.25)) = Ceiling(0.5 \* 2 \* 5 \* Min(30, 96)) = Ceiling(0.5 \* 2 \* 5 \* **30**) = 150. Note that 24/0.25 = 24 \* 4 = 96, but since only the first increments per origin-destination pair is counted towards billable transaction, 66 time intervals are excluded from the transaction calculation per origin-destination pair, thus saving you a total of 330 billable transactions in this scenario.
 
@@ -217,7 +217,7 @@ https://dev.virtualearth.net/REST/v1/Routes/DistanceMatrixAsyncCallback?requestI
 ## Template Parameters
 
 > [!NOTE]
-> Additional parameters, such as output and JSON callback parameters, are found in [Output Parameters](../rest-services/output-parameters.md). 
+> Additional parameters, such as output and JSON callback parameters, are found in [Output Parameters](../services/output-parameters.md). 
 
 | Parameters | Description |
 |------------|-------------|
@@ -235,9 +235,9 @@ https://dev.virtualearth.net/REST/v1/Routes/DistanceMatrixAsyncCallback?requestI
 
 ## Response
 
-A `DistanceMatrix` resource is returned when you make a request with one of the following URLs. For more information about the `DistanceMatrix` resource, see [Distance Matrix Data](../rest-services/distance-matrix-data.md). For more information about the common response syntax for the Bing Maps REST Services, see [Common Response Description](../rest-services/common-response-description.md). JSON and XML responses are provided for the URL examples in the following section.
+A `DistanceMatrix` resource is returned when you make a request with one of the following URLs. For more information about the `DistanceMatrix` resource, see [Distance Matrix Data](../services/distance-matrix-data.md). For more information about the common response syntax for the Bing Maps REST Services, see [Common Response Description](../services/common-response-description.md). JSON and XML responses are provided for the URL examples in the following section.
 
-These URLs support JSON (**application/json**) and XML (**application/xml**) response formats. A JSON response is provided by default unless you request XML output by setting the output (o) parameter. For more information, see [Output Parameters](../rest-services/output-parameters.md).
+These URLs support JSON (**application/json**) and XML (**application/xml**) response formats. A JSON response is provided by default unless you request XML output by setting the output (o) parameter. For more information, see [Output Parameters](../services/output-parameters.md).
 
 ## Examples
 
@@ -256,7 +256,7 @@ Destinations:
 
 **Calculate a simple driving based Distance Matrix (synchronous)**
 
-The following example shows how to request a simple driving based distance matrix for the set of origins and destinations. To view the complete XML and JSON responses, see [Distance Matrix Example](../rest-services/distance-matrix-example.md).
+The following example shows how to request a simple driving based distance matrix for the set of origins and destinations. To view the complete XML and JSON responses, see [Distance Matrix Example](../services/distance-matrix-example.md).
 
 *HTTP GET Request URL*
 
@@ -359,7 +359,7 @@ Content-Type: application/json
 
 **Calculate a simple driving based Distance Matrix for specific time (asynchronous)**
 
-The following example shows how to request a simple driving based distance matrix for the set of origins and destinations for a specified time, June 15<sup>th</sup>, 2017 at 1PM PST. This request will automatically use predictive traffic data to provide accurate estimates. To view the complete XML and JSON responses, see [Distance Matrix Asynchronous Example](../rest-services/distance-matrix-asynchronous-example.md).
+The following example shows how to request a simple driving based distance matrix for the set of origins and destinations for a specified time, June 15<sup>th</sup>, 2017 at 1PM PST. This request will automatically use predictive traffic data to provide accurate estimates. To view the complete XML and JSON responses, see [Distance Matrix Asynchronous Example](../services/distance-matrix-asynchronous-example.md).
 
 *HTTP GET Request URL*
 
@@ -417,7 +417,7 @@ https://dev.virtualearth.net/REST/v1/Routes/DistanceMatrixAsyncCallback?requestI
 
 **Calculate a driving based Distance Matrix Histogram (asynchronous)**
 
-The following example shows how to request a driving based distance matrix histogram for the set of origins and destinations between June 15<sup>th</sup>, 2017 at 1PM PST and June 15<sup>th</sup>, 2017 at 5PM PST with a resolution of 2 (30-minute intervals). This request will automatically use predictive traffic data to provide accurate estimates. To view the complete XML and JSON responses, see [Distance Matrix Histogram Example](../rest-services/distance-matrix-histogram-example.md).
+The following example shows how to request a driving based distance matrix histogram for the set of origins and destinations between June 15<sup>th</sup>, 2017 at 1PM PST and June 15<sup>th</sup>, 2017 at 5PM PST with a resolution of 2 (30-minute intervals). This request will automatically use predictive traffic data to provide accurate estimates. To view the complete XML and JSON responses, see [Distance Matrix Histogram Example](../services/distance-matrix-histogram-example.md).
 
 *HTTP GET Request URL*
 
@@ -478,7 +478,7 @@ https://dev.virtualearth.net/REST/v1/Routes/DistanceMatrixAsyncCallback?requestI
 ## HTTP Status Codes
 
 > [!NOTE]
-> For more details about these HTTP status codes, see [Status Codes and Error Handling](../rest-services/status-codes-and-error-handling.md). 
+> For more details about these HTTP status codes, see [Status Codes and Error Handling](../services/status-codes-and-error-handling.md). 
 
 When the request is successful, the following HTTP status code is returned.
 
@@ -495,8 +495,8 @@ When the request is not successful, the response returns one of the following er
 
 ## See Also
 
-* [Using the REST Services with .NET](../rest-services/using-the-rest-services-with-net.md)
-* [Distance Matrix Data](../rest-services/distance-matrix-data.md)
-* [Distance Matrix Example](../rest-services/distance-matrix-example.md)
-* [Distance Matrix Asynchronous Example](../rest-services/distance-matrix-asynchronous-example.md)
-* [Distance Matrix Histogram Example](../rest-services/distance-matrix-histogram-example.md)
+* [Using the REST Services with .NET](../services/using-the-rest-services-with-net.md)
+* [Distance Matrix Data](../services/distance-matrix-data.md)
+* [Distance Matrix Example](../services/distance-matrix-example.md)
+* [Distance Matrix Asynchronous Example](../services/distance-matrix-asynchronous-example.md)
+* [Distance Matrix Histogram Example](../services/distance-matrix-histogram-example.md)

@@ -14,9 +14,9 @@ manager: "stevelom"
 ms.service: "bing-maps"
 ---
 # Find a Location by Query
-Use the following URL templates to get latitude and longitude coordinates that correspond to location information provided as a query string. The strings `Space Needle` (a landmark) and `1 Microsoft Way Redmond WA` (an address) are examples of query strings with location information. These strings can be specified as a structured URL parameter or as a query parameter value. This URL template can be used to geocode information from any country. For more accurate results, use [User Context Parameters](../rest-services/user-context-parameters.md), such as the coordinates of a user’s current location.  
+Use the following URL templates to get latitude and longitude coordinates that correspond to location information provided as a query string. The strings `Space Needle` (a landmark) and `1 Microsoft Way Redmond WA` (an address) are examples of query strings with location information. These strings can be specified as a structured URL parameter or as a query parameter value. This URL template can be used to geocode information from any country. For more accurate results, use [User Context Parameters](../services/user-context-parameters.md), such as the coordinates of a user’s current location.  
   
- When you make a request by using one of the following URL templates, the response returns one or more Location resources that contain location information associated with the URL parameter values. The location information for each resource includes latitude and longitude coordinates, the type of location, and the geographical area that contains the location. For more information about the Location resource, see [Location Data](../rest-services/location-data.md). You can also view the example URL and response values in the **Examples** section.  
+ When you make a request by using one of the following URL templates, the response returns one or more Location resources that contain location information associated with the URL parameter values. The location information for each resource includes latitude and longitude coordinates, the type of location, and the geographical area that contains the location. For more information about the Location resource, see [Location Data](../services/location-data.md). You can also view the example URL and response values in the **Examples** section.  
   
 ## URL Template  
   
@@ -49,13 +49,13 @@ http://dev.virtualearth.net/REST/v1/Locations?query={locationQuery}&includeNeigh
 ### Template Parameters  
   
 > [!NOTE]
->  See the [Common Parameters and Types](../rest-services/common-parameters-and-types.md) section for additional common parameters to use with these URLs.  
+>  See the [Common Parameters and Types](../services/common-parameters-and-types.md) section for additional common parameters to use with these URLs.  
 >   
 >  Common parameters include:  
 >   
->  -   [Output Parameters](../rest-services/output-parameters.md): Includes response output types and the JSON callback parameters.  
-> -   [Culture Parameter](../rest-services/culture-parameter.md): Includes a list of the supported cultures.  
-> -   [User Context Parameters](../rest-services/user-context-parameters.md): Includes parameters that set user location and viewport values to assist with determining locations. For example, you can prioritize the set of locations returned by a location query when you provide information about the user’s location.  
+>  -   [Output Parameters](../services/output-parameters.md): Includes response output types and the JSON callback parameters.  
+> -   [Culture Parameter](../services/culture-parameter.md): Includes a list of the supported cultures.  
+> -   [User Context Parameters](../services/user-context-parameters.md): Includes parameters that set user location and viewport values to assist with determining locations. For example, you can prioritize the set of locations returned by a location query when you provide information about the user’s location.  
 >   
 >  When an alias is provided, you can use the alias to shorten the length of the query parameter. For example, query=1600 Pennsylvania Ave NW Washington, DC can be shortened to q=1600 Pennsylvania Ave NW Washington, DC.  
 >   
@@ -71,9 +71,9 @@ http://dev.virtualearth.net/REST/v1/Locations?query={locationQuery}&includeNeigh
 |maxResults|maxRes|**Optional.** Specifies the maximum number of locations to return in the response.|A string that contains an integer between 1 and 20. The default value is 5.<br /><br /> **Example:**<br /><br /> maxResults=10|  
   
 ## Response  
- One or more Location resources are returned in the response when you make a request by using these URL templates. For more information about the Location resource, see [Location Data](../rest-services/location-data.md). For more information about the common response syntax for the Bing Maps REST Services, see [Common Response Description](../rest-services/common-response-description.md). JSON and XML responses are provided for the URL examples in the following section.  
+ One or more Location resources are returned in the response when you make a request by using these URL templates. For more information about the Location resource, see [Location Data](../services/location-data.md). For more information about the common response syntax for the Bing Maps REST Services, see [Common Response Description](../services/common-response-description.md). JSON and XML responses are provided for the URL examples in the following section.  
   
- These URLs support JSON (application/json) and XML (application/xml) response formats. A JSON response is provided by default unless you request XML output by setting the output (o) parameter. For more information, see [Output Parameters](../rest-services/output-parameters.md).  
+ These URLs support JSON (application/json) and XML (application/xml) response formats. A JSON response is provided by default unless you request XML output by setting the output (o) parameter. For more information, see [Output Parameters](../services/output-parameters.md).  
   
 ## Examples  
  **Find location information for an address using a query string.**  
@@ -259,7 +259,7 @@ http://dev.virtualearth.net/REST/v1/Locations/1%20Microsoft%20Way%20Redmond%20WA
   
  **Find location information associated with a query string and relevant to the user’s location.**  
   
- The following example searches for locations associated with the search query "Kings Road". Because the userLocation parameter is specified, the results returned are relevant to the user’s location. For more information about the userLocation parameter and other user context parameters, see [User Context Parameters](../rest-services/user-context-parameters.md).  
+ The following example searches for locations associated with the search query "Kings Road". Because the userLocation parameter is specified, the results returned are relevant to the user’s location. For more information about the userLocation parameter and other user context parameters, see [User Context Parameters](../services/user-context-parameters.md).  
   
 ```  
 http://dev.virtualearth.net/REST/v1/Locations?culture=en-GB&query=Kings%20Road&o=xml&userLocation=51.504360719046616,-0.12600176611298197&o=xml&key=BingMapsKey  
@@ -538,7 +538,7 @@ http://dev.virtualearth.net/REST/v1/Locations?q=Greenville&maxResults=10&key=Bin
 ## HTTP Status Codes  
   
 > [!NOTE]
->  For more details about these HTTP status codes, see [Status Codes and Error Handling](../rest-services/status-codes-and-error-handling.md).  
+>  For more details about these HTTP status codes, see [Status Codes and Error Handling](../services/status-codes-and-error-handling.md).  
   
  When the request is successful, the following HTTP status code is returned.  
   
@@ -554,5 +554,5 @@ When the request is not successful, the response returns one of the following er
 * 503
   
 ## See Also  
- * [Using the REST Services with .NET](../rest-services/using-the-rest-services-with-net.md)   
- * [JSON Data Contracts](../rest-services/json-data-contracts.md)   
+ * [Using the REST Services with .NET](../services/using-the-rest-services-with-net.md)   
+ * [JSON Data Contracts](../services/json-data-contracts.md)   

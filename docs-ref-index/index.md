@@ -23,11 +23,11 @@ The Bing™ Maps REST Services Application Programming Interface (API) is a Repr
   
 |REST API|Features|  
 |--------------|--------------|  
-|[Locations](../rest-services/locations-api.md)|-   Find a location based on an address, point, or query.|  
-|[Elevations](../rest-services/elevations-api.md)|-   Get the elevations for a set of locations, a path, or an area on the Earth.|  
-|[Imagery](../rest-services/imagery-api.md)|-   Get a static map.<br />-   Get a static map that displays a route.<br />-   Get imagery metadata.|  
-|[Routes](../rest-services/routes-api.md)|-   Find a walking, driving or transit route.<br />-   Find routes from major routes to a location.<br />-   Get traffic information along a route.|  
-|[Traffic](../rest-services/traffic-api.md)|-   Get traffic information for a geographical area.|  
+|[Locations](../services/locations-api.md)|-   Find a location based on an address, point, or query.|  
+|[Elevations](../services/elevations-api.md)|-   Get the elevations for a set of locations, a path, or an area on the Earth.|  
+|[Imagery](../services/imagery-api.md)|-   Get a static map.<br />-   Get a static map that displays a route.<br />-   Get imagery metadata.|  
+|[Routes](../services/routes-api.md)|-   Find a walking, driving or transit route.<br />-   Find routes from major routes to a location.<br />-   Get traffic information along a route.|  
+|[Traffic](../services/traffic-api.md)|-   Get traffic information for a geographical area.|  
   
 ### Additional Topics  
  The following topics show examples of how to use the Bing Maps REST Services with other Bing Maps APIs or provide related information.  

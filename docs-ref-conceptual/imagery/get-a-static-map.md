@@ -79,13 +79,13 @@ https://dev.virtualearth.net/REST/v1/Imagery/Map/{imagerySet}/{query}?mapSize={m
 ### Template Parameters  
   
 > [!NOTE]
->  See the [Common Parameters and Types](../rest-services/common-parameters-and-types.md) section for additional common parameters to use with these URLs.  
+>  See the [Common Parameters and Types](../services/common-parameters-and-types.md) section for additional common parameters to use with these URLs.  
 >   
 >  Common parameters include:  
 >   
->  -   [Output Parameters](../rest-services/output-parameters.md): Includes response output types and the JSON callback parameters.  
-> -   [Culture Parameter](../rest-services/culture-parameter.md): Includes a list of the supported cultures.  
-> -   [User Context Parameters](../rest-services/user-context-parameters.md): Includes parameters that set user location and viewport values to help determine locations. For example, these values may help prioritize a set of possible locations when you get a map based on a location query.  
+>  -   [Output Parameters](../services/output-parameters.md): Includes response output types and the JSON callback parameters.  
+> -   [Culture Parameter](../services/culture-parameter.md): Includes a list of the supported cultures.  
+> -   [User Context Parameters](../services/user-context-parameters.md): Includes parameters that set user location and viewport values to help determine locations. For example, these values may help prioritize a set of possible locations when you get a map based on a location query.  
 >   
 >  Parameter values are not case-sensitive.  
 >   
@@ -95,20 +95,20 @@ https://dev.virtualearth.net/REST/v1/Imagery/Map/{imagerySet}/{query}?mapSize={m
   
 |Parameter|Alias|Description|Values|  
 |---------------|-----------|-----------------|------------|  
-|centerPoint||**Required.** A point on the Earth where the map is centered.|A Point value (latitude and longitude). For more information about Point values, see [Location and Area Types](../rest-services/location-and-area-types.md).<br /><br /> **Example**: centerPoint=47.610,-122.107|  
+|centerPoint||**Required.** A point on the Earth where the map is centered.|A Point value (latitude and longitude). For more information about Point values, see [Location and Area Types](../services/location-and-area-types.md).<br /><br /> **Example**: centerPoint=47.610,-122.107|  
 |declutterPins|dcl|**Optional.** Specifies whether to change the display of overlapping pushpins so that they display separately on a map.|One of the following values:<br /><br /> -   1: Declutter pusphpin icons.<br />-   0 **[default]**: Do not declutter pushpin icons.<br /><br /> **Note**: This feature is only supported when using the default pushpin style.<br /><br /> **Examples**:<br /><br /> declutter=1<br /><br /> dcl =1|  
 |dpi||**Optional.** Specifies the resolution of the labels on the image to retrieve.|One of the following values:<br /><br /> -   Large: High resolution labels.<br />-   null **[default]**: Default image resolution.<br /><br /> **Example**: dpi=Large|  
 |format|fmt|**Optional.** The image format to use for the static map.|One of the following image format values:<br /><br /> -   gif: Use GIF image format.<br />-   jpeg: Use JPEG image format. JPEG format is the default for Road, Aerial and AerialWithLabels imagery.<br />-   png: Use PNG image format. PNG is the default format for CollinsBart and OrdnanceSurvey imagery.<br /><br /> **Examples:**<br /><br /> format=jpeg<br /><br /> fmt=gif|  
 |imagerySet||**Required.** The type of imagery.|One of the following values:<br /><br /> - Aerial – Aerial imagery.<br />- AerialWithLabels –Aerial imagery with a road overlay.<br />-AerialWithLabelsOnDemand - Aerial imagery with on-demand road overlay.<br />- CanvasDark - A dark version of the road maps.<br />- CanvasLight - A lighter version of the road maps which also has some of the details such as hill shading disabled.<br />- CanvasGray - A grayscale version of the road maps.<br />- Road – Roads without additional imagery.<br />- RoadOnDemand - Roads without additional imagery. Uses the dynamic tile service.|  
-|mapArea|ma|**Required when a center point or set of route points are not specified.** The geographic area to display on the map.|A rectangular area specified as a bounding box. For more information, see [Location and Area Types](../rest-services/location-and-area-types.md).<br /><br /> **Example**: 45.219,-122.325,47.610,-122.107|  
+|mapArea|ma|**Required when a center point or set of route points are not specified.** The geographic area to display on the map.|A rectangular area specified as a bounding box. For more information, see [Location and Area Types](../services/location-and-area-types.md).<br /><br /> **Example**: 45.219,-122.325,47.610,-122.107|  
 |mapLayer|ml|**Optional.** A display layer that renders on top of the imagery set.|-   OrdnanceSurvey - Ordnance Survey imagery. This imagery is visible only in the UK.<br />-   TrafficFlow<br /><br /> **Example**: mapLayer=TrafficFlow|  
 |mapSize|ms|**Optional.** The width and height in pixels of the static map output.|A string that contains a width and a height separated by a comma. The width must be between 80 and 2000 pixels and the height must be between 80 and 1500 pixels. The default map size for static maps is 350 pixels by 350 pixels. If the width or height dimension exceeds the limits, the default dimensions will be used.<br /><br /> **Example**: mapSize=100,600|  
-|pushpin|pp|**Optional**. One or more pushpin locations to display on the map.|A series of values that include a Point value (latitude and longitude) with options to add a label of up to three (3) characters and to specify an icon style. For more information about specifying pushpins, see [Pushpin Syntax and Icon Styles](../rest-services/pushpin-syntax-and-icon-styles.md). You can specify up to 18 pushpins within a URL and 100 if you use the HTTP POST method and specify the pushpins in the body of the request. See the **Examples** section for examples.<br /><br /> **Example**: pushpin=47.610,-122.107;5;P10|  
-|mapMetadata|mmd|**Optional**. Specifies whether to return metadata for the static map instead of the image.<br /><br /> The static map metadata includes the size of the static map and the placement and size of the pushpins on the static map.|One of the following values:<br /><br /> -   1: Return metadata for the specific image. An image is not returned.<br />-   0: Do not return metadata. **[default]**<br />     When you request metadata, the response returns metadata for the map instead of the map image. For more information about the static map metadata, see [Static Map Data](../rest-services/static-map-data.md).<br /><br /> **Example:** mmd=1|  
+|pushpin|pp|**Optional**. One or more pushpin locations to display on the map.|A series of values that include a Point value (latitude and longitude) with options to add a label of up to three (3) characters and to specify an icon style. For more information about specifying pushpins, see [Pushpin Syntax and Icon Styles](../services/pushpin-syntax-and-icon-styles.md). You can specify up to 18 pushpins within a URL and 100 if you use the HTTP POST method and specify the pushpins in the body of the request. See the **Examples** section for examples.<br /><br /> **Example**: pushpin=47.610,-122.107;5;P10|  
+|mapMetadata|mmd|**Optional**. Specifies whether to return metadata for the static map instead of the image.<br /><br /> The static map metadata includes the size of the static map and the placement and size of the pushpins on the static map.|One of the following values:<br /><br /> -   1: Return metadata for the specific image. An image is not returned.<br />-   0: Do not return metadata. **[default]**<br />     When you request metadata, the response returns metadata for the map instead of the map image. For more information about the static map metadata, see [Static Map Data](../services/static-map-data.md).<br /><br /> **Example:** mmd=1|  
 |query||**Required.** A query string that is used to determine the map location to display.|A string that contains query terms for the location of the static map.<br /><br /> **Example:** Seattle%20Center|  
-|zoomLevel||**Required.** The level of zoom to display.|An integer between 0 and 21. **Note:**  Some imagery may not be available at all zoom levels for all locations. If imagery is not available at a location, a message is returned in the `ErrorDetails` collection that is part of the common response fields. See [Common Response Description](../rest-services/common-response-description.md) for a list of common response fields. <br /><br /> **Example**: 10|  
+|zoomLevel||**Required.** The level of zoom to display.|An integer between 0 and 21. **Note:**  Some imagery may not be available at all zoom levels for all locations. If imagery is not available at a location, a message is returned in the `ErrorDetails` collection that is part of the common response fields. See [Common Response Description](../services/common-response-description.md) for a list of common response fields. <br /><br /> **Example**: 10|  
 |highlightEntity|he|Highlights a polygon for an entity.|1 = Highlight polygon is on|  
-|entityType||**Optional.** Indicates the type of entity that should be highlighted. The entity of this type that contains the centerPoint will be highlighted.|CountryRegion, AdminDivision1, or PopulatedPlace. For more information, see [Location and Area Types](https://msdn.microsoft.com/en-us/library/ff701726.aspx)<br /><br /> Also, please see the [Examples](../rest-services/get-a-static-map.md#BKMK_GetAStaticMapExamples) section below for demonstrations of this parameter.|  
+|entityType||**Optional.** Indicates the type of entity that should be highlighted. The entity of this type that contains the centerPoint will be highlighted.|CountryRegion, AdminDivision1, or PopulatedPlace. For more information, see [Location and Area Types](https://msdn.microsoft.com/en-us/library/ff701726.aspx)<br /><br /> Also, please see the [Examples](../services/get-a-static-map.md#BKMK_GetAStaticMapExamples) section below for demonstrations of this parameter.|  
 |style|st|**Optional.** Specifies a custom map style to apply to the road maps.|See [Custom Map Styles in Bing Maps V8 and REST Services](../articles/custom-map-styles-in-bing-maps.md).|  
   
  **Route Parameters**  
@@ -122,7 +122,7 @@ https://dev.virtualearth.net/REST/v1/Imagery/Map/{imagerySet}/{query}?mapSize={m
 |optimize|optmz|**Optional.** Specifies what parameters to use to optimize the route on the map.|One of the following values:<br /><br /> -   distance: The route is calculated to minimize the distance. Traffic information is not used.<br />-   time **[default]**: The route is calculated to minimize the time. Traffic information is not used.<br />-   timeWithTraffic: The route is calculated to minimize the time and uses current traffic information.<br /><br /> **Example**: optimize=time|  
 |timeType|tt|**Required when the travel mode is Transit**. Specifies how to interpret the date and transit time value that is specified by the dateTime parameter.|One of the following values:<br /><br /> -   Arrival: The dateTime parameter contains the desired arrival time for a transit request.<br />-   Departure: The dateTime parameter contains the desired departure time for a transit request.<br />-   LastAvailable: The dateTime parameter contains the latest departure time available for a transit request.|  
 |travelMode||**Optional.** The mode of travel for the route.|One of the following values:<br /><br /> -   Driving **[default]**<br />-   Walking<br />-   Transit|  
-|waypoint.n|wp.n|**Required.** Specifies two or more locations that define the route and that are in sequential order.|A waypoint location can be specified as a point, a landmark, or an address. You can optionally specify an icon style and add a label of up to three (3) characters for each waypoint. For a list of icon styles, see [Pushpin Syntax and Icon Styles](../rest-services/pushpin-syntax-and-icon-styles.md). For more information about Point values, see [Location and Area Types](../rest-services/location-and-area-types.md).<br /><br /> Specify waypoints using the following format: `wp.n;iconID;label`. The index (n value) for the set of waypoints in an integer starting with 0 or 1. The waypoint index values must be sequential and must always increment by 1.<br /><br /> You can have a maximum of 25 waypoints.<br /><br /> **Examples**:<br /><br /> waypoint.1=47.610,-122.107 [Point]<br /><br /> wp.1=Seattle,WA  [landmark]<br /><br /> wp.1=Seattle,WA;66;SEA  [icon and label]<br /><br /> waypoint.1=1 Microsoft%20Way%20Redmond WA [address]<br /><br /> **Incorrect set of waypoints.** The following set of values is not valid because there is no waypoint.2.<br /><br /> &waypoint.1=San%20Francisco&waypoint.3=Seattle|  
+|waypoint.n|wp.n|**Required.** Specifies two or more locations that define the route and that are in sequential order.|A waypoint location can be specified as a point, a landmark, or an address. You can optionally specify an icon style and add a label of up to three (3) characters for each waypoint. For a list of icon styles, see [Pushpin Syntax and Icon Styles](../services/pushpin-syntax-and-icon-styles.md). For more information about Point values, see [Location and Area Types](../services/location-and-area-types.md).<br /><br /> Specify waypoints using the following format: `wp.n;iconID;label`. The index (n value) for the set of waypoints in an integer starting with 0 or 1. The waypoint index values must be sequential and must always increment by 1.<br /><br /> You can have a maximum of 25 waypoints.<br /><br /> **Examples**:<br /><br /> waypoint.1=47.610,-122.107 [Point]<br /><br /> wp.1=Seattle,WA  [landmark]<br /><br /> wp.1=Seattle,WA;66;SEA  [icon and label]<br /><br /> waypoint.1=1 Microsoft%20Way%20Redmond WA [address]<br /><br /> **Incorrect set of waypoints.** The following set of values is not valid because there is no waypoint.2.<br /><br /> &waypoint.1=San%20Francisco&waypoint.3=Seattle|  
   
 ## Response  
  Static images are returned in one of the following formats. You can specify the image format by setting the `format` parameter. Default image formats and the corresponding content-type values returned in the response (such as image/png) are defined below.  
@@ -133,7 +133,7 @@ https://dev.virtualearth.net/REST/v1/Imagery/Map/{imagerySet}/{query}?mapSize={m
   
 -   GIF (image/gif)  
   
- These URLs support JSON (application/json) and XML (application/xml) response formats. A JSON response is provided by default unless you request XML output by setting the output (o) parameter.  For more information, see [Output Parameters](../rest-services/output-parameters.md).  
+ These URLs support JSON (application/json) and XML (application/xml) response formats. A JSON response is provided by default unless you request XML output by setting the output (o) parameter.  For more information, see [Output Parameters](../services/output-parameters.md).  
   
 <a name="BKMK_GetAStaticMapExamples"></a>   
 ## Examples  
@@ -147,7 +147,7 @@ https://dev.virtualearth.net/REST/V1/Imagery/Map/Road/Bellevue%20Washington?mapL
   
  This example returns the following image.  
   
- ![Seattle Center Static Map Example](../rest-services/media/seattlecenterstaticmap.jpg "Seattle Center Static Map Example")  
+ ![Seattle Center Static Map Example](../services/media/seattlecenterstaticmap.jpg "Seattle Center Static Map Example")  
   
  **Get a map with Aerial imagery based on a query.**  
   
@@ -159,7 +159,7 @@ https://dev.virtualearth.net/REST/v1/Imagery/Map/AerialWithLabels/eiffel%20tower
   
  This example returns the following image.  
   
- ![Static Map Image of the Eiffel Tower](../rest-services/media/rest-eiffeltowerstaticmap.PNG "Static Map Image of the Eiffel Tower")  
+ ![Static Map Image of the Eiffel Tower](../services/media/rest-eiffeltowerstaticmap.PNG "Static Map Image of the Eiffel Tower")  
   
  **Get a map with Road imagery and pushpins that is centered at a specified point.**  
   
@@ -171,11 +171,11 @@ https://dev.virtualearth.net/REST/v1/Imagery/Map/Road/47.619048,-122.35384/15?ma
   
  This example returns the following image.  
   
- ![CenterPoint and ZoomLevel Static Map Example](../rest-services/media/centerpointzoomlevelstaticmap.jpg "CenterPoint and ZoomLevel Static Map Example")  
+ ![CenterPoint and ZoomLevel Static Map Example](../services/media/centerpointzoomlevelstaticmap.jpg "CenterPoint and ZoomLevel Static Map Example")  
   
  **Get the static map metadata for a map with Road imagery and pushpins that is centered at a specified point.**  
   
- This example specifies the same map parameters as the previous example and adds the mapMetadata parameter to get the map metadata. Map metadata includes the map size, area and center point and the position and size of the pushpins. To see the XML and JSON responses for this request and for descriptions of the metadata information, see [Static Map Data](../rest-services/static-map-data.md).  
+ This example specifies the same map parameters as the previous example and adds the mapMetadata parameter to get the map metadata. Map metadata includes the map size, area and center point and the position and size of the pushpins. To see the XML and JSON responses for this request and for descriptions of the metadata information, see [Static Map Data](../services/static-map-data.md).  
   
 ```  
 https://dev.virtualearth.net/REST/v1/Imagery/Map/Road/47.619048,-122.35384/15?mapSize=500,500&pp=47.620495,-122.34931;21;AA&pp=47.619385,-122.351485;;AB&pp=47.616295,-122.3556;22&mapMetadata=1&o=xml&key=BingMapsKey  
@@ -191,11 +191,11 @@ https://dev.virtualearth.net/REST/v1/Imagery/Map/Road/47.6156352,-122.2043549/12
   
  This example returns the following image.  
   
- ![Static Map showing decluttered pushpins](../rest-services/media/rest-staticmap-declutteredpins.png "Static Map showing decluttered pushpins")  
+ ![Static Map showing decluttered pushpins](../services/media/rest-staticmap-declutteredpins.png "Static Map showing decluttered pushpins")  
   
  If the declutter parameter was not set in this example, the pushpins would overlap as shown in the following image.  
   
- ![Static Map showing overlapping pushpins](../rest-services/media/rest-staticmap-clutteredpins.png "Static Map showing overlapping pushpins")  
+ ![Static Map showing overlapping pushpins](../services/media/rest-staticmap-clutteredpins.png "Static Map showing overlapping pushpins")  
   
  **Get a map with Aerial imagery and pushpins without specifying a map area or center point. The map is optimized to fit the pushpins.**  
   
@@ -207,7 +207,7 @@ https://dev.virtualearth.net/REST/v1/Imagery/Map/AerialWithLabels?pp=40.804000,-
   
  This example returns the following image.  
   
- ![Static map with pushpins and Aerial imagery](../rest-services/media/rest-ppwithnomapareaorcp.png "Static map with pushpins and Aerial imagery")  
+ ![Static map with pushpins and Aerial imagery](../services/media/rest-ppwithnomapareaorcp.png "Static map with pushpins and Aerial imagery")  
   
  **Get a map with Road imagery for a specified map area.**  
   
@@ -219,7 +219,7 @@ https://dev.virtualearth.net/REST/V1/Imagery/Map/road?mapArea=37.317227,-122.318
   
  This example returns the following image.  
   
- ![Map Area Static Map](../rest-services/media/rest-mapareastaticmap.jpg "Map Area Static Map")  
+ ![Map Area Static Map](../services/media/rest-mapareastaticmap.jpg "Map Area Static Map")  
   
  **Get a map with Road imagery that displays a route.**  
   
@@ -231,11 +231,11 @@ https://dev.virtualearth.net/REST/v1/Imagery/Map/Road/Routes?wp.0=Seattle,WA;64;
   
  This example returns the following image.  
   
- ![Static map with route overlay](../rest-services/media/rest-routeonmapsimplesea2red.jpg "Static map with route overlay")  
+ ![Static map with route overlay](../services/media/rest-routeonmapsimplesea2red.jpg "Static map with route overlay")  
   
  **Get a map with Road imagery centered at a point with a specified zoom level.**  
   
- This example uses a center point and zoom level to get a map that shows the end of the route between Seattle and Redmond from the previous example. The center point is the latitude and longitude coordinates of Redmond. You can use the [Find a Location by Address](../rest-services/find-a-location-by-address.md) API to get the latitude and longitude coordinates of a location.  
+ This example uses a center point and zoom level to get a map that shows the end of the route between Seattle and Redmond from the previous example. The center point is the latitude and longitude coordinates of Redmond. You can use the [Find a Location by Address](../services/find-a-location-by-address.md) API to get the latitude and longitude coordinates of a location.  
   
 ```  
 https://dev.virtualearth.net/REST/v1/Imagery/Map/Road/47.678559869527817,-122.13099449872971/14/Routes? wp.0=Seattle,WA;64;1&wp.1=Redmond,WA;66;2&key=BingMapsKey  
@@ -243,7 +243,7 @@ https://dev.virtualearth.net/REST/v1/Imagery/Map/Road/47.678559869527817,-122.13
   
  This example returns the following image.  
   
- ![Static map with route overlay](../rest-services/media/rest-routeonmapcpzl-simpleendpoint.jpg "Static map with route overlay")  
+ ![Static map with route overlay](../services/media/rest-routeonmapcpzl-simpleendpoint.jpg "Static map with route overlay")  
   
  **Get maps with Road imagery that displays a transit route and zoomed views of the start and end points.**  
   
@@ -255,23 +255,23 @@ https://dev.virtualearth.net/REST/v1/Imagery/Map/Road/47.678559869527817,-122.13
 https://dev.virtualearth.net/REST/V1/Imagery/Map/Road/Routes/Transit?wp.0=Space%20Needle&wp.1=Bellevue%20Downtown%20Park&timeType=Departure&dateTime=3:00:00PM&output=xml&key=BingMapsKey  
 ```  
   
- ![Shows a transit route on a static map](../rest-services/media/rest-transitcompleteroute.PNG "Shows a transit route on a static map")  
+ ![Shows a transit route on a static map](../services/media/rest-transitcompleteroute.PNG "Shows a transit route on a static map")  
   
- View the start of the transit route by specifying a center point and zoom level. The center point for this map is the coordinates for the Space Needle that are returned in the response when you request a transit route by using the [Calculate a Route](../rest-services/calculate-a-route.md) API. This map includes a walking route that is shown by a dotted line.  
+ View the start of the transit route by specifying a center point and zoom level. The center point for this map is the coordinates for the Space Needle that are returned in the response when you request a transit route by using the [Calculate a Route](../services/calculate-a-route.md) API. This map includes a walking route that is shown by a dotted line.  
   
 ```  
 https://dev.virtualearth.net/REST/v1/Imagery/Map/Road/47.620495,-122.34931/15/Routes/Transit?timeType=Departure&dateTime=3:00:00PM&wp.0=Space%20Needle&wp.1=Bellevue%20Downtown%20Park&key=BingMapsKey  
 ```  
   
- ![Zoomed&#45;in view of transit route start](../rest-services/media/rest-transitroutestart.PNG "Zoomed-in view of transit route start")  
+ ![Zoomed&#45;in view of transit route start](../services/media/rest-transitroutestart.PNG "Zoomed-in view of transit route start")  
   
- View the end of the transit route by specifying a center point and zoom level. The center point for this map is the coordinates of the Bellevue Downtown Park in that is returned in the response when you request a transit route by using the [Calculate a Route](../rest-services/calculate-a-route.md) API. This map includes a walking route that is shown by a dotted line.  
+ View the end of the transit route by specifying a center point and zoom level. The center point for this map is the coordinates of the Bellevue Downtown Park in that is returned in the response when you request a transit route by using the [Calculate a Route](../services/calculate-a-route.md) API. This map includes a walking route that is shown by a dotted line.  
   
 ```  
 https://dev.virtualearth.net/REST/v1/Imagery/Map/Road/47.615635,-122.20435/15/Routes/Transit?timeType=Departure&dateTime=3:00:00PM&wp.0=Space%20Needle&wp.1=Bellevue%20Downtown%20Park&key=BingMapsKey  
 ```  
   
- ![Zoomed&#45;in view of transit route end](../rest-services/media/rest-transitrouteend.PNG "Zoomed-in view of transit route end")  
+ ![Zoomed&#45;in view of transit route end](../services/media/rest-transitrouteend.PNG "Zoomed-in view of transit route end")  
   
  **Get a map that displays pushpins by using the HTTP POST Method**  
   
@@ -316,7 +316,7 @@ pp=38.890479451480054,-77.04744637012482;1;VM&pp=38.8896854931628,-77.0351940393
   
  This example returns the following image.  
   
- ![Static map of Washington monuments with pushpins](../rest-services/media/rest-washingtonmonumentswithpushpins.png "Static map of Washington monuments with pushpins")  
+ ![Static map of Washington monuments with pushpins](../services/media/rest-washingtonmonumentswithpushpins.png "Static map of Washington monuments with pushpins")  
   
  **Get a map with Ordnance Survey imagery that is provided in JPEG format.**  
   
@@ -328,7 +328,7 @@ https://dev.virtualearth.net/REST/v1/Imagery/Map/Road/51.506666,-0.129436/15?ml=
   
  This example returns the following image.  
   
- ![Image showing Ordnance Survey imagery](../rest-services/media/rest-ordnacesurveyimage.PNG "Image showing Ordnance Survey imagery")  
+ ![Image showing Ordnance Survey imagery](../services/media/rest-ordnacesurveyimage.PNG "Image showing Ordnance Survey imagery")  
   
  **Get a map that will highlight the polygon for an entity.**  
   
@@ -340,7 +340,7 @@ https://dev.virtualearth.net/REST/v1/Imagery/Map/Road/47.677006,-122.125526/admi
   
  This example returns the following image.  
   
- ![BingRestWS&#95;PolyState](../rest-services/media/bingrestws-polystate.png "BingRestWS_PolyState")  
+ ![BingRestWS&#95;PolyState](../services/media/bingrestws-polystate.png "BingRestWS_PolyState")  
   
  This example shows a map using the `HighlightEntity` (he=1) parameter with a value of `PopulatedPlace` to show a map with a polygon for the city of Redmond. The latitude and longitude is a point that is within the entity that you want to highlight.  
   
@@ -350,12 +350,12 @@ https://dev.virtualearth.net/REST/v1/Imagery/Map/Road/47.677006,-122.125526/Popu
   
  This example returns the following image.  
   
- ![BingRestWS&#95;PolyCity](../rest-services/media/bingrestws-polycity.png "BingRestWS_PolyCity")  
+ ![BingRestWS&#95;PolyCity](../services/media/bingrestws-polycity.png "BingRestWS_PolyCity")  
   
 ## HTTP Status Codes  
   
 > [!NOTE]
->  For more details about these HTTP status codes, see [Status Codes and Error Handling](../rest-services/status-codes-and-error-handling.md).  
+>  For more details about these HTTP status codes, see [Status Codes and Error Handling](../services/status-codes-and-error-handling.md).  
   
  When the request is successful, the following HTTP status code is returned.  
   
@@ -371,5 +371,5 @@ When the request is not successful, the response returns one of the following er
 * 503 
   
 ## See Also  
- [Using the REST Services with .NET](../rest-services/using-the-rest-services-with-net.md)   
- [JSON Data Contracts](../rest-services/json-data-contracts.md)
+ [Using the REST Services with .NET](../services/using-the-rest-services-with-net.md)   
+ [JSON Data Contracts](../services/json-data-contracts.md)
