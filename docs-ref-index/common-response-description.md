@@ -1,10 +1,6 @@
 ---
 title: "Common Response Description | Microsoft Docs"
-ms.custom: ""
 ms.date: "02/28/2018"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 author: "rbrundritt"
 ms.author: "richbrun"

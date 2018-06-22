@@ -1,1 +1,0 @@
-# Welcome to bingmaps-docs-rest-api!
