@@ -1,0 +1,294 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Distance Matrix Data | Microsoft Docs </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Distance Matrix Data | Microsoft Docs ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="TOC.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="distance-matrix-data">Distance Matrix Data</h1>
+
+<p>The response returned when making an asynchronous request to the Distance Matrix API contains a <code>DistanceMatrixAsyncStatus</code> resource which provides information on the status of the request.</p>
+<p>The response returned when making a synchronous request to the Distance Matrix API contains a <code>DistanceMatrix</code> resource. The information provided in the <code>DistanceMatrix</code> resource includes an array of results which correspond to each origin and destination pair in the request. If the request was made asynchronously, the response would provide a request id which can be used to query the status of the asynchronous request.</p>
+<p>The following tables provide the descriptions of the <code>DistanceMatrix</code> and <code>DistanceMatrixAsyncStatus</code> resource fields.</p>
+<p>For more information about the common response container for the Bing Maps REST Services, see <a href="common-response-description.html">Common Response Description</a>.</p>
+<h2 id="distancematrixasyncstatus-resource">DistanceMatrixAsyncStatus Resource</h2>
+<p>A <code>DistanceMatrixAsyncStatus</code> resource is returned as a response when making a <code>DistanceMatrixAsync</code> request. This resource provides the status of an asynchronous distance matrix request which includes an estimated amount of time left to process the request, the unique <code>requestId</code> to use when checking the status, as well as information on if the request was had any errors or not.</p>
+<table>
+<thead>
+<tr>
+<th>JSON</th>
+<th>XML</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>callbackInSeconds</td>
+<td>CallbackInSeconds</td>
+<td>integer</td>
+<td>An estimated number of seconds remaining to complete the request. Wait this long before checking the status again.</td>
+</tr>
+<tr>
+<td>callbackUrl</td>
+<td>CallbackUrl</td>
+<td>string</td>
+<td>The callback URL to use to check the status of the request.</td>
+</tr>
+<tr>
+<td>isAccepted</td>
+<td>IsAccepted</td>
+<td>boolean</td>
+<td>Specifies if the request is accepted. A request will not be accepted if it is not valid, or is not within the coordinate pair limits.</td>
+</tr>
+<tr>
+<td>isCompleted</td>
+<td>IsCompleted</td>
+<td>boolean</td>
+<td>Specifies is the request has completed.</td>
+</tr>
+<tr>
+<td>requestId</td>
+<td>RequestId</td>
+<td>string</td>
+<td>A unique identifier for an asynchronous request. This can be used to retrieve the results of an asynchronous request when it has completed.</td>
+</tr>
+<tr>
+<td>resultUrl</td>
+<td>ResultUrl</td>
+<td>string</td>
+<td>When completed, this field will be populated with a URL which can be used to download the results. The downloaded results will be a <code>DistanceMatrix</code> resource in JSON format. XML support will be coming soon.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="distancematrix-resource">DistanceMatrix Resource</h2>
+<p>The following tables describe the fields in the <code>DistanceMatrix</code> resource in a hierarchical manner.</p>
+<p>A distance matrix has the following basic structure:</p>
+<ul>
+<li>DistanceMatrix [one]<ul>
+<li>DistanceMatrixCell [For each origin-destination pair and time interval]</li>
+</ul>
+</li>
+</ul>
+<h3 id="top-level-distance-matrix-resource-fields">Top-level Distance Matrix Resource Fields</h3>
+<p>The following fields are the top-level fields in the <code>DistanceMatrix</code> resource. Additional tables describe the fields in each cell of array of results.</p>
+<table>
+<thead>
+<tr>
+<th>JSON</th>
+<th>XML</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>destinations</td>
+<td>Destinations</td>
+<td>Coordinate[]</td>
+<td>The array of destinations that were used to calculate the distance matrix.</td>
+</tr>
+<tr>
+<td>origins</td>
+<td>Origins</td>
+<td>Coordinate[]</td>
+<td>The array of destinations that were used to calculate the distance matrix.</td>
+</tr>
+<tr>
+<td>result</td>
+<td>Result</td>
+<td>DistanceMatrixCell[]</td>
+<td>Array of distance matrix cell results containing information for each coordinate pair and time interval.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="distance-matrix-cell-fields">Distance Matrix Cell Fields</h3>
+<p>These fields are specific to the array of <code>DistanceMatrixCells</code> in the <code>DistanceMatrix</code> resource.</p>
+<table>
+<thead>
+<tr>
+<th>JSON</th>
+<th>XML</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>departureTime</td>
+<td>DepartureTime</td>
+<td>string</td>
+<td>The departure time in which this cell was calculated for. Only returned when a <code>startTime</code> is specified. When an <code>endTime</code> is specified in the request several cells will be returned for the same origin and destination pairs, each having a different departure time for each time interval in the generated histogram request. This string is in <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601 date format</a>.<br><br><strong>Example</strong>: 2017-09-22T19:27:03.0000000+00:00</td>
+</tr>
+<tr>
+<td>destinationIndex</td>
+<td>DestinationIndex</td>
+<td>int</td>
+<td>The index of the destination in the provided destinations array used to calculate this cell.</td>
+</tr>
+<tr>
+<td>hasError</td>
+<td>HasError</td>
+<td>boolean</td>
+<td>A boolean indicating if an error occurred when calculating this cell.</td>
+</tr>
+<tr>
+<td>originIndex</td>
+<td>OriginIndex</td>
+<td>int</td>
+<td>The index of the origin in the provided origins array used to calculate this cell.</td>
+</tr>
+<tr>
+<td>travelDistance</td>
+<td>TravelDistance</td>
+<td>double</td>
+<td>The physical distance covered to complete a route between the origin and destination. Currently all distances returned are in kilometers. When travel mode is set to transit or a path between the origin and destination can&#39;t be calculated, this value is set to -1.</td>
+</tr>
+<tr>
+<td>travelDuration</td>
+<td>TravelDuration</td>
+<td>double</td>
+<td>The time that it takes, in the specified time units, to travel a corresponding <code>TravelDistance</code>. If a path a path between the origin and destination can&#39;t be calculated, this value will be a negative number.</td>
+</tr>
+<tr>
+<td>totalWalkDuration</td>
+<td>TotalWalkDuration</td>
+<td>double</td>
+<td>The portion of the total route duration which requires walking. This may occur when the travel mode is set to transit.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="coordinate-field">Coordinate Field</h2>
+<p>These fields are used to represent a location coordinate.</p>
+<table>
+<thead>
+<tr>
+<th>JSON</th>
+<th>XML</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>latitude</td>
+<td>Latitude</td>
+<td>double</td>
+<td>The latitude information of the coordinate.</td>
+</tr>
+<tr>
+<td>longitude</td>
+<td>Longitude</td>
+<td>double</td>
+<td>The longitude information of the coordinate.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="see-also">See Also</h2>
+<ul>
+<li><a href="using-the-rest-services-with-net.html">Using the REST Services with .NET</a></li>
+<li><a href="distance-matrix-example.html">Distance Matrix Example</a></li>
+<li><a href="distance-matrix-asynchronous-example.html">Distance Matrix Asynchronous Example</a></li>
+<li><a href="distance-matrix-histogram-example.html">Distance Matrix Histogram Example</a></li>
+</ul>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/MicrosoftDocs/bingmaps-docs/blob/master/BingMaps/rest-services/distance-matrix-data.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

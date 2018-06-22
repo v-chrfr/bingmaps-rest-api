@@ -71,6 +71,7 @@
   - name: traffic/Get Traffic Incident Data
     href: traffic/getting-traffic-incident-data.md
 - name: Common Paramaters and Types
+  href: common-parameters-and-types/index.md
   maintainContext: true
   items:
     - name: Base URL Structure
