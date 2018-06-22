@@ -13,10 +13,12 @@ ms.author: "richbrun"
 manager: "stevelom"
 ms.service: "bing-maps"
 ---
+
 # Static Map Data
+
 When you use the [Get a Static Map](get-a-static-map.md) API to request static map image metadata, the response returns a Static Map Metadata resource that contains metadata about the static map including the absolute (latitude and longitude) and relative (with respect to the map) coordinates and size of pushpins, as well as the map area, size and center point. When you request static map metadata, the response does not return the map image. This topic contains descriptions of the static map metadata, followed by JSON and XML examples.  
   
- For more information about the common response syntax for the Bing Maps REST Services, see [Common Response Description](../common-parameters-and-types/common-response-description.md).  
+[!INCLUDE [get-common-response-note](../../includes/get-common-response-note.md)] 
   
 ## Static Map Metadata  
  The following fields are returned when you request image metadata for a static map.  

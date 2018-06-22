@@ -14,12 +14,12 @@ manager: "stevelom"
 ms.service: "bing-maps"
 ---
 # Get Elevations
+
 Use the following URLs to get elevation values (in meters) for a set of locations, a polyline path or area on the Earth.  
   
 ## URL Templates  
   
-> [!Note]
-> These templates support both HTTP and HTTPS protocols. To use this API, you must have a [Bing Maps key](/bing-maps-docs/getting-started/getting-a-bing-maps-key.md). 
+[!INCLUDE [get-bing-map-key-note](../../includes/get-bing-map-key-note.md)]
   
  **Unit of elevation**: meters  
   
@@ -460,9 +460,8 @@ points=38.8895,77.0501,38.8877,-77.0472,38.8904,-77.0474,38.8896,77.0351
   
 ## HTTP Status Codes  
   
-> [!NOTE]
->  For more details about these HTTP status codes, see [Status Codes and Error Handling](../common-parameters-and-types/status-codes-and-error-handling.md).  
-  
+[!INCLUDE [get-status-code-note](../../includes/get-status-code-note.md)]
+
  When the request is successful, the following HTTP status code is returned.  
   
 * 200

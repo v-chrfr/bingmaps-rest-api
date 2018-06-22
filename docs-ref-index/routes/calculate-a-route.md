@@ -23,8 +23,7 @@ Use the following URL templates to get a walking, driving or transit route by sp
   
 ## URL Templates  
   
-> [!NOTE]
->  These templates support both HTTP and HTTPS protocols.  
+[!INCLUDE [get-bing-map-key-note](../../includes/get-bing-map-key-note.md)]
   
  You can specify up to 25 waypoints for a route. Each set of waypoints creates a separate route leg. Between any two (2) waypoints, you can have up to 10 intermediate viaWayPoints. ViaWaypoints define the route path and do not create route legs.  
   
@@ -204,8 +203,7 @@ http://dev.virtualearth.net/REST/V1/Routes/Driving?o=xml&wp.0=44.979035,-93.2649
   
 ## HTTP Status Codes  
   
-> [!NOTE]
->  For more details about these HTTP status codes, see [Status Codes and Error Handling](../common-parameters-and-types/status-codes-and-error-handling.md).  
+[!INCLUDE [get-status-code-note](../../includes/get-status-code-note.md)]
   
  When the request is successful, the following HTTP status code is returned.  
   

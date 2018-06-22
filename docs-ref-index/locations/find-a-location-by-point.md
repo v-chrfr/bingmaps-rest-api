@@ -15,8 +15,7 @@ Use the following URL template to get the location information associated with l
   
 ## URL Template  
   
-> [!Note]
-> These templates support both HTTP and HTTPS protocols. To use this API, you must have a [Bing Maps key](/bing-maps-docs/getting-started/getting-a-bing-maps-key.md). 
+[!INCLUDE [get-bing-map-key-note](../../includes/get-bing-map-key-note.md)]
   
  **Get an address for a specified point (latitude and longitude).**  
   
@@ -312,8 +311,7 @@ http://dev.virtualearth.net/REST/v1/Locations/47.64054,-122.12934?includeEntityT
   
 ## HTTP Status Codes  
   
-> [!NOTE]
->  For more details about these HTTP status codes, see [Status Codes and Error Handling](../common-parameters-and-types/status-codes-and-error-handling.md).  
+[!INCLUDE [get-status-code-note](../../includes/get-status-code-note.md)]
   
  When the request is successful, the following HTTP status code is returned.  
   

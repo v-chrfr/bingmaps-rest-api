@@ -1,10 +1,6 @@
 ---
 title: "Calculate a Distance Matrix | Microsoft Docs"
-ms.custom: ""
 ms.date: "02/28/2018"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 1b06a21d-8204-4a5a-8389-c3983bde4307
 caps.latest.revision: 15
@@ -24,7 +20,7 @@ Distance matrices are used in several different types of applications. The most 
 * Calculate the difference in commute times between locations. For example: We are looking to move to a new office, what is the impact on commute times for our staff?
 * Clustering data based on travel time and distances. For example: Find all homes that are within 1 mile of a corner store.
 
-When you make a request by using one of the following URL templates, the response returns a Distance Matrix resource that contains either an array of Distance Matrix cells or information on the asynchronous request that was made to calculate a distance matrix. Each distance matrix cell contains the location and index of the origin and destination it is related to, the travel time, and distance. If a distance matrix histogram is requested, a departure time for when in the histogram the cell it is related to will be included. For more information about the Distance Matrix resource, see [Distance Matrix Data](distance-matrix-data.md). You can also view the example URL and response values in the **Examples** section.
+When you make a request by using one of the following URL templates, the response returns a Distance Matrix resource that contains either an array of Distance Matrix cells or information on the asynchronous request that was made to calculate a distance matrix. Each distance matrix cell contains the location and index of the origin and destination it is related to, the travel time, and distance. If a distance matrix histogram is requested, a departure time for when in the histogram the cell it is related to will be included. For more information about the Distance Matrix resource, see [Distance Matrix Data](distance-matrix-data.md). You can also view the example URL and response values in the [Examples](calculate-a-distance-matrix.md#examples) section.
 
 ## API Limits
 
@@ -478,8 +474,7 @@ https://dev.virtualearth.net/REST/v1/Routes/DistanceMatrixAsyncCallback?requestI
 
 ## HTTP Status Codes
 
-> [!NOTE]
-> For more details about these HTTP status codes, see [Status Codes and Error Handling](../common-parameters-and-types/status-codes-and-error-handling.md). 
+[!INCLUDE [get-status-code-note](../../includes/get-status-code-note.md)]
 
 When the request is successful, the following HTTP status code is returned.
 

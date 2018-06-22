@@ -22,11 +22,9 @@ When you make a request by using one of the following URL templates, the respons
   
 ## URL Templates  
   
-> [!Note]
-> These templates support both HTTP and HTTPS protocols. To use this API, you must have a [Bing Maps key](/bing-maps-docs/getting-started/getting-a-bing-maps-key.md). 
+[!INCLUDE [get-bing-map-key-note](../../includes/get-bing-map-key-note.md)]
   
-> [!TIP]
->  Be sure to review the [Bing Maps API Best Practices guide](/bing-maps-docs/getting-started/bing-maps-api-best-practices.md) before using this service.  
+[!INCLUDE [get-bing-maps-best-practices-note](../../includes/get-bing-maps-best-practices-note.md)]
     
 **Unstructured URL: Get the latitude and longitude coordinates based on a set of address values for any country**  
   
@@ -499,8 +497,7 @@ http://dev.virtualearth.net/REST/v1/Locations?locality=London&postalCode=SW1A&ke
   
 ## HTTP Status Codes  
   
-> [!NOTE]
->  For more details about these HTTP status codes, see [Status Codes and Error Handling](../common-parameters-and-types/status-codes-and-error-handling.md).  
+[!INCLUDE [get-status-code-note](../../includes/get-status-code-note.md)]
   
  When the request is successful, the following HTTP status code is returned.  
   
@@ -518,6 +515,6 @@ When the request is not successful, the response returns one of the following er
 ## See Also  
  [Using the REST Services with .NET](../using-the-rest-services-with-net.md)   
  [JSON Data Contracts](../json-data-contracts.md)   
- [Geocoding a Location](https://msdn.microsoft.com/en-us/library/gg427601.aspx)   
+ [Geocoding a Location](https://msdn.microsoft.com/en-us/library/gg427601.aspx)
  [Getting Route Directions](https://msdn.microsoft.com/en-us/library/gg427607.aspx)   
  [Find a location by query](https://www.bingmapsportal.com/ISDK/AjaxV7#RESTServices1)

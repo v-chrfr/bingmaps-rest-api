@@ -11,7 +11,7 @@ ms.service: "bing-maps"
 
 The response returned by an Imagery Metadata URL request contains a resource that provides imagery metadata information. If the metadata requested is for Birdseye imagery, a Birdseye Metadata resource is returned. For other types of imagery, an Imagery Metadata resource is returned. This topic contains descriptions of the information elements in these resources, followed by JSON and XML examples.  
   
- For more information about the common response syntax for the Bing Maps REST Services, see [Common Response Description](../common-parameters-and-types/common-response-description.md).  
+[!INCLUDE [get-common-response-note](../../includes/get-common-response-note.md)]
   
 ## Common Imagery Resource Fields
 
@@ -29,6 +29,7 @@ The response returned by an Imagery Metadata URL request contains a resource tha
 |zoomMax|ZoomMax|integer|The maximum zoom level available for this imagery set.|  
   
 ## Birdseye Metadata Resource Fields  
+
  These fields are only used only by the Birdseye Metadata resource.  
   
 |JSON|XML|Type|Description|  
@@ -38,6 +39,7 @@ The response returned by an Imagery Metadata URL request contains a resource tha
 |tilesY|TilesY|integer|The vertical dimension of the imagery in number of tiles.|  
   
 ## Understanding the Image URL Placeholders  
+
  When you request imagery metadata, the image URL field returned in the response specifies a map tile. This map tile can contain one or more of the following placeholders.  
   
 |URI placeholder|Description|  

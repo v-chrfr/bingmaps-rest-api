@@ -22,11 +22,9 @@ Use the following URL templates to get latitude and longitude coordinates that c
   
 ## URL Template  
   
-> [!Note]
-> These templates support both HTTP and HTTPS protocols. To use this API, you must have a [Bing Maps key](/bing-maps-docs/getting-started/getting-a-bing-maps-key.md). 
+[!INCLUDE [get-bing-map-key-note](../../includes/get-bing-map-key-note.md)]
   
-> [!TIP]
->  Be sure to review the [Bing Maps API Best Practices guide](/bing-maps-docs/getting-started/bing-maps-api-best-practices.md) before using this service.  
+[!INCLUDE [get-bing-maps-best-practices-note](../../includes/get-bing-maps-best-practices-note.md)]
 
  **Returns latitude and longitude coordinates for a location that is specified as query string.**  
   
@@ -540,10 +538,9 @@ http://dev.virtualearth.net/REST/v1/Locations?q=Greenville&maxResults=10&key=Bin
 ```  
   
 ## HTTP Status Codes  
-  
-> [!NOTE]
->  For more details about these HTTP status codes, see [Status Codes and Error Handling](../common-parameters-and-types/status-codes-and-error-handling.md).  
-  
+
+[!INCLUDE [get-status-code-note](../../includes/get-status-code-note.md)]  
+
  When the request is successful, the following HTTP status code is returned.  
   
 * 200

@@ -13,7 +13,9 @@ ms.author: "richbrun"
 manager: "stevelom"
 ms.service: "bing-maps"
 ---
+
 # Get Imagery Metadata
+
 Use the following URL templates to get metadata for imagery that is hosted by Bing™ Maps. The imagery metadata returned includes URLs and dimensions for imagery tiles, ranges of zoom levels, and imagery vintage information.  
   
  Uses of this metadata include the following:  
@@ -25,8 +27,7 @@ Use the following URL templates to get metadata for imagery that is hosted by Bi
   
 ## URL Templates  
   
-> [!Note]
-> These templates support both HTTP and HTTPS protocols. To use this API, you must have a [Bing Maps key](/bing-maps-docs/getting-started/getting-a-bing-maps-key.md). 
+[!INCLUDE [get-bing-map-key-note](../../includes/get-bing-map-key-note.md)]
   
 There are two types of imagery metadata URLs:  
   
@@ -382,9 +383,8 @@ https://dev.virtualearth.net/REST/v1/Imagery/Metadata/AerialWithLabels/47.23,-12
   
 ## HTTP Status Codes  
   
-> [!NOTE]
->  For more details about these HTTP status codes, see [Status Codes and Error Handling](../common-parameters-and-types/status-codes-and-error-handling.md).  
-  
+[!INCLUDE [get-status-code-note](../../includes/get-status-code-note.md)]
+
  When the request is successful, the following HTTP status code is returned.  
   
 * 200
@@ -399,7 +399,7 @@ When the request is not successful, the response returns one of the following er
 * 503
   
 ## See Also  
- [Bing Maps Tile System](http://msdn.microsoft.com/en-us/library/bb259689.aspx)   
+ [Bing Maps Tile System](http://msdn.microsoft.com/en-us/library/bb259689.aspx)
  [Building Your Own Tile Server](http://msdn.microsoft.com/en-us/library/bb545006.aspx)   
  [Understanding Scale and Resolution](http://msdn.microsoft.com/en-us/library/aa940990.aspx)   
  [Using the REST Services with .NET](../using-the-rest-services-with-net.md)   

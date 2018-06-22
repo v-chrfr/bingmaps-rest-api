@@ -54,8 +54,7 @@ Many developers prefer the simplicity of HTTP GET requests which simply require 
 
 ## URL Template
 
-> [!NOTE]
->  These templates support both HTTP and HTTPS protocols. To use this API, you must have a [Bing Maps key](/bing-maps-docs/getting-started/getting-a-bing-maps-key.md). 
+[!INCLUDE [get-bing-map-key-note](../../includes/get-bing-map-key-note.md)]
 
 Truck route calculations require a lot more processing than standard driving route calculations, as such synchronous and asynchronous requests are supported. It is recommended to use the asynchronous request when calculating longer routes.
 
@@ -348,8 +347,7 @@ To view the complete XML and JSON responses, see [Truck Route Asynchronous Examp
 
 ## HTTP Status Codes
 
-> [!NOTE]
-> For more details about these HTTP status codes, see [Status Codes and Error Handling](../common-parameters-and-types/status-codes-and-error-handling.md).
+[!INCLUDE [get-status-code-note](../../includes/get-status-code-note.md)]
 
 When the request is successful, the following HTTP status code is returned.
 

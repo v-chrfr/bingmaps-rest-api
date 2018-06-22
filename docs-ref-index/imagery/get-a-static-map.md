@@ -26,8 +26,7 @@ POST requests require all parameters to be passed into the body of the request a
 
  The default map size is 350 pixels by 350 pixels.  
   
-> [!Note]
-> These templates support both HTTP and HTTPS protocols. To use this API, you must have a [Bing Maps key](/bing-maps-docs/getting-started/getting-a-bing-maps-key.md).
+[!INCLUDE [get-bing-map-key-note](../../includes/get-bing-map-key-note.md)]
   
  **Static map metadata**: To get the size and center point of the image and the locations and size of the pushpins on the map, set the mapMetadata parameter to 1 (true). When you request static map metadata, the metadata is returned instead of the map image.  
   
@@ -356,8 +355,7 @@ https://dev.virtualearth.net/REST/v1/Imagery/Map/Road/47.677006,-122.125526/Popu
   
 ## HTTP Status Codes  
   
-> [!NOTE]
->  For more details about these HTTP status codes, see [Status Codes and Error Handling](../common-parameters-and-types/status-codes-and-error-handling.md).  
+[!INCLUDE [get-status-code-note](../../includes/get-status-code-note.md)]
   
  When the request is successful, the following HTTP status code is returned.  
   

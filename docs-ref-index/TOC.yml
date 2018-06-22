@@ -28,7 +28,7 @@
       href: elevations/elevation-data.md
     - name: Point Compression Algorithm
       href: elevations/point-compression-algorithm.md
-- name: Imagery API
+- name: Imagery
   href: imagery/index.md
   maintainContext: true
   items:
@@ -47,7 +47,7 @@
     - name: Calculate a Distance Matrix
       href: routes/calculate-a-distance-matrix.md
     - name: Calculate a Isochrone
-      href: routes/calculate-a-isochrone.md
+      href: routes/calculate-an-isochrone.md
     - name: Calculate a Route
       href: routes/calculate-a-route.md
     - name: Calculate a Truck Route
@@ -68,7 +68,7 @@
   items:
   - name: Get Traffic Incidents
     href: traffic/get-traffic-incidents.md
-  - name: traffic/Get Traffic Incident Data
+  - name: Get Traffic Incident Data
     href: traffic/getting-traffic-incident-data.md
 - name: Common Paramaters and Types
   href: common-parameters-and-types/index.md

@@ -19,7 +19,7 @@ ms.service: "bing-maps"
 
 The response returned by a Locations URL contains one or more Location resources. Each Location resource contains location information that corresponds to the values provided in the request. This topic provides descriptions of the Locations resource fields, followed by JSON and XML examples.  
   
- For more information about the common response container for the Bing Maps REST Services, see [Common Response Description](../common-response-description.md).  
+[!INCLUDE [get-common-response-note](../../includes/get-common-response-note.md)]
   
 |JSON|XML|Type|Description|  
 |----------|---------|----------|-----------------|  
