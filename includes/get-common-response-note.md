@@ -1,1 +1,1 @@
- For more information about the common response syntax for the Bing Maps REST Services, see [Common Response Description](../common-parameters-and-types/common-response-description.md). 
+ For more information about the common response syntax for the Bing Maps REST Services, see [Common Response Description](../docs-ref-index//common-parameters-and-types/common-response-description.md).
