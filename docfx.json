@@ -2,7 +2,7 @@
   "build": {
     "content": [
       {
-        "src": "content",
+        "src": "docs-ref-overview",
         "dest": "api/overview",
         "files":  ["**/*.md"]
       },

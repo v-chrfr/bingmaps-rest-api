@@ -16,18 +16,18 @@ ms.service: "bing-maps"
 
 The Bing™ Maps REST Services Application Programming Interface (API) is a Representational State Transfer (REST) API that you can use to do common tasks, such as finding an address, retrieving a map with a pushpin and a label, or getting driving directions. You perform these tasks by constructing a URL..  
   
- **To use the Bing Maps REST Services, you must have a [Bing Maps Key](../getting-started/getting-a-bing-maps-key.md).**  
+ **To use the Bing Maps REST Services, you must have a [Bing Maps Key](~/docs-ref-content/getting-started/getting-a-bing-maps-key.md).**  
   
 ## Bing Maps REST Services  
  The following table lists the Bing Maps REST Services and the common tasks they perform. Click the links for API details.  
   
 |REST API|Features|  
 |--------------|--------------|  
-|[Locations](../services/locations-api.md)|-   Find a location based on an address, point, or query.|  
-|[Elevations](../services/elevations-api.md)|-   Get the elevations for a set of locations, a path, or an area on the Earth.|  
-|[Imagery](../services/imagery-api.md)|-   Get a static map.<br />-   Get a static map that displays a route.<br />-   Get imagery metadata.|  
-|[Routes](../services/routes-api.md)|-   Find a walking, driving or transit route.<br />-   Find routes from major routes to a location.<br />-   Get traffic information along a route.|  
-|[Traffic](../services/traffic-api.md)|-   Get traffic information for a geographical area.|  
+|[Locations](../services/locations)|-   Find a location based on an address, point, or query.|  
+|[Elevations](../services/elevations)|-   Get the elevations for a set of locations, a path, or an area on the Earth.|  
+|[Imagery](../services/imagery)|-   Get a static map.<br />-   Get a static map that displays a route.<br />-   Get imagery metadata.|  
+|[Routes](../services/routes)|-   Find a walking, driving or transit route.<br />-   Find routes from major routes to a location.<br />-   Get traffic information along a route.|  
+|[Traffic](../services/traffic)|-   Get traffic information for a geographical area.|  
   
 ### Additional Topics  
  The following topics show examples of how to use the Bing Maps REST Services with other Bing Maps APIs or provide related information.  
