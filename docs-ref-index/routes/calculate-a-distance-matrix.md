@@ -356,7 +356,7 @@ Content-Type: application/json
 
 **Calculate a simple driving based Distance Matrix for specific time (asynchronous)**
 
-The following example shows how to request a simple driving based distance matrix for the set of origins and destinations for a specified time, June 15<sup>th</sup>, 2017 at 1PM PST. This request will automatically use predictive traffic data to provide accurate estimates. To view the complete XML and JSON responses, see [Distance Matrix Asynchronous Example](../examples/distance-matrix-asynchronous-example.md).
+The following example shows how to request a simple driving based distance matrix for the set of origins and destinations for a specified time, June 15<sup>th</sup>, 2017 at 1PM PST. This request will automatically use predictive traffic data to provide accurate estimates. To view the complete XML and JSON responses, see [Distance Matrix Asynchronous Example](~/doc-ref-index/examples/distance-matrix-asynchronous-example.md).
 
 *HTTP GET Request URL*
 
@@ -414,7 +414,7 @@ https://dev.virtualearth.net/REST/v1/Routes/DistanceMatrixAsyncCallback?requestI
 
 **Calculate a driving based Distance Matrix Histogram (asynchronous)**
 
-The following example shows how to request a driving based distance matrix histogram for the set of origins and destinations between June 15<sup>th</sup>, 2017 at 1PM PST and June 15<sup>th</sup>, 2017 at 5PM PST with a resolution of 2 (30-minute intervals). This request will automatically use predictive traffic data to provide accurate estimates. To view the complete XML and JSON responses, see [Distance Matrix Histogram Example](../examples/distance-matrix-histogram-example.md).
+The following example shows how to request a driving based distance matrix histogram for the set of origins and destinations between June 15<sup>th</sup>, 2017 at 1PM PST and June 15<sup>th</sup>, 2017 at 5PM PST with a resolution of 2 (30-minute intervals). This request will automatically use predictive traffic data to provide accurate estimates. To view the complete XML and JSON responses, see [Distance Matrix Histogram Example](~/doc-ref-index/examples/distance-matrix-histogram-example.md).
 
 *HTTP GET Request URL*
 
@@ -493,6 +493,6 @@ When the request is not successful, the response returns one of the following er
 
 * [Using the REST Services with .NET](../using-the-rest-services-with-net.md)
 * [Distance Matrix Data](distance-matrix-data.md)
-* [Distance Matrix Example](../examples/distance-matrix-example.md)
-* [Distance Matrix Asynchronous Example](../examples/distance-matrix-asynchronous-example.md)
-* [Distance Matrix Histogram Example](../examples/distance-matrix-histogram-example.md)
+* [Distance Matrix Example](~/doc-ref-index/examples/distance-matrix-example.md)
+* [Distance Matrix Asynchronous Example](~/doc-ref-index/examples/distance-matrix-asynchronous-example.md)
+* [Distance Matrix Histogram Example](~/doc-ref-index/examples/distance-matrix-histogram-example.md)

@@ -197,12 +197,12 @@ These fields are specific to the RouteLeg collection in the Route resource.
 
  See the following topics for response examples.  
   
--   [Walking Route Example](../examples/walking-route-example.md)  
+-   [Walking Route Example](~/doc-ref-index/examples/walking-route-example.md)  
   
--   [Driving Route Example](../examples/driving-route-example.md)  
+-   [Driving Route Example](~/doc-ref-index/examples/driving-route-example.md)  
   
--   [Transit Route Example](../examples/transit-route-example.md)  
+-   [Transit Route Example](~/doc-ref-index/examples/transit-route-example.md)  
   
--   [Driving Route with Route Path Example](../examples/driving-route-with-route-path-example.md)  
+-   [Driving Route with Route Path Example](~/doc-ref-index/examples/driving-route-with-route-path-example.md)  
   
--   [Driving Route using Tolerances Example](../examples/driving-route-using-tolerances-example.md)
+-   [Driving Route using Tolerances Example](~/doc-ref-index/examples/driving-route-using-tolerances-example.md)

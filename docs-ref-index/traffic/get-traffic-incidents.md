@@ -17,7 +17,7 @@ ms.service: "bing-maps"
 
 Use the following URL template to request traffic incident information. A collection of traffic incidents is returned in the response.  
   
- For more information about the traffic incident data that is returned in the response, see [Traffic Incident Data](traffic-incident-data.md). You can also view the example URL and response values in the [Examples](get-traffic-incidents.md#examples) section below. For an overview of how traffic incident information is returned by Bing Maps REST Services, see [Getting Traffic Incident Data](getting-traffic-incident-data.md).  
+ For more information about the traffic incident data that is returned in the response, see [Traffic Incident Data](traffic-incident-data.md). You can also view the example URL and response values in the [Examples](#examples) section below. For an overview of how traffic incident information is returned by Bing Maps REST Services, see [Getting Traffic Incident Data](getting-traffic-incident-data.md).  
   
  For traffic coverage by country, see [Bing Maps Traffic Coverage](/bing-maps-docs/coverage/bing-maps-traffic-coverage.md).  
   
@@ -359,8 +359,7 @@ http://dev.virtualearth.net/REST/V1/Traffic/Incidents/37,-105,45,-94/true?t=9,2&
   
 ## HTTP Status Codes  
   
-> [!NOTE]
->  For more details about these HTTP status codes, see [Status Codes and Error Handling](../services/status-codes-and-error-handling.md).  
+[!INCLUDE [get-status-code-note](../../includes/get-status-code-note.md)]
   
  When the request is successful, the following HTTP status code is returned.  
   
@@ -379,5 +378,5 @@ http://dev.virtualearth.net/REST/V1/Traffic/Incidents/37,-105,45,-94/true?t=9,2&
 -   503  
   
 ## See Also  
- [Using the REST Services with .NET](../services/using-the-rest-services-with-net.md)   
- [JSON Data Contracts](../services/json-data-contracts.md)
+ [Using the REST Services with .NET](../using-the-rest-services-with-net.md) 
+ [JSON Data Contracts](../json-data-contracts.md)

@@ -297,7 +297,7 @@ Content-Type: application/json
 
 For comparison the following image shows this truck route in green and a vehicle not carrying flammable material would typically take in red. The primary reason for the difference in routes in this case is that flammable and explosive materials are prohibited inside the Liberty Tunnel. As a result, the route for this truck is 3.9 miles while the route a vehicle that isn’t carrying flammable or explosive material is only 3.1 miles.
 
-To view the complete XML and JSON responses, see [Truck Route Example](../examples/truck-route-example.md).
+To view the complete XML and JSON responses, see [Truck Route Example](~/doc-ref-index/examples/truck-route-example.md).
 
 **Calculate a truck based route (asynchronous)**
 
@@ -343,7 +343,7 @@ Once the initial request is made a *requestId* will be returned. A *requestId* i
 https://dev.virtualearth.net/REST/v1/Routes/TruckAsyncCallback?requestId=90b07189-33d8-4cbf-866a-1bd5c5b4f474&key=BingMapsKey
 ```
 
-To view the complete XML and JSON responses, see [Truck Route Asynchronous Example](../examples/truck-route-asynchronous-example.md).
+To view the complete XML and JSON responses, see [Truck Route Asynchronous Example](~/doc-ref-index/examples/truck-route-asynchronous-example.md).
 
 ## HTTP Status Codes
 
@@ -365,5 +365,5 @@ When the request is not successful, the response returns one of the following er
 ## See Also
 
 * [Using the REST Services with .NET](../using-the-rest-services-with-net.md)
-* [Truck Route Example](../examples/truck-route-example.md)
-* [Truck Route Asynchronous Example](../examples/truck-route-asynchronous-example.md)
+* [Truck Route Example](~/doc-ref-index/examples/truck-route-example.md)
+* [Truck Route Asynchronous Example](~/doc-ref-index/examples/truck-route-asynchronous-example.md)

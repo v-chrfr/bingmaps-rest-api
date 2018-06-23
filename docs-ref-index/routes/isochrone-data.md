@@ -40,4 +40,4 @@ This class represents a polygon object.
 ## See Also
 
 * [Using the REST Services with .NET](../using-the-rest-services-with-net.md)
-* [Isochrone Example](../examples/isochrone-example.md)
+* [Isochrone Example](~/doc-ref-index/examples/isochrone-example.md)

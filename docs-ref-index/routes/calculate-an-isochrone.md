@@ -111,7 +111,7 @@ In this case, consider a delivery company that has some electric vehicles in the
 https://dev.virtualearth.net/REST/v1/Routes/Isochrones?waypoint=31.520759,-97.133597&maxDistance=50&distanceUnit=mile&optimize=distance&travelMode=driving&key=BingMapsKey
 ```
 
-To view the complete XML and JSON responses, see [Isochrone Example](../examples/isochrone-example.md).
+To view the complete XML and JSON responses, see [Isochrone Example](~/doc-ref-index/examples/isochrone-example.md).
 
 **Calculate an Isochrone (asynchronous)**
 
@@ -141,7 +141,7 @@ The following image shows the resulting isochrone.
 
 ![BM_Isochrone30Minute](../media/bm-isochrone30minute.PNG)
 
-To view the complete XML and JSON responses, see [Isochrone Asynchronous Example](../examples/isochrone-asynchronous-example.md).
+To view the complete XML and JSON responses, see [Isochrone Asynchronous Example](~/doc-ref-index/examples/isochrone-asynchronous-example.md).
 
 ## HTTP Status Codes
 
@@ -167,5 +167,5 @@ When the request is not successful, the response returns one of the following er
 
 * [Using the REST Services with .NET](../using-the-rest-services-with-net.md)
 * [Isochrone Data](isochrone-data.md)
-* [Isochrone Example](../examples/isochrone-example.md)
-* [Isochrone Asynchronous Example](../examples/isochrone-asynchronous-example.md)
+* [Isochrone Example](~/doc-ref-index/examples/isochrone-example.md)
+* [Isochrone Asynchronous Example](~/doc-ref-index/examples/isochrone-asynchronous-example.md)
