@@ -200,7 +200,7 @@ Content-Type: application/json
 
 Notice that both standard and truck speed limits are requested in this query. The reason for this is few roads have posted truck speed limits, when there is no posted truck speed limit the value returned will be 0. When this occurs, the standard posted speed limit is assumed to also apply to trucks as well.
 
-To view the complete XML and JSON responses, see [Snap to Road Example](~/doc-ref-index/examples/snap-to-road-example.md).
+To view the complete XML and JSON responses, see [Snap to Road Example](../examples/snap-to-road-example.md).
 
 ## HTTP Status Codes
 
@@ -222,4 +222,4 @@ When the request is not successful, the response returns one of the following er
 ## See Also
 
 * [Using the REST Services with .NET](../using-the-rest-services-with-net.md)
-* [Snap to Road Example](~/doc-ref-index/examples/snap-to-road-example.md)
+* [Snap to Road Example](../examples/snap-to-road-example.md)

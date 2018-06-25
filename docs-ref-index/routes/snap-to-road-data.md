@@ -43,4 +43,4 @@ Represents a snapped or interpolated point.
 ## See Also
 
 * [Using the REST Services with .NET](../using-the-rest-services-with-net.md)
-* [Snap to Road Example](~/doc-ref-index/examples/snap-to-road-example.md)
+* [Snap to Road Example](../examples/snap-to-road-example.md)

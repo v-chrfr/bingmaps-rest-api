@@ -80,7 +80,7 @@ http://dev.virtualearth.net/REST/v1/Routes/{travelMode}?wayPoint.1={wayPpoint1}&
 ## Examples  
  **Find a driving route.**  
   
- The following example shows how to request a driving route between two locations that minimizes the use of toll roads. To view the complete XML and JSON responses, see [Driving Route Example](~/doc-ref-index/examples/driving-route-example.md).  
+ The following example shows how to request a driving route between two locations that minimizes the use of toll roads. To view the complete XML and JSON responses, see [Driving Route Example](../examples/driving-route-example.md).  
   
 ```url
 http://dev.virtualearth.net/REST/V1/Routes/Driving?o=xml&wp.0=london&wp.1=leeds&avoid=minimizeTolls&key=BingMapsKey  
@@ -96,7 +96,7 @@ http://dev.virtualearth.net/REST/V1/Routes/Driving?o=xml&wp.0=Seattle,WA&vwp.1=P
   
  **Find a walking route that minimizes distance.**  
   
- This example returns a walking route from the Eiffel Tower to the Louvre Museum in Paris, France. The route is optimized for distance and returns the results in XML. To view the complete XML and JSON responses, see [Walking Route Example](~/doc-ref-index/examples/walking-route-example.md).  
+ This example returns a walking route from the Eiffel Tower to the Louvre Museum in Paris, France. The route is optimized for distance and returns the results in XML. To view the complete XML and JSON responses, see [Walking Route Example](../examples/walking-route-example.md).  
   
 ```url
 http://dev.virtualearth.net/REST/V1/Routes/Walking?wp.0=Eiffel%20Tower&wp.1=louvre%20museum&optmz=distance&output=xml&key=BingMapsKey  
@@ -179,7 +179,7 @@ http://dev.virtualearth.net/REST/V1/Routes/Driving?wp.0=Buffalo&wp.1=Syracuse&av
   
  **Find a driving route and request a set of points that define the route.**  
   
- This example returns a driving route from the Minneapolis, Minnesota to St. Paul, Minnesota. The route is optimized for distance and requests point values for the route’s path. The results are returned in JSON. To view the complete XML and JSON responses, see [Driving Route with Route Path Example](~/doc-ref-index/examples/driving-route-with-route-path-example.md).  
+ This example returns a driving route from the Minneapolis, Minnesota to St. Paul, Minnesota. The route is optimized for distance and requests point values for the route’s path. The results are returned in JSON. To view the complete XML and JSON responses, see [Driving Route with Route Path Example](../examples/driving-route-with-route-path-example.md).  
   
 ```url
 http://dev.virtualearth.net/REST/V1/Routes/Driving?wp.0=Minneapolis,MN&wp.1=St%20Paul,MN&optmz=distance&routeAttributes=routePath&key=BingMapsKey  
@@ -195,7 +195,7 @@ http://dev.virtualearth.net/REST/V1/Routes/Driving?wp.0=Minneapolis,MN&wp.1=St%2
   
  **Find a driving route and request a route path and a subset of route path points based on tolerance values.**  
   
- This example returns a driving route from the Minneapolis, Minnesota to St. Paul, Minnesota. The route is optimized for distance and requests point values for the route’s path. In addition to the full set of route points, a list of tolerances is specified. For each tolerance value, a subset of points is returned in the response. The route defined by each subset of points approximates the route defined by all the points. The difference allowed between the two routes is defined by the tolerance value. To view examples of these subsets of points in the response, see [Driving Route using Tolerances Example](~/doc-ref-index/examples/driving-route-using-tolerances-example.md).  
+ This example returns a driving route from the Minneapolis, Minnesota to St. Paul, Minnesota. The route is optimized for distance and requests point values for the route’s path. In addition to the full set of route points, a list of tolerances is specified. For each tolerance value, a subset of points is returned in the response. The route defined by each subset of points approximates the route defined by all the points. The difference allowed between the two routes is defined by the tolerance value. To view examples of these subsets of points in the response, see [Driving Route using Tolerances Example](../examples/driving-route-using-tolerances-example.md).  
   
 ```url
 http://dev.virtualearth.net/REST/V1/Routes/Driving?o=xml&wp.0=44.979035,-93.26493&wp.1=44.943828508257866,-93.09332862496376&optmz=distance&routeAttributes=routePath&tl=0.00000344978,0.0000218840,0.000220577,0.00188803,0.0169860,0.0950130,0.846703&key=BingMapsKey  
@@ -218,8 +218,8 @@ http://dev.virtualearth.net/REST/V1/Routes/Driving?o=xml&wp.0=44.979035,-93.2649
 -   503  
   
 ## See Also  
- * [Driving Route Example](~/doc-ref-index/examples/driving-route-example.md)   
- * [Walking Route Example](~/doc-ref-index/examples/walking-route-example.md)   
- * [Transit Route Example](~/doc-ref-index/examples/transit-route-example.md)   
- * [Driving Route with Route Path Example](~/doc-ref-index/examples/driving-route-with-route-path-example.md)   
- * [Driving Route using Tolerances Example](~/doc-ref-index/examples/driving-route-using-tolerances-example.md)
+ * [Driving Route Example](../examples/driving-route-example.md)   
+ * [Walking Route Example](../examples/walking-route-example.md)   
+ * [Transit Route Example](../examples/transit-route-example.md)   
+ * [Driving Route with Route Path Example](../examples/driving-route-with-route-path-example.md)   
+ * [Driving Route using Tolerances Example](../examples/driving-route-using-tolerances-example.md)

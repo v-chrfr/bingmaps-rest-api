@@ -1,10 +1,16 @@
 {
   "ExpandedNodes": [
     "",
+    "\\bingmaps-docs-rest-api",
     "\\docs-ref-autogen",
     "\\docs-ref-conceptual",
-    "\\docs-ref-index"
+    "\\docs-ref-index",
+    "\\docs-ref-index\\common-parameters-and-types",
+    "\\docs-ref-index\\elevations",
+    "\\docs-ref-index\\imagery",
+    "\\docs-ref-index\\routes",
+    "\\includes"
   ],
-  "SelectedNode": "\\docs-ref-autogen\\toc.md",
+  "SelectedNode": "\\breadcrumb",
   "PreviewInSolutionExplorer": false
 }
