@@ -20,7 +20,7 @@ The response returned when making a synchronous request to the Distance Matrix A
 
 The following tables provide the descriptions of the `DistanceMatrix` and `DistanceMatrixAsyncStatus` resource fields.
 
-For more information about the common response container for the Bing Maps REST Services, see [Common Response Description](../common-response-description.md).
+[!INCLUDE [get-common-response-note](../../includes/get-common-response-note.md)]
 
 ## DistanceMatrixAsyncStatus Resource
 
